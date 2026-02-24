@@ -25,6 +25,7 @@ function App() {
           <div className="flex gap-6 text-sm font-medium text-gray-400">
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href="#experience" className="hover:text-white transition-colors">Experience</a>
+            <a href="#projects" className="hover:text-white transition-colors">Projects</a>
             <a href="#skills" className="hover:text-white transition-colors">Skills</a>
           </div>
         </div>
@@ -133,6 +134,42 @@ function App() {
               </ul>
             </div>
 
+          </div>
+        </section>
+
+        {/* Featured Projects Section */}
+        <section id="projects" className="space-y-12">
+          <div className="space-y-2">
+            <h2 className="text-3xl font-bold tracking-tight">Featured Projects</h2>
+            <p className="text-gray-400">Open-source tools and AI platforms I've built to solve complex GRC and security challenges.</p>
+          </div>
+
+          <div className="grid gap-6">
+            <div className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 group">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-200 mb-2">
+                    <a href="https://github.com/tvobrachini/scf-auto-crosswalker" target="_blank" rel="noreferrer" className="hover:text-purple-400 transition-colors flex items-center gap-2">
+                      SCF Auto-Crosswalker <Github size={20} className="text-gray-400 group-hover:text-purple-400 transition-colors" />
+                    </a>
+                  </h3>
+                  <p className="text-purple-400 text-sm font-medium">Open-Source GRC Assistant Platform</p>
+                </div>
+              </div>
+              <p className="text-gray-400 leading-relaxed mb-6">
+                An open-source, AI-powered internal GRC tool designed to eliminate manual spreadsheet mapping for IT Auditors and GRC Engineers. Built with Python, Streamlit, and LangChain (Llama-3), this platform features three dedicated tools:
+              </p>
+              <ul className="list-disc list-inside text-sm text-gray-400 space-y-2 mb-6 ml-1">
+                <li><strong className="text-gray-300">Auto-Crosswalker:</strong> Maps massive raw IT policies and Cloud Security JSON findings directly to the Secure Controls Framework (SCF).</li>
+                <li><strong className="text-gray-300">Audit Scope Analyzer:</strong> Predicts required baseline SCF controls from narrative audit scope documents (PDF/TXT) using AI reasoning.</li>
+                <li><strong className="text-gray-300">Compliance Gap Analyzer:</strong> Evaluates existing controls against target regulations (e.g., SOC 2, GDPR, HIPAA) to instantly generate missing control checklists.</li>
+              </ul>
+              <div className="flex flex-wrap gap-2">
+                {['Python', 'Streamlit', 'LangChain', 'Llama-3', 'Pandas', 'GRC Automation'].map(tag => (
+                  <span key={tag} className="text-xs font-semibold px-3 py-1 bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-full">{tag}</span>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 

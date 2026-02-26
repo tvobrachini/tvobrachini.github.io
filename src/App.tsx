@@ -80,7 +80,7 @@ function App() {
           <div className="grid gap-6 border-l border-white/10 pl-6 ml-3">
 
             <div className="relative group space-y-2">
-              <div className="absolute -left-[31px] top-1.5 w-3 h-3 bg-[#8A05BE] rounded-full shadow-[0_0_10px_rgba(138,5,190,0.5)]"></div>
+              <div className="absolute left-[-24px] -translate-x-1/2 top-1.5 w-3 h-3 bg-[#8A05BE] rounded-full ring-4 ring-[#0a0a0a] shadow-[0_0_12px_rgba(138,5,190,0.8)]"></div>
               <h3 className="text-xl font-semibold">IT Internal Audit Specialist</h3>
               <a href="https://international.nubank.com.br/about/" target="_blank" rel="noreferrer" className="inline-block text-[#8A05BE] font-medium hover:underline">Nubank</a>
               <div className="text-sm text-gray-500">Mar 2023 - Present ({getDurationPassed(new Date('2023-03-01'))})</div>
@@ -90,7 +90,7 @@ function App() {
             </div>
 
             <div className="relative group space-y-2 pt-8">
-              <div className="absolute -left-[31px] top-9.5 w-3 h-3 bg-gray-600 rounded-full group-hover:bg-[#FFE600] transition-colors"></div>
+              <div className="absolute left-[-24px] -translate-x-1/2 top-9.5 w-3 h-3 bg-gray-700 rounded-full ring-4 ring-[#0a0a0a] group-hover:bg-[#FFE600] group-hover:shadow-[0_0_12px_rgba(255,230,0,0.8)] transition-all duration-300"></div>
               <h3 className="text-xl font-semibold">IT Internal Audit</h3>
               <a href="https://investor.mercadolibre.com/" target="_blank" rel="noreferrer" className="inline-block text-[#FFE600] font-medium hover:underline">Mercado Livre</a>
               <div className="text-sm text-gray-500">Nov 2021 - Mar 2023 (1 year 5 months)</div>
@@ -100,7 +100,7 @@ function App() {
             </div>
 
             <div className="relative group space-y-2 pt-8">
-              <div className="absolute -left-[31px] top-9.5 w-3 h-3 bg-gray-600 rounded-full group-hover:bg-[#00A868] transition-colors"></div>
+              <div className="absolute left-[-24px] -translate-x-1/2 top-9.5 w-3 h-3 bg-gray-700 rounded-full ring-4 ring-[#0a0a0a] group-hover:bg-[#00A868] group-hover:shadow-[0_0_12px_rgba(0,168,104,0.8)] transition-all duration-300"></div>
               <h3 className="text-xl font-semibold">IT Internal Audit</h3>
               <a href="https://www.stoneco.com.br/en/" target="_blank" rel="noreferrer" className="inline-block text-[#00A868] font-medium hover:underline">Stone</a>
               <div className="text-sm text-gray-500">Feb 2021 - Nov 2021 (10 months)</div>
@@ -110,7 +110,7 @@ function App() {
             </div>
 
             <div className="relative group space-y-2 pt-8">
-              <div className="absolute -left-[31px] top-9.5 w-3 h-3 bg-gray-600 rounded-full group-hover:bg-[#D04A02] transition-colors"></div>
+              <div className="absolute left-[-24px] -translate-x-1/2 top-9.5 w-3 h-3 bg-gray-700 rounded-full ring-4 ring-[#0a0a0a] group-hover:bg-[#D04A02] group-hover:shadow-[0_0_12px_rgba(208,74,2,0.8)] transition-all duration-300"></div>
               <h3 className="text-xl font-semibold">Risk Assurance Senior Associate (External Audit)</h3>
               <a href="https://www.pwc.com/gx/en/about.html" target="_blank" rel="noreferrer" className="inline-block text-[#D04A02] font-medium hover:underline">PwC</a>
               <div className="text-sm text-gray-500">Jul 2015 - Feb 2021 (5 years 8 months)</div>
@@ -121,7 +121,7 @@ function App() {
 
             {/* Earlier Technical Experience */}
             <div className="relative group space-y-2 pt-8 mt-4 border-t border-white/5 mx-[-24px] pl-[24px]">
-              <div className="absolute -left-[7px] top-14 w-3 h-3 bg-gray-800 border-2 border-gray-600 rounded-full"></div>
+              <div className="absolute left-0 -translate-x-1/2 top-14 w-3 h-3 bg-[#0a0a0a] border-2 border-gray-500 rounded-full ring-4 ring-[#0a0a0a] group-hover:border-gray-300 transition-colors duration-300"></div>
               <h3 className="text-lg font-semibold text-gray-300 pt-4">Early Technical Background</h3>
               <div className="text-gray-400 font-medium pb-2">Software Development & IT Infrastructure (2009 - 2015)</div>
               <p className="text-gray-500 text-sm max-w-3xl leading-relaxed">

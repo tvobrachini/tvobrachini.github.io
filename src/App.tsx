@@ -137,11 +137,11 @@ function App() {
           </div>
         </section>
 
-        {/* Featured Projects Section */}
+        {/* Case Studies Section */}
         <section id="projects" className="space-y-12">
           <div className="space-y-2">
-            <h2 className="text-3xl font-bold tracking-tight">Featured Projects</h2>
-            <p className="text-gray-400">Open-source tools and AI platforms I've built to solve complex GRC and security challenges.</p>
+            <h2 className="text-3xl font-bold tracking-tight">Case Studies & Automation Portfolios</h2>
+            <p className="text-gray-400">Deep-dive technical decision stories where I apply "Audit Engineering" to solve complex GRC challenges.</p>
           </div>
 
           <div className="grid gap-6">
@@ -153,16 +153,16 @@ function App() {
                       SCF Auto-Crosswalker <Github size={20} className="text-gray-400 group-hover:text-purple-400 transition-colors" />
                     </a>
                   </h3>
-                  <p className="text-purple-400 text-sm font-medium">Open-Source GRC Assistant Platform</p>
+                  <p className="text-purple-400 text-sm font-medium">Open-Source GRC Assistant & Audit Engineering Showcase</p>
                 </div>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
-                An open-source, AI-powered internal GRC tool designed to eliminate manual spreadsheet mapping for IT Auditors and GRC Engineers. Built with Python, Streamlit, and LangChain (Llama-3), this platform features three dedicated tools:
+                An open-source, AI-powered internal GRC tool designed to eliminate manual spreadsheet mapping for IT Auditors and GRC Engineers. Built with Python, Streamlit, and LangChain (Llama-3). <a href="https://github.com/tvobrachini/scf-auto-crosswalker/blob/main/CASE_STUDY.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium">View the full architectural decision Case Study here.</a>
               </p>
               <ul className="list-disc list-inside text-sm text-gray-400 space-y-2 mb-6 ml-1">
                 <li><strong className="text-gray-300">Auto-Crosswalker:</strong> Maps massive raw IT policies and Cloud Security JSON findings directly to the Secure Controls Framework (SCF).</li>
-                <li><strong className="text-gray-300">Audit Scope Analyzer:</strong> Predicts required baseline SCF controls from narrative audit scope documents (PDF/TXT) using AI reasoning.</li>
-                <li><strong className="text-gray-300">Compliance Gap Analyzer:</strong> Evaluates existing controls against target regulations (e.g., SOC 2, GDPR, HIPAA) to instantly generate missing control checklists.</li>
+                <li><strong className="text-gray-300">Compliance Gap Analyzer:</strong> Evaluates existing controls against target regulations (e.g., SOC 2, HIPAA) to instantly generate missing control checklists.</li>
+                <li><strong className="text-gray-300">Audit Engineering (Compliance-as-Code):</strong> Structured LLM outputs are rigorously tested with a <code className="bg-white/10 px-1 py-0.5 rounded">pytest</code> suite and continuously deployed via <strong className="text-white">GitHub Actions CI/CD</strong>, proving that GRC tools can be built with the same SDLC rigor as production environments.</li>
               </ul>
               <div className="flex flex-wrap gap-2">
                 {['Python', 'Streamlit', 'LangChain', 'Llama-3', 'Pandas', 'GRC Automation'].map(tag => (

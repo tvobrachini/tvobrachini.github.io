@@ -102,7 +102,7 @@ function App() {
             <div className="relative group space-y-2 pt-8">
               <div className="absolute -left-[31px] top-9.5 w-3 h-3 bg-gray-600 rounded-full group-hover:bg-[#00A868] transition-colors"></div>
               <h3 className="text-xl font-semibold">IT Internal Audit</h3>
-              <a href="https://www.stone.co.br/" target="_blank" rel="noreferrer" className="inline-block text-[#00A868] font-medium hover:underline">Stone</a>
+              <a href="https://www.stoneco.com.br/en/" target="_blank" rel="noreferrer" className="inline-block text-[#00A868] font-medium hover:underline">Stone</a>
               <div className="text-sm text-gray-500">Feb 2021 - Nov 2021 (10 months)</div>
               <p className="text-gray-400 mt-2 max-w-3xl leading-relaxed">
                 Specialized in payment industry compliance (PCI-DSS) and enterprise risk management. Architected and executed rigorous internal audit testing over mission-critical financial applications and core infrastructure, ensuring high availability and secure transaction environments.
@@ -121,7 +121,7 @@ function App() {
 
             {/* Earlier Technical Experience */}
             <div className="relative group space-y-2 pt-8 mt-4 border-t border-white/5 mx-[-24px] pl-[24px]">
-              <div className="absolute -left-[31px] top-14 w-3 h-3 bg-gray-800 border-2 border-gray-600 rounded-full"></div>
+              <div className="absolute -left-[7px] top-14 w-3 h-3 bg-gray-800 border-2 border-gray-600 rounded-full"></div>
               <h3 className="text-lg font-semibold text-gray-300 pt-4">Early Technical Background</h3>
               <div className="text-gray-400 font-medium pb-2">Software Development & IT Infrastructure (2009 - 2015)</div>
               <p className="text-gray-500 text-sm max-w-3xl leading-relaxed">

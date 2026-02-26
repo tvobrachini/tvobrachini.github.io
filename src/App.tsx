@@ -85,37 +85,37 @@ function App() {
               <a href="https://international.nubank.com.br/about/" target="_blank" rel="noreferrer" className="inline-block text-[#8A05BE] font-medium hover:underline">Nubank</a>
               <div className="text-sm text-gray-500">Mar 2023 - Present ({getDurationPassed(new Date('2023-03-01'))})</div>
               <p className="text-gray-400 mt-2 max-w-3xl leading-relaxed">
-                Evaluating internal controls, mapping IT risks, and deploying AI-driven tools to enhance audit documentation and control testing methodologies in a fast-paced fintech environment.
+                Lead the evaluation of complex IT general controls and risk matrices. Spearhead the deployment of AI-driven automation for audit documentation and control testing methodologies within a high-velocity fintech ecosystem, enhancing overall audit efficiency and risk posture.
               </p>
             </div>
 
             <div className="relative group space-y-2 pt-8">
               <div className="absolute -left-[31px] top-9.5 w-3 h-3 bg-gray-600 rounded-full group-hover:bg-[#FFE600] transition-colors"></div>
               <h3 className="text-xl font-semibold">IT Internal Audit</h3>
-              <a href="https://investor.mercadolibre.com/about-us" target="_blank" rel="noreferrer" className="inline-block text-[#FFE600] font-medium hover:underline">Mercado Livre</a>
+              <a href="https://investor.mercadolibre.com/" target="_blank" rel="noreferrer" className="inline-block text-[#FFE600] font-medium hover:underline">Mercado Livre</a>
               <div className="text-sm text-gray-500">Nov 2021 - Mar 2023 (1 year 5 months)</div>
               <p className="text-gray-400 mt-2 max-w-3xl leading-relaxed">
-                Led IT general controls (ITGC) assessments and cloud security audits for LATAM's largest e-commerce platform. Coordinated cross-functional reviews to ensure compliance and robust security posture.
+                Directed comprehensive IT General Controls (ITGC) assessments and advanced cloud security audits across LATAM's premier e-commerce infrastructure. Orchestrated cross-functional reviews aligning technical operations with regulatory compliance, significantly strengthening the enterprise security posture.
               </p>
             </div>
 
             <div className="relative group space-y-2 pt-8">
               <div className="absolute -left-[31px] top-9.5 w-3 h-3 bg-gray-600 rounded-full group-hover:bg-[#00A868] transition-colors"></div>
               <h3 className="text-xl font-semibold">IT Internal Audit</h3>
-              <a href="https://investors.stone.co/about-stoneco/" target="_blank" rel="noreferrer" className="inline-block text-[#00A868] font-medium hover:underline">Stone</a>
+              <a href="https://www.stone.co.br/" target="_blank" rel="noreferrer" className="inline-block text-[#00A868] font-medium hover:underline">Stone</a>
               <div className="text-sm text-gray-500">Feb 2021 - Nov 2021 (10 months)</div>
               <p className="text-gray-400 mt-2 max-w-3xl leading-relaxed">
-                Focused on payment industry compliance (PCI-DSS) and risk management. Executed internal audit testing over critical financial applications and infrastructure infrastructure.
+                Specialized in payment industry compliance (PCI-DSS) and enterprise risk management. Architected and executed rigorous internal audit testing over mission-critical financial applications and core infrastructure, ensuring high availability and secure transaction environments.
               </p>
             </div>
 
             <div className="relative group space-y-2 pt-8">
               <div className="absolute -left-[31px] top-9.5 w-3 h-3 bg-gray-600 rounded-full group-hover:bg-[#D04A02] transition-colors"></div>
               <h3 className="text-xl font-semibold">Risk Assurance Senior Associate (External Audit)</h3>
-              <a href="https://www.pwc.com/gx/en/about.html" target="_blank" rel="noreferrer" className="inline-block text-[#D04A02] font-medium hover:underline">PwC Brasil</a>
+              <a href="https://www.pwc.com/gx/en/about.html" target="_blank" rel="noreferrer" className="inline-block text-[#D04A02] font-medium hover:underline">PwC</a>
               <div className="text-sm text-gray-500">Jul 2015 - Feb 2021 (5 years 8 months)</div>
               <p className="text-gray-400 mt-2 max-w-3xl leading-relaxed">
-                Developed IT and business process audits. Built flowcharts, risk matrices, and evaluated the design and operational effectiveness of complex internal controls over financial reporting (SOX compliance) for diverse global clients.
+                Orchestrated end-to-end IT and business process audits for diverse global clients. Developed comprehensive flowcharts and risk matrices, and rigorously evaluated the design and operational effectiveness of complex internal controls over financial reporting (SOX compliance) to mitigate enterprise risks.
               </p>
             </div>
 

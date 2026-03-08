@@ -161,12 +161,12 @@ function App() {
                 A stateful, interactive AI Audit Swarm powered by <b>LangGraph</b>. It coordinates specialized agents (Orchestrator, Researcher, Specialist, Challenger) to autonomously research risks, map controls, and execute recursive audit tests to generate a Findings Command Center. <a href="https://github.com/tvobrachini/grc-audit-swarm/blob/master/CASE_STUDY.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium">View Case Study.</a>
               </p>
               <ul className="list-disc list-inside text-sm text-gray-400 space-y-2 mb-6 ml-1">
-                <li><strong className="text-gray-300">Swarm Intelligence:</strong> Agents push back on each other's work (e.g. Challenger revisions) to ensure high-quality audit planning.</li>
-                <li><strong className="text-gray-300">Findings Command Center:</strong> Real-time KPI dashboards and drill-downs for TOD/TOE results with automated evidence extraction.</li>
-                <li><strong className="text-gray-300">Reliability Guardrails:</strong> 60+ unit tests enforcing agent contracts and graph state transitions.</li>
+                <li><strong className="text-gray-300">Live Infrastructure Integration:</strong> Autonomous evidence gathering via <b>AWS MCP</b> sidecar for real-time risk discovery.</li>
+                <li><strong className="text-gray-300">Ironclad Safeguards:</strong> Embedded 12-digit Account ID redaction and budget-friendly read-only guardrails for 100% private, zero-cost auditing.</li>
+                <li><strong className="text-gray-300">Reliability Guardrails:</strong> 80+ structural and BDD tests enforcing agent compliance and graph stability.</li>
               </ul>
               <div className="flex flex-wrap gap-2">
-                {['LangGraph', 'Pytest-BDD', 'Docker', 'Multi-Agent', 'Audit Engineering'].map(tag => (
+                {['LangGraph', 'AWS MCP', 'Privacy Redaction', 'Pytest-BDD', 'Docker', 'Audit Engineering'].map(tag => (
                   <span key={tag} className="text-xs font-semibold px-3 py-1 bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-full">{tag}</span>
                 ))}
               </div>

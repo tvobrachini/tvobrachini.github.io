@@ -158,7 +158,7 @@ function App() {
                 </div>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
-                A stateful, interactive AI Audit Swarm powered by <b>LangGraph</b>. It coordinates specialized agents (Orchestrator, Researcher, Specialist, Challenger) to autonomously research risks, map controls, and execute recursive audit tests to generate a Findings Command Center.
+                A stateful, interactive AI Audit Swarm powered by <b>LangGraph</b>. It coordinates specialized agents (Orchestrator, Researcher, Specialist, Challenger) to autonomously research risks, map controls, and execute recursive audit tests to generate a Findings Command Center. <a href="https://github.com/tvobrachini/grc-audit-swarm/blob/master/CASE_STUDY.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium">View Case Study.</a>
               </p>
               <ul className="list-disc list-inside text-sm text-gray-400 space-y-2 mb-6 ml-1">
                 <li><strong className="text-gray-300">Swarm Intelligence:</strong> Agents push back on each other's work (e.g. Challenger revisions) to ensure high-quality audit planning.</li>

@@ -166,7 +166,7 @@ function App() {
                 <li><strong className="text-gray-300">Reliability Guardrails:</strong> 60+ unit tests enforcing agent contracts and graph state transitions.</li>
               </ul>
               <div className="flex flex-wrap gap-2">
-                {['LangGraph', 'Python', 'Multi-Agent', 'DuckDuckGo Search', 'Audit Engineering'].map(tag => (
+                {['LangGraph', 'Pytest-BDD', 'Docker', 'Multi-Agent', 'Audit Engineering'].map(tag => (
                   <span key={tag} className="text-xs font-semibold px-3 py-1 bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-full">{tag}</span>
                 ))}
               </div>
@@ -193,7 +193,7 @@ function App() {
                 <li><strong className="text-gray-300">Master Control Database:</strong> Features a high-performance parsed JSON engine utilized by the Execution Swarm.</li>
               </ul>
               <div className="flex flex-wrap gap-2">
-                {['Python', 'Streamlit', 'SCF', 'Pandas', 'JSON Engine'].map(tag => (
+                {['Docker', 'uv', 'Streamlit', 'GenAI', 'JSON Engine'].map(tag => (
                   <span key={tag} className="text-xs font-semibold px-3 py-1 bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-full">{tag}</span>
                 ))}
               </div>
@@ -243,7 +243,7 @@ function App() {
                 Past experience in full-stack web development and utilizing modern LLMs for audit automation.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['Python/Django', 'PHP', 'Cursor', 'Claude', 'Vertex AI'].map(tag => (
+                {['Docker', 'uv', 'Cursor', 'LangGraph', 'GitHub Actions'].map(tag => (
                   <span key={tag} className="text-xs font-medium px-2 py-1 bg-white/10 rounded-md text-gray-300">{tag}</span>
                 ))}
               </div>

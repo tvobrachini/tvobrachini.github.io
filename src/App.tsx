@@ -144,28 +144,56 @@ function App() {
             <p className="text-gray-400">Deep-dive technical decision stories where I apply "Audit Engineering" to solve complex GRC challenges.</p>
           </div>
 
-          <div className="grid gap-6">
+          <div className="grid gap-8">
+            {/* Project: GRC Audit Swarm */}
+            <div className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 group">
+              <div className="flex justify-between items-start mb-4">
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-200 mb-2">
+                    <a href="https://github.com/tvobrachini/grc-audit-swarm" target="_blank" rel="noreferrer" className="hover:text-purple-400 transition-colors flex items-center gap-2">
+                      GRC Audit Swarm <Github size={20} className="text-gray-400 group-hover:text-purple-400 transition-colors" />
+                    </a>
+                  </h3>
+                  <p className="text-purple-400 text-sm font-medium">Adaptive AI Multi-Agent GRC Execution Engine</p>
+                </div>
+              </div>
+              <p className="text-gray-400 leading-relaxed mb-6">
+                A stateful, interactive AI Audit Swarm powered by <b>LangGraph</b>. It coordinates specialized agents (Orchestrator, Researcher, Specialist, Challenger) to autonomously research risks, map controls, and execute recursive audit tests to generate a Findings Command Center.
+              </p>
+              <ul className="list-disc list-inside text-sm text-gray-400 space-y-2 mb-6 ml-1">
+                <li><strong className="text-gray-300">Swarm Intelligence:</strong> Agents push back on each other's work (e.g. Challenger revisions) to ensure high-quality audit planning.</li>
+                <li><strong className="text-gray-300">Findings Command Center:</strong> Real-time KPI dashboards and drill-downs for TOD/TOE results with automated evidence extraction.</li>
+                <li><strong className="text-gray-300">Reliability Guardrails:</strong> 60+ unit tests enforcing agent contracts and graph state transitions.</li>
+              </ul>
+              <div className="flex flex-wrap gap-2">
+                {['LangGraph', 'Python', 'Multi-Agent', 'DuckDuckGo Search', 'Audit Engineering'].map(tag => (
+                  <span key={tag} className="text-xs font-semibold px-3 py-1 bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-full">{tag}</span>
+                ))}
+              </div>
+            </div>
+
+            {/* Project: SCF Auto-Crosswalker */}
             <div className="bg-white/5 border border-white/10 p-8 rounded-2xl hover:bg-white/10 transition-all duration-300 group">
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="text-2xl font-bold text-gray-200 mb-2">
                     <a href="https://github.com/tvobrachini/scf-auto-crosswalker" target="_blank" rel="noreferrer" className="hover:text-purple-400 transition-colors flex items-center gap-2">
-                      SCF Auto-Crosswalker <Github size={20} className="text-gray-400 group-hover:text-purple-400 transition-colors" />
+                      SCF Auto-Crosswalker (Core Data Hub) <Github size={20} className="text-gray-400 group-hover:text-purple-400 transition-colors" />
                     </a>
                   </h3>
-                  <p className="text-purple-400 text-sm font-medium">Open-Source GRC Assistant & Audit Engineering Showcase</p>
+                  <p className="text-purple-400 text-sm font-medium">Framework-as-Code & Master Data Hub for GRC Automation</p>
                 </div>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
-                An open-source, AI-powered internal GRC tool designed to eliminate manual spreadsheet mapping for IT Auditors and GRC Engineers. Built with Python, Streamlit, and LangChain (Llama-3). <a href="https://github.com/tvobrachini/scf-auto-crosswalker/blob/main/CASE_STUDY.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium">View the full architectural decision Case Study here.</a>
+                The central framework hub for my auditing ecosystem. An AI-powered tool designed to eliminate manual spreadsheet mapping for IT Auditors, serving as the <b>Source of Truth</b> for the Secure Controls Framework (SCF). <a href="https://github.com/tvobrachini/scf-auto-crosswalker/blob/main/CASE_STUDY.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium">View Case Study.</a>
               </p>
               <ul className="list-disc list-inside text-sm text-gray-400 space-y-2 mb-6 ml-1">
-                <li><strong className="text-gray-300">Auto-Crosswalker:</strong> Maps massive raw IT policies and Cloud Security JSON findings directly to the Secure Controls Framework (SCF).</li>
-                <li><strong className="text-gray-300">Compliance Gap Analyzer:</strong> Evaluates existing controls against target regulations (e.g., SOC 2, HIPAA) to instantly generate missing control checklists.</li>
-                <li><strong className="text-gray-300">Audit Engineering (Compliance-as-Code):</strong> Structured LLM outputs are rigorously tested with a <code className="bg-white/10 px-1 py-0.5 rounded">pytest</code> suite and continuously deployed via <strong className="text-white">GitHub Actions CI/CD</strong>, proving that GRC tools can be built with the same SDLC rigor as production environments.</li>
+                <li><strong className="text-gray-300">Auto-Crosswalker:</strong> Maps raw IT policies and Cloud Security JSON findings to the SCF.</li>
+                <li><strong className="text-gray-300">Compliance Gap Analyzer:</strong> Instantly generates missing control checklists for target regulations (SOC 2, GDPR, PCI).</li>
+                <li><strong className="text-gray-300">Master Control Database:</strong> Features a high-performance parsed JSON engine utilized by the Execution Swarm.</li>
               </ul>
               <div className="flex flex-wrap gap-2">
-                {['Python', 'Streamlit', 'LangChain', 'Llama-3', 'Pandas', 'GRC Automation'].map(tag => (
+                {['Python', 'Streamlit', 'SCF', 'Pandas', 'JSON Engine'].map(tag => (
                   <span key={tag} className="text-xs font-semibold px-3 py-1 bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-full">{tag}</span>
                 ))}
               </div>

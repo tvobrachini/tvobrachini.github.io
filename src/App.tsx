@@ -1,15 +1,16 @@
 import { Github, Linkedin, Mail, Shield, Server, FileText } from 'lucide-react';
 
-function getDurationPassed(startDate: Date): string {
-  const now = new Date();
-  const diffTime = Math.abs(now.getTime() - startDate.getTime());
-  const diffMonths = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 30.416));
-  const years = Math.floor(diffMonths / 12);
-  const months = diffMonths % 12;
-
-  if (years > 0 && months > 0) return `${years} yr${years > 1 ? 's' : ''} ${months} mo${months > 1 ? 's' : ''}`;
-  if (years > 0) return `${years} yr${years > 1 ? 's' : ''}`;
-  return `${months} mo${months > 1 ? 's' : ''}`;
+function getDurationPassed(startDate: Date, endDate: Date = new Date()): string {
+  let years = endDate.getFullYear() - startDate.getFullYear();
+  let months = endDate.getMonth() - startDate.getMonth();
+  if (months < 0) {
+    years--;
+    months += 12;
+  }
+  const parts: string[] = [];
+  if (years > 0) parts.push(`${years} year${years > 1 ? 's' : ''}`);
+  if (months > 0) parts.push(`${months} month${months > 1 ? 's' : ''}`);
+  return parts.join(' ') || 'Less than a month';
 }
 
 function App() {
@@ -34,7 +35,7 @@ function App() {
       <main className="max-w-5xl mx-auto px-6 pt-32 pb-24 space-y-32">
 
         {/* Hero Section */}
-        <section className="space-y-8 animate-fade-in-up">
+        <section id="about" className="space-y-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 border border-purple-500/20 text-purple-300 text-sm">
             <Shield size={14} />
             <span>Specialist IT Auditor</span>
@@ -51,19 +52,19 @@ function App() {
           <p className="text-xl text-gray-400 max-w-2xl leading-relaxed">
             Hi, I'm Tiago Brachini. I am a dedicated IT Internal & External Auditor with a decade of hands-on expertise evaluating complex technical environments.
             <br /><br />
-            My deep background in IT controls naturally extends into robust capabilities across <b>InfoSec GRC, Cloud Security, and IT Security Compliance</b> — helping organizations build secure, transparent, and resilient digital architectures.
+            My deep background in IT controls naturally extends into robust capabilities across <strong>InfoSec GRC, Cloud Security, and IT Security Compliance</strong> — helping organizations build secure, transparent, and resilient digital architectures.
           </p>
 
           <div className="flex gap-4 pt-4">
-            <a href="https://www.linkedin.com/in/tvobrachini" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors">
+            <a href="https://www.linkedin.com/in/tvobrachini" target="_blank" rel="noreferrer" aria-label="Visit LinkedIn profile" className="flex items-center gap-2 bg-white text-black px-6 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors">
               <Linkedin size={20} />
               <span>LinkedIn</span>
             </a>
-            <a href="https://github.com/tvobrachini" target="_blank" rel="noreferrer" className="flex items-center gap-2 bg-white/5 border border-white/10 hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-all">
+            <a href="https://github.com/tvobrachini" target="_blank" rel="noreferrer" aria-label="Visit GitHub profile" className="flex items-center gap-2 bg-white/5 border border-white/10 hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-all">
               <Github size={20} />
               <span>GitHub</span>
             </a>
-            <a href="mailto:tvobrachini@gmail.com" className="flex items-center gap-2 bg-white/5 border border-white/10 hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-all">
+            <a href="mailto:tvobrachini@gmail.com" aria-label="Send email" className="flex items-center gap-2 bg-white/5 border border-white/10 hover:bg-white/10 px-6 py-3 rounded-lg font-medium transition-all">
               <Mail size={20} />
               <span>Contact</span>
             </a>
@@ -93,7 +94,7 @@ function App() {
               <div className="absolute left-[-24px] -translate-x-1/2 top-9.5 w-3 h-3 bg-gray-700 rounded-full ring-4 ring-[#0a0a0a] group-hover:bg-[#FFE600] group-hover:shadow-[0_0_12px_rgba(255,230,0,0.8)] transition-all duration-300"></div>
               <h3 className="text-xl font-semibold">IT Internal Audit</h3>
               <a href="https://investor.mercadolibre.com/" target="_blank" rel="noreferrer" className="inline-block text-[#FFE600] font-medium hover:underline">Mercado Livre</a>
-              <div className="text-sm text-gray-500">Nov 2021 - Mar 2023 (1 year 5 months)</div>
+              <div className="text-sm text-gray-500">Nov 2021 - Mar 2023 ({getDurationPassed(new Date('2021-11-01'), new Date('2023-03-01'))})</div>
               <p className="text-gray-400 mt-2 max-w-3xl leading-relaxed">
                 Directed comprehensive IT General Controls (ITGC) assessments and advanced cloud security audits across LATAM's premier e-commerce infrastructure. Orchestrated cross-functional reviews aligning technical operations with regulatory compliance, significantly strengthening the enterprise security posture.
               </p>
@@ -158,10 +159,10 @@ function App() {
                 </div>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
-                A stateful, interactive AI Audit Swarm powered by <b>LangGraph</b>. It coordinates specialized agents (Orchestrator, Researcher, Specialist, Challenger) to autonomously research risks, map controls, and execute recursive audit tests to generate a Findings Command Center. <a href="https://github.com/tvobrachini/grc-audit-swarm/blob/master/CASE_STUDY.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium">View Case Study.</a>
+                A stateful, interactive AI Audit Swarm powered by <strong>LangGraph</strong>. It coordinates specialized agents (Orchestrator, Researcher, Specialist, Challenger) to autonomously research risks, map controls, and execute recursive audit tests to generate a Findings Command Center. <a href="https://github.com/tvobrachini/grc-audit-swarm/blob/master/CASE_STUDY.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium">View Case Study.</a>
               </p>
               <ul className="list-disc list-inside text-sm text-gray-400 space-y-2 mb-6 ml-1">
-                <li><strong className="text-gray-300">Live Infrastructure Integration:</strong> Autonomous evidence gathering via <b>AWS MCP</b> sidecar for real-time risk discovery.</li>
+                <li><strong className="text-gray-300">Live Infrastructure Integration:</strong> Autonomous evidence gathering via <strong>AWS MCP</strong> sidecar for real-time risk discovery.</li>
                 <li><strong className="text-gray-300">Ironclad Safeguards:</strong> Embedded 12-digit Account ID redaction and budget-friendly read-only guardrails for 100% private, zero-cost auditing.</li>
                 <li><strong className="text-gray-300">Reliability Guardrails:</strong> 80+ structural and BDD tests enforcing agent compliance and graph stability.</li>
               </ul>
@@ -185,7 +186,7 @@ function App() {
                 </div>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
-                The central framework hub for my auditing ecosystem. An AI-powered tool designed to eliminate manual spreadsheet mapping for IT Auditors, serving as the <b>Source of Truth</b> for the Secure Controls Framework (SCF). <a href="https://github.com/tvobrachini/scf-auto-crosswalker/blob/main/CASE_STUDY.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium">View Case Study.</a>
+                The central framework hub for my auditing ecosystem. An AI-powered tool designed to eliminate manual spreadsheet mapping for IT Auditors, serving as the <strong>Source of Truth</strong> for the Secure Controls Framework (SCF). <a href="https://github.com/tvobrachini/scf-auto-crosswalker/blob/main/CASE_STUDY.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium">View Case Study.</a>
               </p>
               <ul className="list-disc list-inside text-sm text-gray-400 space-y-2 mb-6 ml-1">
                 <li><strong className="text-gray-300">Auto-Crosswalker:</strong> Maps raw IT policies and Cloud Security JSON findings to the SCF.</li>

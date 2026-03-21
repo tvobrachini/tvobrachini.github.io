@@ -5,8 +5,18 @@
   --foreground: #ededed;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--background);
   color: var(--foreground);
   font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+:focus-visible {
+  outline: 2px solid #a855f7;
+  outline-offset: 3px;
+  border-radius: 4px;
 }

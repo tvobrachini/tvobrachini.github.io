@@ -1,4 +1,5 @@
-import { Github, Linkedin, Mail, Shield, Server, FileText } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Github, Linkedin, Mail, Shield, Server, FileText, Menu, X, ArrowUp } from 'lucide-react';
 
 function getDurationPassed(startDate: Date, endDate: Date = new Date()): string {
   let years = endDate.getFullYear() - startDate.getFullYear();
@@ -13,23 +14,104 @@ function getDurationPassed(startDate: Date, endDate: Date = new Date()): string 
   return parts.join(' ') || 'Less than a month';
 }
 
+const navLinks = [
+  { href: '#about', label: 'About' },
+  { href: '#experience', label: 'Experience' },
+  { href: '#projects', label: 'Projects' },
+  { href: '#skills', label: 'Skills' },
+  { href: '#education', label: 'Education' },
+];
+
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('about');
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Scroll spy: highlight nav link for the section currently in view
+  useEffect(() => {
+    const sectionIds = navLinks.map(({ href }) => href.slice(1));
+
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+
+      // Show/hide scroll-to-top button
+      setShowScrollTop(scrollY > 300);
+
+      // Find the last section whose top is above the viewport midpoint
+      let current = sectionIds[0];
+      for (const id of sectionIds) {
+        const el = document.getElementById(id);
+        if (el && el.offsetTop - 120 <= scrollY) {
+          current = id;
+        }
+      }
+      setActiveSection(current);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Close mobile menu on Escape
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setMenuOpen(false);
+    };
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   return (
     <div className="min-h-screen bg-[#0a0a0a] text-[#ededed] font-sans selection:bg-purple-500/30">
 
       {/* Navigation */}
       <nav className="fixed w-full z-50 top-0 bg-[#0a0a0a]/80 backdrop-blur-md border-b border-white/5 py-4">
         <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
-          <span className="text-xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
+          <a href="#about" className="text-xl font-bold tracking-tighter bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-blue-500">
             tvobrachini
-          </span>
-          <div className="flex gap-6 text-sm font-medium text-gray-400">
-            <a href="#about" className="hover:text-white transition-colors">About</a>
-            <a href="#experience" className="hover:text-white transition-colors">Experience</a>
-            <a href="#projects" className="hover:text-white transition-colors">Projects</a>
-            <a href="#skills" className="hover:text-white transition-colors">Skills</a>
+          </a>
+
+          {/* Desktop nav */}
+          <div className="hidden md:flex gap-6 text-sm font-medium">
+            {navLinks.map(({ href, label }) => (
+              <a
+                key={href}
+                href={href}
+                className={`transition-colors ${activeSection === href.slice(1) ? 'text-white' : 'text-gray-400 hover:text-white'}`}
+              >
+                {label}
+              </a>
+            ))}
           </div>
+
+          {/* Mobile hamburger */}
+          <button
+            className="md:hidden text-gray-400 hover:text-white transition-colors"
+            onClick={() => setMenuOpen(prev => !prev)}
+            aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          >
+            {menuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
         </div>
+
+        {/* Mobile dropdown */}
+        {menuOpen && (
+          <div className="md:hidden border-t border-white/5 bg-[#0a0a0a]/95 backdrop-blur-md">
+            <div className="max-w-5xl mx-auto px-6 py-4 flex flex-col gap-4 text-sm font-medium text-gray-400">
+              {navLinks.map(({ href, label }) => (
+                <a
+                  key={href}
+                  href={href}
+                  className={`transition-colors py-1 ${activeSection === href.slice(1) ? 'text-white' : 'hover:text-white'}`}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {label}
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
       </nav>
 
       <main className="max-w-5xl mx-auto px-6 pt-32 pb-24 space-y-32">
@@ -75,7 +157,7 @@ function App() {
         <section id="experience" className="space-y-12">
           <div className="space-y-2">
             <h2 className="text-3xl font-bold tracking-tight">Professional Experience</h2>
-            <p className="text-gray-400">Over 10+ years as an external and internal auditor across top-tier financial and tech companies.</p>
+            <p className="text-gray-400">10+ years as an external and internal auditor across top-tier financial and tech companies.</p>
           </div>
 
           <div className="grid gap-6 border-l border-white/10 pl-6 ml-3">
@@ -287,7 +369,15 @@ function App() {
               <div>
                 <h3 className="text-xl font-semibold mb-1 text-gray-200">Publications</h3>
                 <p className="text-sm text-gray-400 mt-2">
-                  <strong className="text-gray-300">"Impact of systemic management on project development: A study in a software house"</strong>
+                  <a
+                    href="https://www.researchgate.net/publication/319282476_Impacto_da_gestao_sistemica_no_desenvolvimento_de_projetos_um_estudo_em_uma_Software_House"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-gray-300 font-semibold hover:text-purple-400 transition-colors hover:underline"
+                  >
+                    "Impact of systemic management on project development: A study in a software house"
+                  </a>
+                  <span className="block text-gray-500 mt-1">ResearchGate</span>
                 </p>
               </div>
 
@@ -306,6 +396,18 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Scroll-to-top button */}
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          aria-label="Scroll to top"
+          className="fixed bottom-8 right-8 z-50 p-3 rounded-full bg-white/10 border border-white/20 text-gray-300 hover:bg-white/20 hover:text-white backdrop-blur-md transition-all duration-300 shadow-lg"
+        >
+          <ArrowUp size={20} />
+        </button>
+      )}
+
     </div>
   );
 }

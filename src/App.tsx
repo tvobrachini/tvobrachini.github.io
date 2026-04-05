@@ -237,19 +237,19 @@ function App() {
                       GRC Audit Swarm <Github size={20} className="text-gray-400 group-hover:text-purple-400 transition-colors" />
                     </a>
                   </h3>
-                  <p className="text-purple-400 text-sm font-medium">Adaptive AI Multi-Agent GRC Execution Engine</p>
+                  <p className="text-purple-400 text-sm font-medium">AI Multi-Agent GRC Audit Platform</p>
                 </div>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
-                A stateful, interactive AI Audit Swarm powered by <strong>LangGraph</strong>. It coordinates specialized agents (Orchestrator, Researcher, Specialist, Challenger) to autonomously research risks, map controls, and execute recursive audit tests to generate a Findings Command Center. <a href="https://github.com/tvobrachini/grc-audit-swarm/blob/master/CASE_STUDY.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium">View Case Study.</a>
+                A stateful, three-phase audit automation engine powered by <strong>CrewAI</strong> & <strong>Groq</strong>. It orchestrates specialized agent crews across Planning, Fieldwork, and Reporting — each gated by human approval (IIA 2340) and backed by an immutable evidence vault. <a href="https://github.com/tvobrachini/grc-audit-swarm/blob/master/CASE_STUDY.md" target="_blank" rel="noreferrer" className="text-blue-400 hover:text-blue-300 font-medium">View Case Study.</a>
               </p>
               <ul className="list-disc list-inside text-sm text-gray-400 space-y-2 mb-6 ml-1">
-                <li><strong className="text-gray-300">Live Infrastructure Integration:</strong> Autonomous evidence gathering via <strong>AWS MCP</strong> sidecar for real-time risk discovery.</li>
-                <li><strong className="text-gray-300">Ironclad Safeguards:</strong> Embedded 12-digit Account ID redaction and budget-friendly read-only guardrails for 100% private, zero-cost auditing.</li>
-                <li><strong className="text-gray-300">Reliability Guardrails:</strong> 80+ structural and BDD tests enforcing agent compliance and graph stability.</li>
+                <li><strong className="text-gray-300">Phase-Based Swarm:</strong> Segregates audit duties across Planning (RACM), Fieldwork (Testing), and Reporting crews with autonomous QA auto-retry loops.</li>
+                <li><strong className="text-gray-300">Immutable Evidence Vault:</strong> PCAOB AS 1215 compliant SHA-256 hashing and verbatim quote verification badges to prevent AI hallucinations.</li>
+                <li><strong className="text-gray-300">Live Infrastructure Integration:</strong> Native evidence collection via <strong>AWS APIs</strong> for real-time verification of IAM policies, MFA, and S3 security.</li>
               </ul>
               <div className="flex flex-wrap gap-2">
-                {['LangGraph', 'AWS MCP', 'Privacy Redaction', 'Pytest-BDD', 'Docker', 'Audit Engineering'].map(tag => (
+                {['CrewAI', 'Groq', 'AWS Audit', 'SHA-256 Vault', 'IIA 2340', 'Audit Engineering'].map(tag => (
                   <span key={tag} className="text-xs font-semibold px-3 py-1 bg-purple-500/10 text-purple-300 border border-purple-500/20 rounded-full">{tag}</span>
                 ))}
               </div>
@@ -326,7 +326,7 @@ function App() {
                 Past experience in full-stack web development and utilizing modern LLMs for audit automation.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['Docker', 'uv', 'Claude Code', 'LangGraph', 'GitHub Actions', 'Streamlit'].map(tag => (
+                {['Docker', 'uv', 'Cursor', 'CrewAI', 'Claude Code', 'LangGraph', 'GitHub Actions', 'Streamlit'].map(tag => (
                   <span key={tag} className="text-xs font-medium px-2 py-1 bg-white/10 rounded-md text-gray-300">{tag}</span>
                 ))}
               </div>

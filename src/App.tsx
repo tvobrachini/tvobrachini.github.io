@@ -300,7 +300,7 @@ function App() {
                 Evaluating internal controls, SOX compliance, and mapping IT risks based on well-known frameworks.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['ISO 27001', 'NIST', 'COBIT', 'SOX', 'PCI-DSS'].map(tag => (
+                {['ISO 27001', 'NIST', 'COBIT', 'SOX', 'PCI-DSS', 'SCF'].map(tag => (
                   <span key={tag} className="text-xs font-medium px-2 py-1 bg-white/10 rounded-md text-gray-300">{tag}</span>
                 ))}
               </div>
@@ -326,7 +326,7 @@ function App() {
                 Past experience in full-stack web development and utilizing modern LLMs for audit automation.
               </p>
               <div className="flex flex-wrap gap-2">
-                {['Docker', 'uv', 'Cursor', 'CrewAI', 'LangGraph', 'GitHub Actions'].map(tag => (
+                {['Docker', 'uv', 'Cursor', 'CrewAI', 'Claude Code', 'LangGraph', 'GitHub Actions', 'Streamlit'].map(tag => (
                   <span key={tag} className="text-xs font-medium px-2 py-1 bg-white/10 rounded-md text-gray-300">{tag}</span>
                 ))}
               </div>

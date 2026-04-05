@@ -18,6 +18,7 @@ const navLinks = [
   { href: '#professional-experience', label: '02. Professional Experience' },
   { href: '#strategic-projects', label: '03. Strategic Projects' },
   { href: '#capabilities', label: '04. Capabilities' },
+  { href: '#credentials', label: '05. Credentials' },
 ];
 
 function App() {
@@ -56,20 +57,28 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-alpine-obsidian text-alpine-crepe font-sans selection:bg-alpine-moss selection:text-alpine-crepe leading-relaxed">
+    <div className="min-h-screen bg-alpine-obsidian text-alpine-crepe font-sans selection:bg-alpine-moss selection:text-white scroll-smooth relative">
+      <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-alpine-basalt/20 via-transparent to-transparent"></div>
       
-      {/* Top Border */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-alpine-stone z-50"></div>
+      {/* Ambient Atmospheric Background */}
+      <div 
+        className="absolute top-0 left-0 w-full h-[700px] md:h-[900px] pointer-events-none opacity-40 bg-cover bg-[center_bottom]"
+        style={{ 
+          backgroundImage: "url('/alpine_bg.png')", 
+          maskImage: "linear-gradient(to bottom, black 10%, transparent 95%)", 
+          WebkitMaskImage: "linear-gradient(to bottom, black 10%, transparent 95%)" 
+        }}
+      />
 
       {/* Navigation */}
       <nav className="fixed w-full z-40 top-1 bg-alpine-obsidian/90 backdrop-blur-md border-b border-alpine-stone py-5">
-        <div className="max-w-5xl mx-auto px-6 flex justify-between items-center">
-          <a href="#executive-summary" className="text-xl font-serif font-bold text-alpine-crepe tracking-tight hover:text-alpine-moss transition-colors">
+        <div className="max-w-[1400px] mx-auto px-6 xl:px-12 flex justify-between items-center">
+          <a href="#executive-summary" className="text-xl font-serif font-bold text-alpine-crepe tracking-tight hover:text-alpine-moss transition-colors whitespace-nowrap">
             tvobrachini
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest text-alpine-cloud">
+          <div className="hidden xl:flex gap-4 2xl:gap-8 text-[10px] 2xl:text-xs font-mono uppercase tracking-widest text-alpine-cloud whitespace-nowrap">
             {navLinks.map(({ href, label }) => (
               <a
                 key={href}
@@ -85,7 +94,7 @@ function App() {
 
           {/* Mobile menu toggle */}
           <button
-            className="md:hidden font-mono text-xs border border-alpine-stone px-3 py-1 uppercase text-alpine-cloud hover:bg-alpine-stone hover:text-alpine-crepe transition-colors"
+            className="xl:hidden font-mono text-xs border border-alpine-stone px-3 py-1 uppercase text-alpine-cloud hover:bg-alpine-stone hover:text-alpine-crepe transition-colors"
             onClick={() => setMenuOpen(prev => !prev)}
           >
             {menuOpen ? 'CLOSE' : 'MENU'}
@@ -94,7 +103,7 @@ function App() {
 
         {/* Mobile dropdown */}
         {menuOpen && (
-          <div className="md:hidden border-t border-alpine-stone bg-alpine-basalt mt-4">
+          <div className="xl:hidden border-t border-alpine-stone bg-alpine-basalt mt-4">
             <div className="max-w-5xl mx-auto px-6 py-6 flex flex-col gap-4 font-mono text-xs uppercase tracking-widest">
               {navLinks.map(({ href, label }) => (
                 <a
@@ -113,58 +122,99 @@ function App() {
         )}
       </nav>
 
-      <main className="max-w-4xl mx-auto px-6 pt-48 pb-32 space-y-40">
+      <main className="max-w-4xl mx-auto px-6 pt-48 pb-0 space-y-40">
 
         {/* Hero Section */}
-        <section id="executive-summary" className="space-y-10 relative">
+        <section id="executive-summary" className="relative">
           
-          <div className="font-mono text-xs tracking-widest uppercase text-alpine-moss border-b border-alpine-stone pb-3 mb-8 inline-block">
-            IT Risk & Governance // Executive Summary
-          </div>
+          <div className="flex flex-col-reverse lg:flex-row lg:justify-between lg:items-start gap-12 lg:gap-20">
+            
+            {/* Text Content */}
+            <div className="space-y-10 flex-1">
+              <div className="font-mono text-xs tracking-widest uppercase text-alpine-moss border-b border-alpine-stone pb-3 mb-8 inline-block">
+                IT Risk & Governance // Executive Summary
+              </div>
 
-          <h1 className="text-5xl md:text-7xl font-serif font-black text-alpine-crepe leading-[1.1] tracking-tight">
-            Navigating the expansive landscape of <span className="italic text-alpine-slate">IT risk.</span>
-          </h1>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-alpine-crepe leading-[1.1] tracking-tight">
+                Navigating the expansive landscape of <span className="italic text-alpine-slate">IT risk.</span>
+              </h1>
 
-          <div className="border-l-2 border-alpine-moss pl-6 sm:pl-8 mt-10">
-            <p className="text-xl text-alpine-crepe/90 max-w-2xl leading-relaxed">
-              Technology and AI are fundamentally shifting the ground beneath modern enterprise capabilities. 
-            </p>
-            <p className="text-lg text-alpine-cloud max-w-2xl leading-relaxed mt-4">
-              I operate as a deeply technical Senior IT Internal Auditor. By bridging the gap between granular technical operations and broad executive business risk, I design enduring control frameworks capable of withstanding the elements of a rapidly changing technical frontier.
-            </p>
-          </div>
+              <div className="border-l-2 border-alpine-moss pl-6 sm:pl-8 mt-10">
+                <p className="text-xl text-alpine-crepe/90 max-w-2xl leading-relaxed">
+                  Technology and AI are fundamentally shifting the ground beneath modern enterprise capabilities. 
+                </p>
+                <p className="text-lg text-alpine-cloud max-w-2xl leading-relaxed mt-4">
+                  I operate as a deeply technical Senior IT Internal Auditor. By bridging the gap between granular technical operations and broad executive business risk, I design enduring control frameworks capable of withstanding the elements of a rapidly changing technical frontier.
+                </p>
+              </div>
 
-          <div className="flex flex-wrap gap-4 pt-10 font-mono text-xs uppercase tracking-widest">
-            <a href="https://www.linkedin.com/in/tvobrachini" target="_blank" rel="noreferrer" className="bg-alpine-crepe text-alpine-obsidian px-8 py-3 border border-alpine-crepe hover:bg-transparent hover:text-alpine-crepe transition-colors">
-              LinkedIn Profile
-            </a>
-            <a href="https://github.com/tvobrachini" target="_blank" rel="noreferrer" className="bg-transparent text-alpine-cloud px-8 py-3 border border-alpine-stone hover:border-alpine-crepe hover:text-alpine-crepe transition-colors">
-              GitHub Repository
-            </a>
-            <a href="mailto:tvobrachini@gmail.com" className="bg-transparent text-alpine-cloud px-8 py-3 border-b border-transparent hover:border-alpine-moss transition-colors content-center">
-              Direct Contact
-            </a>
+              <div className="flex flex-wrap gap-4 pt-10 font-mono text-xs uppercase tracking-widest items-center">
+                <a href="https://www.linkedin.com/in/tvobrachini" target="_blank" rel="noreferrer" className="bg-alpine-crepe text-alpine-obsidian px-8 py-3 border border-alpine-crepe hover:bg-transparent hover:text-alpine-crepe transition-colors">
+                  LinkedIn Profile
+                </a>
+                <a href="https://github.com/tvobrachini" target="_blank" rel="noreferrer" className="bg-transparent text-alpine-cloud px-8 py-3 border border-alpine-stone hover:border-alpine-crepe hover:text-alpine-crepe transition-colors">
+                  GitHub Repository
+                </a>
+                <a href="mailto:tvobrachini@gmail.com" className="bg-transparent text-alpine-cloud px-8 py-3 border-b-2 border-transparent hover:border-alpine-moss transition-colors">
+                  Direct Contact
+                </a>
+              </div>
+            </div>
+
+            {/* Profile Image Avatar */}
+            <div className="w-32 h-32 md:w-40 md:h-40 xl:w-56 xl:h-56 shrink-0 relative mt-4 md:mt-2 group self-start">
+               <div className="absolute inset-0 bg-alpine-moss translate-x-3 translate-y-3 opacity-30 border border-alpine-stone group-hover:translate-x-4 group-hover:translate-y-4 group-hover:opacity-50 transition-all duration-500"></div>
+               <img 
+                 src="/profile.jpg" 
+                 alt="T.V. Brachini" 
+                 className="relative w-full h-full object-cover border border-alpine-stone brightness-90 saturate-[0.85] opacity-90 hover:brightness-100 hover:saturate-100 hover:opacity-100 transition-all duration-700 isolate" 
+               />
+            </div>
+
           </div>
         </section>
 
+      </main>
+
+      {/* Cinematic Divider — full viewport width */}
+      <div className="relative overflow-hidden h-44 md:h-56 w-full">
+        <img
+          src="/alpine_divider.png"
+          alt="Alpine terrain"
+          className="w-full h-full object-cover object-[center_55%] opacity-75"
+        />
+        {/* Very light top fade only */}
+        <div className="absolute inset-0 bg-gradient-to-b from-alpine-obsidian/80 via-transparent to-transparent pointer-events-none" />
+        {/* Very light bottom fade only */}
+        <div className="absolute inset-0 bg-gradient-to-t from-alpine-obsidian/60 via-transparent to-transparent pointer-events-none" />
+        {/* Minimal side vignette */}
+        <div className="absolute inset-0 bg-gradient-to-r from-alpine-obsidian/30 via-transparent to-alpine-obsidian/30 pointer-events-none" />
+        <div className="absolute bottom-4 right-8 font-mono text-[9px] uppercase tracking-[0.3em] text-alpine-cloud/30 select-none">
+          Navigating Complex Terrain
+        </div>
+      </div>
+
+      <main className="max-w-4xl mx-auto px-6 pt-20 pb-32 space-y-40">
+
         {/* Experience Section */}
+
         <section id="professional-experience" className="space-y-16">
-          <div className="border-b border-alpine-stone pb-4 flex flex-col md:flex-row md:items-baseline md:justify-between">
+          <div className="border-b border-alpine-stone pb-4 flex flex-col md:flex-row md:items-baseline md:justify-between flex-wrap gap-y-2">
             <h2 className="text-3xl font-serif font-bold text-alpine-crepe">Professional Experience</h2>
-            <p className="font-mono text-xs text-alpine-cloud mt-2 md:mt-0 uppercase tracking-widest">10+ Years of Excellence</p>
+            <p className="font-mono text-xs text-alpine-cloud mt-2 md:mt-0 uppercase tracking-widest whitespace-nowrap">10+ Years of Excellence</p>
           </div>
 
           <div className="border-l border-alpine-stone pl-6 md:pl-10 space-y-16 relative">
 
             {/* Nubank */}
             <div className="relative group">
-              <div className="absolute left-[-28px] md:left-[-44px] top-1.5 w-3 h-3 bg-alpine-obsidian border-2 border-alpine-moss group-hover:bg-alpine-moss transition-colors"></div>
-              <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+              <div className="absolute left-[-28px] md:left-[-44px] top-1.5 w-3 h-3 bg-alpine-obsidian border-2 border-[#926C9C] group-hover:bg-[#926C9C] transition-colors"></div>
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-baseline mb-2 flex-wrap gap-y-2">
                 <h3 className="text-2xl font-serif font-bold text-alpine-crepe">
                   <a href="https://international.nubank.com.br/about/" target="_blank" rel="noreferrer" className="hover:text-alpine-moss transition-colors">Nubank</a>
+                  <span className="font-mono text-[10px] sm:text-xs text-alpine-cloud ml-3 tracking-widest uppercase align-middle bg-alpine-stone/50 px-2 py-0.5 rounded-sm whitespace-nowrap">Largest LATAM Digital Bank</span>
                 </h3>
-                <span className="font-mono text-xs text-alpine-moss font-bold tracking-widest uppercase mt-1 md:mt-0">Mar 2023 - Present ({getDurationPassed(new Date('2023-03-01'))})</span>
+                <span className="font-mono text-xs text-[#926C9C] font-bold tracking-widest uppercase mt-2 lg:mt-0 whitespace-nowrap">Mar 2023 - Present ({getDurationPassed(new Date('2023-03-01'))})</span>
               </div>
               <div className="font-sans font-bold tracking-wide text-alpine-slate mb-4">IT Internal Audit Specialist</div>
               <p className="text-alpine-cloud leading-relaxed max-w-3xl">
@@ -174,12 +224,13 @@ function App() {
 
             {/* Mercado Livre */}
             <div className="relative group">
-              <div className="absolute left-[-28px] md:left-[-44px] top-1.5 w-3 h-3 bg-alpine-obsidian border-2 border-alpine-stone group-hover:bg-alpine-moss transition-colors"></div>
-              <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+              <div className="absolute left-[-28px] md:left-[-44px] top-1.5 w-3 h-3 bg-alpine-obsidian border-2 border-[#C4B160] group-hover:bg-[#C4B160] transition-colors"></div>
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-baseline mb-2 flex-wrap gap-y-2">
                 <h3 className="text-2xl font-serif font-bold text-alpine-crepe">
                   <a href="https://investor.mercadolibre.com/" target="_blank" rel="noreferrer" className="hover:text-alpine-moss transition-colors">Mercado Livre</a>
+                  <span className="font-mono text-[10px] sm:text-xs text-alpine-cloud ml-3 tracking-widest uppercase align-middle bg-alpine-stone/50 px-2 py-0.5 rounded-sm whitespace-nowrap">LATAM #1 E-Commerce</span>
                 </h3>
-                <span className="font-mono text-xs text-alpine-cloud font-bold tracking-widest uppercase mt-1 md:mt-0">Nov 2021 - Mar 2023 ({getDurationPassed(new Date('2021-11-01'), new Date('2023-03-01'))})</span>
+                <span className="font-mono text-xs text-[#C4B160] font-bold tracking-widest uppercase mt-2 lg:mt-0 whitespace-nowrap">Nov 2021 - Mar 2023 ({getDurationPassed(new Date('2021-11-01'), new Date('2023-03-01'))})</span>
               </div>
               <div className="font-sans font-bold tracking-wide text-alpine-slate mb-4">IT Internal Audit & Cloud Security</div>
               <p className="text-alpine-cloud leading-relaxed max-w-3xl">
@@ -189,12 +240,13 @@ function App() {
 
             {/* Stone */}
             <div className="relative group">
-              <div className="absolute left-[-28px] md:left-[-44px] top-1.5 w-3 h-3 bg-alpine-obsidian border-2 border-alpine-stone group-hover:bg-alpine-moss transition-colors"></div>
-              <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+              <div className="absolute left-[-28px] md:left-[-44px] top-1.5 w-3 h-3 bg-alpine-obsidian border-2 border-[#5A8F70] group-hover:bg-[#5A8F70] transition-colors"></div>
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-baseline mb-2 flex-wrap gap-y-2">
                 <h3 className="text-2xl font-serif font-bold text-alpine-crepe">
                   <a href="https://www.stoneco.com.br/en/" target="_blank" rel="noreferrer" className="hover:text-alpine-moss transition-colors">Stone</a>
+                  <span className="font-mono text-[10px] sm:text-xs text-alpine-cloud ml-3 tracking-widest uppercase align-middle bg-alpine-stone/50 px-2 py-0.5 rounded-sm whitespace-nowrap">Major Payment Processor</span>
                 </h3>
-                <span className="font-mono text-xs text-alpine-cloud font-bold tracking-widest uppercase mt-1 md:mt-0">Feb 2021 - Nov 2021 (10 MOS)</span>
+                <span className="font-mono text-xs text-[#5A8F70] font-bold tracking-widest uppercase mt-2 lg:mt-0 whitespace-nowrap">Feb 2021 - Nov 2021 (10 MOS)</span>
               </div>
               <div className="font-sans font-bold tracking-wide text-alpine-slate mb-4">IT Internal Audit</div>
               <p className="text-alpine-cloud leading-relaxed max-w-3xl">
@@ -204,12 +256,13 @@ function App() {
 
             {/* PwC */}
             <div className="relative group">
-              <div className="absolute left-[-28px] md:left-[-44px] top-1.5 w-3 h-3 bg-alpine-obsidian border-2 border-alpine-stone group-hover:bg-alpine-moss transition-colors"></div>
-              <div className="flex flex-col md:flex-row md:justify-between md:items-baseline mb-2">
+              <div className="absolute left-[-28px] md:left-[-44px] top-1.5 w-3 h-3 bg-alpine-obsidian border-2 border-[#B86B49] group-hover:bg-[#B86B49] transition-colors"></div>
+              <div className="flex flex-col lg:flex-row lg:justify-between lg:items-baseline mb-2 flex-wrap gap-y-2">
                 <h3 className="text-2xl font-serif font-bold text-alpine-crepe">
                   <a href="https://www.pwc.com/gx/en/about.html" target="_blank" rel="noreferrer" className="hover:text-alpine-moss transition-colors">PwC</a>
+                  <span className="font-mono text-[10px] sm:text-xs text-alpine-cloud ml-3 tracking-widest uppercase align-middle bg-alpine-stone/50 px-2 py-0.5 rounded-sm whitespace-nowrap">Big Four Accounting</span>
                 </h3>
-                <span className="font-mono text-xs text-alpine-cloud font-bold tracking-widest uppercase mt-1 md:mt-0">Jul 2015 - Feb 2021 (5 YRS 8 MOS)</span>
+                <span className="font-mono text-xs text-[#B86B49] font-bold tracking-widest uppercase mt-2 lg:mt-0 whitespace-nowrap">Jul 2015 - Feb 2021 (5 YRS 8 MOS)</span>
               </div>
               <div className="font-sans font-bold tracking-wide text-alpine-slate mb-4">Risk Assurance Senior Associate</div>
               <p className="text-alpine-cloud leading-relaxed max-w-3xl">
@@ -248,9 +301,9 @@ function App() {
 
         {/* Deployments Section */}
         <section id="strategic-projects" className="space-y-16">
-          <div className="border-b border-alpine-stone pb-4 flex flex-col md:flex-row md:items-baseline md:justify-between">
+          <div className="border-b border-alpine-stone pb-4 flex flex-col md:flex-row md:items-baseline md:justify-between flex-wrap gap-y-2">
             <h2 className="text-3xl font-serif font-bold text-alpine-crepe">Strategic Projects</h2>
-            <p className="font-mono text-xs text-alpine-cloud mt-2 md:mt-0 uppercase tracking-widest">Automation & Architecture</p>
+            <p className="font-mono text-xs text-alpine-cloud mt-2 md:mt-0 uppercase tracking-widest whitespace-nowrap">Automation & Architecture</p>
           </div>
 
           <div className="grid gap-8">
@@ -324,12 +377,12 @@ function App() {
 
         {/* Skills Section */}
         <section id="capabilities" className="space-y-16">
-          <div className="border-b border-alpine-stone pb-4 flex flex-col md:flex-row md:items-baseline md:justify-between">
+          <div className="border-b border-alpine-stone pb-4 flex flex-col md:flex-row md:items-baseline md:justify-between flex-wrap gap-y-2">
             <h2 className="text-3xl font-serif font-bold text-alpine-crepe">Capabilities</h2>
-            <p className="font-mono text-xs text-alpine-cloud mt-2 md:mt-0 uppercase tracking-widest">Frameworks & Technologies</p>
+            <p className="font-mono text-xs text-alpine-cloud mt-2 md:mt-0 uppercase tracking-widest whitespace-nowrap">Frameworks & Technologies</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 gap-6">
 
             {/* Toolbox 1 */}
             <div className="border border-alpine-stone bg-alpine-basalt p-8 hover:border-alpine-moss transition-colors">
@@ -363,7 +416,7 @@ function App() {
             </div>
 
             {/* Toolbox 3 */}
-            <div className="border border-alpine-stone bg-alpine-basalt p-8 hover:border-alpine-leather transition-colors">
+            <div className="border border-alpine-stone bg-alpine-basalt p-8 hover:border-[#B86B49] transition-colors">
               <div className="font-mono text-xs tracking-widest text-alpine-cloud mb-6 uppercase border-b border-alpine-stone/50 pb-2">03. Automation</div>
               <h3 className="text-xl font-serif font-bold mb-4 text-alpine-crepe">Software & GenAI</h3>
               <p className="text-sm text-alpine-cloud/80 mb-8 min-h-[4rem]">
@@ -377,14 +430,28 @@ function App() {
               </ul>
             </div>
 
+            {/* Toolbox 4 */}
+            <div className="border border-alpine-stone bg-alpine-basalt p-8 hover:border-[#C4B160] transition-colors">
+              <div className="font-mono text-xs tracking-widest text-alpine-cloud mb-6 uppercase border-b border-alpine-stone/50 pb-2">04. Linguistics</div>
+              <h3 className="text-xl font-serif font-bold mb-4 text-alpine-crepe">Languages</h3>
+              <p className="text-sm text-alpine-cloud/80 mb-8 min-h-[4rem]">
+                Cross-border communication and technical documentation across international teams.
+              </p>
+              <ul className="font-mono text-[10px] xl:text-xs text-alpine-cloud space-y-3 uppercase tracking-widest">
+                <li className="flex justify-between items-baseline gap-2"><span>Portuguese</span><span className="text-[#5A8F70]">Fluent / Native</span></li>
+                <li className="flex justify-between items-baseline gap-2"><span>English</span><span className="text-[#5A8F70]">Advanced</span></li>
+                <li className="flex justify-between items-baseline gap-2"><span>Spanish</span><span className="text-alpine-cloud/50">Basic-Interm.</span></li>
+              </ul>
+            </div>
+
           </div>
         </section>
 
         {/* Education & Credentials Section */}
         <section id="credentials" className="space-y-16">
-          <div className="border-b border-alpine-stone pb-4 flex flex-col md:flex-row md:items-baseline md:justify-between">
+          <div className="border-b border-alpine-stone pb-4 flex flex-col md:flex-row md:items-baseline md:justify-between flex-wrap gap-y-2">
             <h2 className="text-3xl font-serif font-bold text-alpine-crepe">Credentials & Education</h2>
-            <p className="font-mono text-xs text-alpine-cloud mt-2 md:mt-0 uppercase tracking-widest">Academic Foundations</p>
+            <p className="font-mono text-xs text-alpine-cloud mt-2 md:mt-0 uppercase tracking-widest whitespace-nowrap">Academic Foundations</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">

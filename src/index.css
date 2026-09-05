@@ -43,3 +43,60 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Print Stylesheet for Executive Resume generation */
+@media print {
+  @page {
+    margin: 1.5cm;
+    size: A4 portrait;
+  }
+
+  html, body {
+    background-color: #ffffff !important;
+    color: #1a1a1a !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: #000000 !important;
+    page-break-after: avoid;
+  }
+
+  p, li, span {
+    color: #262626 !important;
+  }
+
+  .border-alpine-stone,
+  .border-alpine-moss {
+    border-color: #d1d5db !important;
+  }
+
+  .bg-alpine-basalt,
+  .bg-alpine-stone,
+  .bg-alpine-obsidian {
+    background-color: #ffffff !important;
+    border-color: #e5e7eb !important;
+  }
+
+  /* Prevent page breaks inside cards */
+  .relative.group,
+  .border.bg-alpine-basalt,
+  section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Hide interactive elements and web banners */
+  nav,
+  footer,
+  button,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  a {
+    text-decoration: none !important;
+    color: inherit !important;
+  }
+}

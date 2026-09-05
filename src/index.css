@@ -29,6 +29,9 @@
   section[id] {
     scroll-margin-top: 6rem;
   }
+  #executive-summary {
+    scroll-margin-top: 30rem;
+  }
 }
 
 :focus-visible {

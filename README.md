@@ -3,7 +3,7 @@
 My personal portfolio website built to showcase my experience as a specialized IT Internal/External Auditor and my expertise bridging the gap between technical operations and business risk.
 
 ## Overview
-This site highlights my background in IT controls, InfoSec GRC, Cloud Security, and IT Security Compliance across top-tier financial and tech companies (Nubank, Mercado Livre, Stone, PwC). It also serves as a landing page for my open-source projects, including the [SCF Auto-Crosswalker](https://github.com/tvobrachini/scf-auto-crosswalker) GRC Assistant Platform.
+This site highlights my background in IT controls, InfoSec GRC, Cloud Security, and IT Security Compliance across top-tier financial and tech companies (Nubank, Mercado Livre, Stone, PwC). It also serves as a showcase for my open-source projects, including the [GRC Audit Swarm](https://github.com/tvobrachini/grc-audit-swarm) multi-agent audit automation platform and the [SCF Auto-Crosswalker](https://github.com/tvobrachini/scf-auto-crosswalker) GRC assistant.
 
 ## Tech Stack
 The site is built with modern web technologies:
@@ -16,8 +16,9 @@ The site is built with modern web technologies:
 
 ## Core Features
 *   **Responsive Design:** Fully accessible across all devices from desktop to mobile.
-*   **Dynamic UI:** Uses Tailwind CSS for smooth micro-animations, hover states, and a sleek dark mode aesthetic.
+*   **Dynamic UI:** Uses Tailwind CSS for smooth micro-animations, hover states, and a sleek Alpine Obsidian aesthetic.
 *   **Interactive Timeline:** A custom-built experience timeline displaying my professional journey.
+*   **Print / PDF Resume:** Dedicated print stylesheet and one-click CV export for executive review.
 *   **Automated Deployments:** Pushes to the `main` branch automatically trigger a GitHub Actions workflow to build and deploy the site using `npm run build`.
 
 ## Getting Started Locally

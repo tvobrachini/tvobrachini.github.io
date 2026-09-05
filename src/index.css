@@ -26,6 +26,9 @@
     color: var(--color-alpine-crepe);
     font-family: var(--font-sans);
   }
+  section[id] {
+    scroll-margin-top: 6rem;
+  }
 }
 
 :focus-visible {

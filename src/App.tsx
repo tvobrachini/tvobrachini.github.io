@@ -14,6 +14,29 @@ export function App() {
   const [activeSection, setActiveSection] = useState('executive-summary');
   const [showScrollTop, setShowScrollTop] = useState(false);
 
+  // Handle direct hash navigation (e.g. from GitHub profile links) and browser back/forward
+  useEffect(() => {
+    const scrollToHash = () => {
+      const hash = window.location.hash.slice(1);
+      if (!hash) return;
+
+      const tryScroll = (attempts = 0) => {
+        const el = document.getElementById(hash);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth' });
+        } else if (attempts < 15) {
+          setTimeout(() => tryScroll(attempts + 1), 80);
+        }
+      };
+
+      tryScroll();
+    };
+
+    scrollToHash();
+    window.addEventListener('hashchange', scrollToHash);
+    return () => window.removeEventListener('hashchange', scrollToHash);
+  }, []);
+
   // Scroll spy
   useEffect(() => {
     const sectionIds = navLinks.map(({ href }) => href.slice(1));

@@ -13,8 +13,15 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
     <nav className="fixed w-full z-40 top-0 bg-alpine-obsidian/90 backdrop-blur-md border-b border-alpine-stone py-4 md:py-5 transition-all print:hidden">
       <div className="max-w-[1400px] mx-auto px-6 xl:px-12 flex justify-between items-center">
         <a
-          href="#executive-summary"
-          className="text-xl font-serif font-bold text-alpine-crepe tracking-tight hover:text-alpine-moss transition-colors whitespace-nowrap"
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (window.location.hash) {
+              window.history.pushState(null, '', window.location.pathname);
+            }
+          }}
+          className="text-xl font-serif font-bold text-alpine-crepe tracking-tight hover:text-alpine-moss transition-colors whitespace-nowrap cursor-pointer"
         >
           {personalInfo.displayName}
         </a>
@@ -25,6 +32,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
             <a
               key={href}
               href={href}
+              onClick={(e) => {
+                if (href === '#executive-summary') {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  window.history.pushState(null, '', window.location.pathname);
+                }
+              }}
               className={`transition-all pb-1 border-b-2 hover:border-alpine-moss hover:text-alpine-crepe ${
                 activeSection === href.slice(1)
                   ? 'border-alpine-moss text-alpine-crepe font-bold'
@@ -59,7 +73,14 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                 className={`transition-colors py-2 border-b border-alpine-stone/50 ${
                   activeSection === href.slice(1) ? 'text-alpine-moss font-bold' : 'text-alpine-cloud'
                 }`}
-                onClick={() => setMenuOpen(false)}
+                onClick={(e) => {
+                  setMenuOpen(false);
+                  if (href === '#executive-summary') {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    window.history.pushState(null, '', window.location.pathname);
+                  }
+                }}
               >
                 {label}
               </a>

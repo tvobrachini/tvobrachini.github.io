@@ -20,6 +20,11 @@ export function App() {
       const hash = window.location.hash.slice(1);
       if (!hash) return;
 
+      if (hash === 'executive-summary') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        return;
+      }
+
       const tryScroll = (attempts = 0) => {
         const el = document.getElementById(hash);
         if (el) {

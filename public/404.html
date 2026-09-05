@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page Not Found | Tiago Brachini</title>
-    <meta http-equiv="refresh" content="4;url=/" />
+    <title>404 // Page Not Found | Tiago Brachini</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta http-equiv="refresh" content="5;url=/" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Merriweather:wght@700;900&family=IBM+Plex+Mono:wght@400;600&display=swap" rel="stylesheet" />
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body {
-        background: #0a0a0a;
-        color: #ededed;
-        font-family: system-ui, -apple-system, sans-serif;
+        background: #090e11;
+        color: #e5e0d8;
+        font-family: 'Inter', sans-serif;
         min-height: 100vh;
         display: flex;
         align-items: center;
@@ -18,41 +22,75 @@
         text-align: center;
         padding: 24px;
       }
-      .container { max-width: 480px; }
-      .code {
-        font-size: 6rem;
-        font-weight: 700;
-        line-height: 1;
-        background: linear-gradient(to right, #a855f7, #3b82f6);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 16px;
+      .container {
+        max-width: 520px;
+        background: #121a1d;
+        border: 1px solid #1a2428;
+        padding: 48px 36px;
+        position: relative;
       }
-      h1 { font-size: 1.5rem; font-weight: 600; margin-bottom: 12px; }
-      p { color: #6b7280; margin-bottom: 32px; line-height: 1.6; }
-      a {
+      .tagline {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 11px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        color: #4a6053;
+        margin-bottom: 24px;
+        border-bottom: 1px solid #1a2428;
+        padding-bottom: 12px;
+        display: inline-block;
+      }
+      .code {
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 4.5rem;
+        font-weight: 600;
+        line-height: 1;
+        color: #5c7685;
+        margin-bottom: 16px;
+        letter-spacing: -0.05em;
+      }
+      h1 {
+        font-family: 'Merriweather', serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        margin-bottom: 16px;
+        color: #e5e0d8;
+      }
+      p {
+        color: #a8b2b6;
+        margin-bottom: 32px;
+        line-height: 1.7;
+        font-size: 0.95rem;
+      }
+      .button {
         display: inline-flex;
         align-items: center;
         gap: 8px;
-        background: rgba(255,255,255,0.05);
-        border: 1px solid rgba(255,255,255,0.1);
-        color: #ededed;
+        background: transparent;
+        border: 1px solid #1a2428;
+        color: #e5e0d8;
         text-decoration: none;
-        padding: 12px 24px;
-        border-radius: 8px;
-        font-weight: 500;
-        transition: background 0.2s;
+        padding: 12px 28px;
+        font-family: 'IBM Plex Mono', monospace;
+        font-size: 12px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        transition: all 0.2s ease;
       }
-      a:hover { background: rgba(255,255,255,0.1); }
+      .button:hover {
+        border-color: #4a6053;
+        color: #e5e0d8;
+        background: #1a2428;
+      }
     </style>
   </head>
   <body>
     <div class="container">
+      <div class="tagline">Error // Out of Bounds</div>
       <div class="code">404</div>
-      <h1>Page not found</h1>
-      <p>This page doesn't exist. You'll be redirected to the homepage in a few seconds.</p>
-      <a href="/">Go home</a>
+      <h1>Terrain Not Found</h1>
+      <p>The control checkpoint or page you requested does not exist in this scope. Redirecting to the primary landscape...</p>
+      <a href="/" class="button">[ Return to Base ]</a>
     </div>
   </body>
 </html>

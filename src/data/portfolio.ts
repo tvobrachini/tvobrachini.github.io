@@ -258,11 +258,11 @@ export const credentials: Credential[] = [
 export const certificationsAndDegrees = [
   {
     title: 'Alteryx Designer Core',
-    issuer: '(Alteryx)',
+    issuer: '(Alteryx, 2020, expired 2022)',
   },
   {
     title: 'Scrum Fundamentals Certified',
-    issuer: '(SCRUMstudy, 2019)',
+    issuer: '(SCRUMstudy, 2019, expired 2022)',
   },
   {
     title: 'Cloud Audit Academy',

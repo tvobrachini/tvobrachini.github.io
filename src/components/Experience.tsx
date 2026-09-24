@@ -23,7 +23,7 @@ export const Experience: React.FC = () => {
 
       <div className="border-l border-alpine-stone pl-6 md:pl-10 space-y-16 relative">
         {experiences.map((exp) => (
-          <div key={exp.company} className="relative group">
+          <div key={`${exp.company}-${exp.role}`} className="relative group">
             {/* Timeline indicator dot */}
             <div
               className="absolute left-[-28px] md:left-[-44px] top-1.5 w-3 h-3 bg-alpine-obsidian border-2 transition-colors"

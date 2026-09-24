@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Linkedin, Github, Mail, Copy, Check, Printer } from 'lucide-react';
+import { Linkedin, Github, Mail, Copy, Check, Printer, FileText } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 
 export const Hero: React.FC = () => {
@@ -19,17 +19,22 @@ export const Hero: React.FC = () => {
     <section id="executive-summary" className="relative">
       <div className="flex flex-col-reverse lg:flex-row lg:justify-between lg:items-start gap-12 lg:gap-20">
         {/* Text Content */}
-        <div className="space-y-10 flex-1">
-          <div className="font-mono text-xs tracking-widest uppercase text-alpine-moss border-b border-alpine-stone pb-3 mb-8 inline-block">
-            {personalInfo.tagline}
+        <div className="space-y-8 flex-1">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="font-mono text-xs tracking-widest uppercase text-alpine-moss border-b border-alpine-stone pb-1 inline-block">
+              {personalInfo.tagline}
+            </span>
+            <span className="font-mono text-[11px] px-2.5 py-0.5 bg-emerald-950/60 border border-emerald-700/60 text-emerald-300 rounded tracking-wider">
+              {personalInfo.availability}
+            </span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-alpine-crepe leading-[1.1] tracking-tight">
-            Navigating the expansive landscape of{' '}
-            <span className="italic text-alpine-slate">IT risk.</span>
+            Auditing cloud architecture, SDLC governance, and{' '}
+            <span className="italic text-alpine-slate">applied AI.</span>
           </h1>
 
-          <div className="border-l-2 border-alpine-moss pl-6 sm:pl-8 mt-10">
+          <div className="border-l-2 border-alpine-moss pl-6 sm:pl-8 mt-8">
             <p className="text-xl text-alpine-crepe/90 max-w-2xl leading-relaxed">
               {personalInfo.subheadlineLead}
             </p>
@@ -39,12 +44,35 @@ export const Hero: React.FC = () => {
           </div>
 
           {/* Action Links & Buttons */}
-          <div className="flex flex-wrap gap-4 pt-10 font-mono text-xs uppercase tracking-widest items-center print:hidden">
+          <div className="flex flex-wrap gap-3 pt-6 font-mono text-xs uppercase tracking-widest items-center print:hidden">
+            {/* Primary CV Downloads */}
+            <a
+              href={personalInfo.cvEnUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 bg-alpine-crepe text-alpine-obsidian px-5 py-3 border border-alpine-crepe font-semibold hover:bg-transparent hover:text-alpine-crepe transition-colors shadow-sm"
+              title="Download English CV (PDF)"
+            >
+              <FileText className="w-4 h-4" />
+              <span>CV (EN · PDF)</span>
+            </a>
+
+            <a
+              href={personalInfo.cvPtUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 bg-transparent text-alpine-crepe px-5 py-3 border border-alpine-moss hover:bg-alpine-moss/20 transition-colors"
+              title="Baixar Currículo em Português (PDF)"
+            >
+              <FileText className="w-4 h-4 text-alpine-moss" />
+              <span>Currículo (PT)</span>
+            </a>
+
             <a
               href={personalInfo.linkedinUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-alpine-crepe text-alpine-obsidian px-6 py-3 border border-alpine-crepe hover:bg-transparent hover:text-alpine-crepe transition-colors"
+              className="inline-flex items-center gap-2 bg-transparent text-alpine-cloud px-5 py-3 border border-alpine-stone hover:border-alpine-crepe hover:text-alpine-crepe transition-colors"
             >
               <Linkedin className="w-4 h-4" />
               <span>LinkedIn</span>
@@ -54,7 +82,7 @@ export const Hero: React.FC = () => {
               href={personalInfo.githubUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-transparent text-alpine-cloud px-6 py-3 border border-alpine-stone hover:border-alpine-crepe hover:text-alpine-crepe transition-colors"
+              className="inline-flex items-center gap-2 bg-transparent text-alpine-cloud px-5 py-3 border border-alpine-stone hover:border-alpine-crepe hover:text-alpine-crepe transition-colors"
             >
               <Github className="w-4 h-4" />
               <span>GitHub</span>
@@ -64,7 +92,7 @@ export const Hero: React.FC = () => {
             <div className="relative inline-flex items-stretch border border-alpine-stone hover:border-alpine-crepe transition-colors">
               <a
                 href={`mailto:${personalInfo.email}`}
-                className="inline-flex items-center gap-2 px-5 py-3 text-alpine-cloud hover:text-alpine-crepe transition-colors"
+                className="inline-flex items-center gap-2 px-4 py-3 text-alpine-cloud hover:text-alpine-crepe transition-colors"
                 title="Send email"
               >
                 <Mail className="w-4 h-4 text-alpine-slate" />
@@ -92,11 +120,11 @@ export const Hero: React.FC = () => {
             {/* Print / Save CV */}
             <button
               onClick={handlePrint}
-              className="inline-flex items-center gap-2 bg-transparent text-alpine-cloud px-5 py-3 border border-dashed border-alpine-stone hover:border-alpine-moss hover:text-alpine-crepe transition-colors"
-              title="Print or save PDF resume"
+              className="inline-flex items-center gap-2 bg-transparent text-alpine-cloud px-4 py-3 border border-dashed border-alpine-stone hover:border-alpine-moss hover:text-alpine-crepe transition-colors"
+              title="Print page or save PDF"
             >
               <Printer className="w-4 h-4 text-alpine-moss" />
-              <span>Print / Save CV</span>
+              <span>Print Page</span>
             </button>
           </div>
         </div>

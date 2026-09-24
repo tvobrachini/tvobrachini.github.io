@@ -81,7 +81,7 @@ export const personalInfo = {
   headline: 'Navigating the expansive landscape of IT risk.',
   subheadlineLead: 'Technology and AI are fundamentally shifting the ground beneath modern enterprise capabilities.',
   subheadlineBody:
-    'I operate as a deeply technical Senior IT Internal Auditor. By bridging the gap between granular technical operations and broad executive business risk, I design enduring control frameworks capable of withstanding the elements of a rapidly changing technical frontier.',
+    'I operate as a deeply technical Global IT Audit Specialist. By bridging the gap between granular technical operations and broad executive business risk, I design enduring control frameworks capable of withstanding the elements of a rapidly changing technical frontier.',
   email: 'tvobrachini@gmail.com',
   linkedinUrl: 'https://www.linkedin.com/in/tvobrachini',
   githubUrl: 'https://github.com/tvobrachini',
@@ -94,17 +94,28 @@ export const experiences: ExperienceItem[] = [
     companyUrl: 'https://international.nubank.com.br/about/',
     badge: 'Largest LATAM Digital Bank',
     dotColor: '#926C9C',
-    role: 'IT Internal Audit Specialist',
-    startDate: new Date('2023-03-01'),
+    role: 'Global IT Audit Specialist',
+    startDate: new Date('2025-09-01'),
     description:
-      'Lead the holistic evaluation of complex IT general controls and risk matrices. Spearhead the deployment of AI-driven automation for audit documentation and control testing methodologies within a high-velocity fintech ecosystem, significantly enhancing overall audit efficiency and risk posture.',
+      'Plan and lead IT and security audits of SDLC governance and cloud environments (AWS, GCP), evaluating IT general controls and risk-and-control matrices. Drive AI-assisted audit documentation and control testing.',
+  },
+  {
+    company: 'Nubank',
+    companyUrl: 'https://international.nubank.com.br/about/',
+    badge: 'Largest LATAM Digital Bank',
+    dotColor: '#926C9C',
+    role: 'IT Internal Auditor',
+    startDate: new Date('2023-03-01'),
+    endDate: new Date('2025-09-01'),
+    description:
+      'Evaluated IT general controls and risk matrices across cloud (AWS, GCP) and SDLC. Automated audit testing and data analysis with Databricks and Scala.',
   },
   {
     company: 'Mercado Livre',
     companyUrl: 'https://investor.mercadolibre.com/',
     badge: 'LATAM #1 E-Commerce',
     dotColor: '#C4B160',
-    role: 'IT Internal Audit',
+    role: 'IT Internal Auditor',
     startDate: new Date('2021-11-01'),
     endDate: new Date('2023-03-01'),
     description:
@@ -115,7 +126,7 @@ export const experiences: ExperienceItem[] = [
     companyUrl: 'https://www.stoneco.com.br/en/',
     badge: 'Major Payment Processor',
     dotColor: '#5A8F70',
-    role: 'IT Internal Audit',
+    role: 'IT Internal Auditor',
     startDate: new Date('2021-02-01'),
     endDate: new Date('2021-11-01'),
     description:
@@ -126,7 +137,7 @@ export const experiences: ExperienceItem[] = [
     companyUrl: 'https://www.pwc.com/gx/en/about.html',
     badge: 'Big Four Accounting',
     dotColor: '#B86B49',
-    role: 'Risk Assurance Senior Associate',
+    role: 'Risk Assurance, Trainee to Senior Associate',
     startDate: new Date('2015-07-01'),
     endDate: new Date('2021-02-01'),
     description:
@@ -161,9 +172,9 @@ export const strategicProjects: StrategicProject[] = [
     badge: 'Case Study',
     objective: 'Deploy a stateful, three-phase audit automation engine powered by CrewAI and Groq.',
     execution:
-      'Orchestrated specialized agent crews across Planning, Fieldwork, and Reporting—each gated by human approval to adhere to IIA Standard 2340. Integrated native evidence collection directly via AWS APIs for reliable verification of IAM, MFA, and S3 security controls.',
+      'Orchestrated specialized agent crews across Planning, Fieldwork, and Reporting—each gated by a human approval step modelled on engagement supervision (IIA Standard 2340), not a compliance claim. Integrated native evidence collection directly via AWS APIs for reliable verification of IAM, MFA, and S3 security controls.',
     outcome:
-      'Established an immutable evidence vault leveraging PCAOB AS 1215 compliant SHA-256 hashing and verbatim source-quote verification, virtually eliminating AI hallucinations in automated testing.',
+      'Built a SHA-256-hashed evidence vault with verbatim source-quote verification, in the spirit of PCAOB AS 1215 documentation integrity (not a compliance claim), so every finding can be traced back to the evidence it cites.',
     tags: ['CrewAI', 'Groq', 'AWS APIs', 'SHA-256 Vault', 'IIA 2340'],
   },
   {
@@ -228,8 +239,8 @@ export const capabilities: CapabilityCategory[] = [
     hoverBorderClass: 'hover:border-[#C4B160]',
     skills: [
       { name: 'Portuguese', level: 'Fluent / Native' },
-      { name: 'English', level: 'Advanced' },
-      { name: 'Spanish', level: 'Basic-Interm.' },
+      { name: 'English', level: 'Fluent' },
+      { name: 'Spanish', level: 'Basic' },
     ],
   },
 ];
@@ -246,11 +257,19 @@ export const credentials: Credential[] = [
 
 export const certificationsAndDegrees = [
   {
-    title: 'Cloud Audit Academy',
-    issuer: '(Cloud Agnostic)',
+    title: 'Alteryx Designer Core',
+    issuer: '(Alteryx)',
   },
   {
-    title: 'Information Technology',
+    title: 'Scrum Fundamentals Certified',
+    issuer: '(SCRUMstudy, 2019)',
+  },
+  {
+    title: 'Cloud Audit Academy',
+    issuer: '(AWS training, Cloud Agnostic, 2021)',
+  },
+  {
+    title: 'Technology in IT Management (2012)',
     institution: 'FATEC Bragança Paulista',
     institutionUrl: 'https://site.cps.sp.gov.br/fatec/',
   },

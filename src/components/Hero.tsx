@@ -5,10 +5,14 @@ import { personalInfo } from '../data/portfolio';
 export const Hero: React.FC = () => {
   const [copied, setCopied] = useState(false);
 
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText(personalInfo.email);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2500);
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(personalInfo.email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    } catch {
+      window.location.href = `mailto:${personalInfo.email}`;
+    }
   };
 
   const handlePrint = () => {
@@ -26,10 +30,12 @@ export const Hero: React.FC = () => {
             </span>
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-alpine-crepe leading-[1.1] tracking-tight">
-            IT audit of cloud and SDLC governance,{' '}
-            <span className="italic text-alpine-slate">with data and AI tooling.</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-serif font-bold text-alpine-crepe leading-[1.1] tracking-tight">
+            Tiago Brachini
           </h1>
+          <p className="text-2xl md:text-3xl font-serif italic text-alpine-slate leading-snug max-w-3xl">
+            IT audit of cloud and SDLC governance, with data and AI tooling.
+          </p>
 
           <div className="border-l-2 border-alpine-moss pl-6 sm:pl-8 mt-8">
             <p className="text-xl text-alpine-crepe/90 max-w-2xl leading-relaxed">
@@ -64,9 +70,11 @@ export const Hero: React.FC = () => {
               rel="noreferrer"
               className="inline-flex items-center gap-2 bg-transparent text-alpine-crepe px-5 py-3 border border-alpine-moss hover:bg-alpine-moss/20 transition-colors"
               title="Baixar Currículo em Português (PDF)"
+              lang="pt-BR"
+              hrefLang="pt-BR"
             >
               <FileText className="w-4 h-4 text-alpine-moss" />
-              <span>Currículo (PT)</span>
+              <span>Currículo (PT · PDF)</span>
             </a>
 
             <a
@@ -111,11 +119,13 @@ export const Hero: React.FC = () => {
                   <Copy className="w-3.5 h-3.5" />
                 )}
               </button>
+              <span role="status" aria-live="polite">
               {copied && (
                 <span className="absolute -top-8 right-0 bg-alpine-stone border border-alpine-moss text-[10px] text-alpine-crepe px-2 py-0.5 rounded font-mono shadow-md animate-in fade-in">
                   Copied!
                 </span>
               )}
+              </span>
             </div>
 
             {/* Print / Save CV */}

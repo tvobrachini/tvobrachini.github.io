@@ -6,9 +6,9 @@
   --color-alpine-stone: #1a2428;
   --color-alpine-crepe: #e5e0d8;
   --color-alpine-cloud: #a8b2b6;
-  --color-alpine-moss: #4a6053;
-  --color-alpine-slate: #5c7685;
-  --color-alpine-leather: #5c4533;
+  --color-alpine-moss: #809087;
+  --color-alpine-slate: #8d9faa;
+  --color-alpine-leather: #95867a;
 
   --font-serif: "Merriweather", serif;
   --font-mono: "IBM Plex Mono", monospace;
@@ -17,9 +17,13 @@
 
 @layer base {
   html {
-    scroll-behavior: smooth;
     background-color: var(--color-alpine-obsidian);
     color: var(--color-alpine-crepe);
+  }
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
   }
   body {
     background-color: var(--color-alpine-obsidian);

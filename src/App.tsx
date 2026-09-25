@@ -10,6 +10,9 @@ import { Credentials } from './components/Credentials';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 
+const scrollBehavior = (): ScrollBehavior =>
+  window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+
 export function App() {
   const [activeSection, setActiveSection] = useState('executive-summary');
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -21,14 +24,14 @@ export function App() {
       if (!hash) return;
 
       if (hash === 'executive-summary') {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        window.scrollTo({ top: 0, behavior: scrollBehavior() });
         return;
       }
 
       const tryScroll = (attempts = 0) => {
         const el = document.getElementById(hash);
         if (el) {
-          el.scrollIntoView({ behavior: 'smooth' });
+          el.scrollIntoView({ behavior: scrollBehavior() });
         } else if (attempts < 15) {
           setTimeout(() => tryScroll(attempts + 1), 80);
         }
@@ -82,9 +85,10 @@ export function App() {
       <Navbar activeSection={activeSection} />
 
       {/* Hero Content */}
-      <main className="max-w-4xl mx-auto px-6 pt-36 md:pt-44 pb-0 space-y-36 print:pt-4 print:space-y-12">
+      <main>
+      <div className="max-w-4xl mx-auto px-6 pt-36 md:pt-44 pb-0 space-y-36 print:pt-4 print:space-y-12">
         <Hero />
-      </main>
+      </div>
 
       {/* Cinematic Terrain Divider */}
       <div className="my-24 md:my-32">
@@ -92,11 +96,12 @@ export function App() {
       </div>
 
       {/* Body Content */}
-      <main className="max-w-4xl mx-auto px-6 pt-6 pb-24 space-y-36 print:pt-0 print:space-y-12">
+      <div className="max-w-4xl mx-auto px-6 pt-6 pb-24 space-y-36 print:pt-0 print:space-y-12">
         <Experience />
         <Projects />
         <Capabilities />
         <Credentials />
+      </div>
       </main>
 
       {/* Scroll to Top floating action */}

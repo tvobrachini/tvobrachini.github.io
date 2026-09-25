@@ -76,7 +76,7 @@ export const navLinks: NavLink[] = [
 
 export const personalInfo = {
   name: 'Tiago Vinícius de Oliveira Brachini',
-  displayName: 'tvobrachini',
+  displayName: 'Tiago Brachini',
   tagline: 'Global IT Audit Specialist',
   headline: 'IT audit of cloud and SDLC governance, with data and AI tooling.',
   subheadlineLead:
@@ -97,7 +97,7 @@ export const experiences: ExperienceItem[] = [
     company: 'Nubank (NYSE: NU)',
     companyUrl: 'https://international.nubank.com.br/about/',
     badge: '140M+ Customers · Digital Banking Platform',
-    dotColor: '#926C9C',
+    dotColor: '#a889b0',
     role: 'Global IT Audit Specialist',
     startDate: new Date('2025-09-01'),
     description:
@@ -107,7 +107,7 @@ export const experiences: ExperienceItem[] = [
     company: 'Nubank (NYSE: NU)',
     companyUrl: 'https://international.nubank.com.br/about/',
     badge: 'Digital Banking Platform',
-    dotColor: '#926C9C',
+    dotColor: '#a889b0',
     role: 'IT Internal Auditor',
     startDate: new Date('2023-03-01'),
     endDate: new Date('2025-09-01'),

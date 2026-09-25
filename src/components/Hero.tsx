@@ -40,6 +40,10 @@ export const Hero: React.FC = () => {
             </p>
           </div>
 
+          <p className="hidden print:block font-mono text-xs text-black">
+            Tiago Brachini · tvobrachini@gmail.com · linkedin.com/in/tvobrachini · tvobrachini.github.io
+          </p>
+
           {/* Action Links & Buttons */}
           <div className="flex flex-wrap gap-3 pt-6 font-mono text-xs uppercase tracking-widest items-center print:hidden">
             {/* Primary CV Downloads */}

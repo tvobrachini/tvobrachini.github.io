@@ -41,7 +41,7 @@ export const Credentials: React.FC = () => {
             <div className="flex items-center gap-2 mb-4 text-alpine-slate">
               <Award className="w-5 h-5" />
               <h3 className="text-xl font-serif font-bold text-alpine-crepe">
-                Certifications & Degrees
+                Degree & Training
               </h3>
             </div>
             <ul className="text-sm text-alpine-cloud/80 space-y-3">

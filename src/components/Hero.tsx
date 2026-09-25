@@ -27,8 +27,8 @@ export const Hero: React.FC = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-alpine-crepe leading-[1.1] tracking-tight">
-            Auditing cloud architecture, SDLC governance, and{' '}
-            <span className="italic text-alpine-slate">applied AI.</span>
+            IT audit of cloud and SDLC governance,{' '}
+            <span className="italic text-alpine-slate">with data and AI tooling.</span>
           </h1>
 
           <div className="border-l-2 border-alpine-moss pl-6 sm:pl-8 mt-8">
@@ -39,6 +39,10 @@ export const Hero: React.FC = () => {
               {personalInfo.subheadlineBody}
             </p>
           </div>
+
+          <p className="hidden print:block font-mono text-xs text-black">
+            Tiago Brachini · tvobrachini@gmail.com · linkedin.com/in/tvobrachini · tvobrachini.github.io
+          </p>
 
           {/* Action Links & Buttons */}
           <div className="flex flex-wrap gap-3 pt-6 font-mono text-xs uppercase tracking-widest items-center print:hidden">

@@ -10,9 +10,6 @@ export const Footer: React.FC = () => {
           <p className="font-mono text-xs text-alpine-cloud uppercase tracking-widest">
             © {new Date().getFullYear()} {personalInfo.displayName}
           </p>
-          <div className="font-serif italic text-sm text-alpine-cloud/70 mt-1">
-            Precision in a complex landscape.
-          </div>
         </div>
 
         <div className="flex items-center gap-4 text-alpine-cloud print:hidden">

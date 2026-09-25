@@ -96,7 +96,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: 'Nubank (NYSE: NU)',
     companyUrl: 'https://international.nubank.com.br/about/',
-    badge: '139M Customers · LATAM Digital Bank',
+    badge: '140M+ Customers · Digital Banking Platform',
     dotColor: '#926C9C',
     role: 'Global IT Audit Specialist',
     startDate: new Date('2025-09-01'),
@@ -106,7 +106,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: 'Nubank (NYSE: NU)',
     companyUrl: 'https://international.nubank.com.br/about/',
-    badge: 'LATAM Digital Bank',
+    badge: 'Digital Banking Platform',
     dotColor: '#926C9C',
     role: 'IT Internal Auditor',
     startDate: new Date('2023-03-01'),

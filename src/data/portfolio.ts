@@ -69,20 +69,20 @@ export function formatDuration(startDate: Date, endDate: Date = new Date()): str
 export const navLinks: NavLink[] = [
   { href: '#executive-summary', label: '01. Executive Summary' },
   { href: '#professional-experience', label: '02. Professional Experience' },
-  { href: '#strategic-projects', label: '03. Strategic Projects' },
+  { href: '#strategic-projects', label: '03. Open-Source Projects' },
   { href: '#capabilities', label: '04. Capabilities' },
   { href: '#credentials', label: '05. Credentials' },
 ];
 
 export const personalInfo = {
-  name: 'Tiago Vinicius de Oliveira Brachini',
+  name: 'Tiago Vinícius de Oliveira Brachini',
   displayName: 'tvobrachini',
   tagline: 'Global IT Audit Specialist',
-  headline: 'Auditing cloud architecture, SDLC governance, and applied AI.',
+  headline: 'IT audit of cloud and SDLC governance, with data and AI tooling.',
   subheadlineLead:
-    '10+ years of IT audit and technology risk experience across Big Four (PwC) and leading fintechs (Nubank, MercadoLibre, StoneCo).',
+    '10+ years of IT audit and technology risk experience across Big Four (PwC) and three publicly listed fintechs (Nubank, MercadoLibre, StoneCo).',
   subheadlineBody:
-    'I plan and lead IT and security audits across cloud environments (AWS, GCP) and SDLC governance, evaluate IT general controls, and build data analytics and AI tooling (Databricks, Scala, Python, CrewAI) to automate control testing. Based in Bragança Paulista, SP, Brazil (UTC−3), open to remote roles worldwide.',
+    'I plan and lead IT and security audits across cloud environments (AWS, GCP) and SDLC governance, evaluate IT general controls, and build data analytics and AI tooling (Databricks, Scala, Python, CrewAI) to automate control testing. Based in Bragança Paulista, SP, Brazil (UTC-3), open to remote roles worldwide.',
   email: 'tvobrachini@gmail.com',
   linkedinUrl: 'https://www.linkedin.com/in/tvobrachini',
   githubUrl: 'https://github.com/tvobrachini',
@@ -153,19 +153,19 @@ export const foundationalRoles: FoundationalRole[] = [
   {
     title: 'PHP Developer',
     company: 'Tmax Technology',
-    period: 'Jul 2014 - Jul 2015',
+    period: 'Jul 2014 – Jul 2015',
   },
   {
     title: 'Software Development Intern',
     company: 'OSG Sulamericana',
-    period: 'Jul 2012 - Jul 2013',
-    details: 'Supported J-SOX compliance upgrades and developed intranet applications using Python/Django and Progress 4GL.',
+    period: 'Jul 2012 – Jul 2013',
+    details: 'Updated IT policies for J-SOX and developed intranet applications.',
   },
   {
     title: 'Software Developer',
     company: '3Wise Tecnologia',
-    period: 'Jun 2011 - May 2012',
-    details: 'Built full-stack import/export modules for Honda Trade Division using VB6, ASP.NET, C# and MySQL/Oracle databases.',
+    period: 'Jun 2011 – May 2012',
+    details: 'Built an import/export module for Honda Brazil using ASP/VB6, ASP.NET/C# and MySQL/Oracle.',
   },
 ];
 
@@ -174,9 +174,9 @@ export const strategicProjects: StrategicProject[] = [
     title: 'GRC Audit Swarm',
     repoUrl: 'https://github.com/tvobrachini/grc-audit-swarm',
     badge: 'Case Study',
-    objective: 'Deploy a stateful, three-phase audit automation platform built with CrewAI.',
+    objective: 'Build a three-phase, human-gated audit automation platform with CrewAI.',
     execution:
-      'Orchestrated specialized agent crews across Planning, Fieldwork, and Reporting—each gated by a human approval step modelled on engagement supervision (IIA Standard 2340), not a compliance claim. Integrated native evidence collection directly via AWS APIs (boto3) for reliable verification of IAM, MFA, and S3 security controls.',
+      'Orchestrated specialized agent crews across Planning, Fieldwork, and Reporting, each gated by a human approval step modeled on engagement supervision (IIA Global Internal Audit Standards, Standard 12.3, formerly 2340), not a compliance claim. Integrated native evidence collection directly via AWS APIs (boto3) to collect read-only evidence on IAM, MFA and S3 settings.',
     outcome:
       'Built a SHA-256-hashed evidence vault with verbatim source-quote verification, in the spirit of PCAOB AS 1215 documentation integrity (not a compliance claim), so every finding can be traced back to the evidence it cites.',
     tags: ['CrewAI', 'Python', 'AWS APIs', 'SHA-256 Vault'],
@@ -185,9 +185,9 @@ export const strategicProjects: StrategicProject[] = [
     title: 'SCF Auto-Crosswalker',
     repoUrl: 'https://github.com/tvobrachini/scf-auto-crosswalker',
     badge: 'Case Study',
-    objective: 'Eliminate manual spreadsheet risk mapping by designing a programmatic framework-as-code crosswalking utility.',
+    objective: 'Reduce manual spreadsheet mapping to SCF controls with a framework-as-code utility.',
     execution:
-      'Developed an automated crosswalking tool that maps unstructured IT policies and AWS Security Hub findings directly to Secure Controls Framework (SCF) control identifiers, which link onward to ISO 27001, NIST, PCI DSS and SOC 2 through the SCF\'s own crosswalk.',
+      'Developed a tool that suggests mappings from IT policies and AWS Security Hub findings to Secure Controls Framework (SCF) control identifiers, which link onward to ISO 27001, NIST, PCI DSS and SOC 2 through the SCF\'s own crosswalk.',
     outcome:
       'Identifies relevant SCF control IDs for human audit review, streamlining multi-framework mapping.',
     tags: ['Python', 'LLM', 'Security Hub', 'SCF', 'Compliance-as-Code'],
@@ -205,22 +205,22 @@ export const capabilities: CapabilityCategory[] = [
       { name: 'ISO 27001' },
       { name: 'NIST CSF' },
       { name: 'COBIT & SOX' },
-      { name: 'PCI-DSS' },
+      { name: 'PCI DSS' },
       { name: 'Secure Controls Framework' },
     ],
   },
   {
     number: '02',
-    category: 'Architecture',
+    category: 'Cloud',
     title: 'Cloud Security',
     description: 'Assessing cloud security and SDLC governance in AWS and GCP environments.',
     hoverBorderClass: 'hover:border-alpine-slate',
     skills: [
-      { name: 'AWS Ecosystem' },
-      { name: 'GCP Operations' },
+      { name: 'AWS' },
+      { name: 'GCP' },
       { name: 'SDLC Governance' },
-      { name: 'IAM Policy Modeling' },
-      { name: 'Linux / UNIX Admin' },
+      { name: 'IAM reviews' },
+      { name: 'Linux' },
     ],
   },
   {
@@ -239,7 +239,7 @@ export const capabilities: CapabilityCategory[] = [
   },
   {
     number: '04',
-    category: 'Linguistics',
+    category: 'Languages',
     title: 'Languages',
     description: 'Cross-border communication and audit execution across international teams.',
     hoverBorderClass: 'hover:border-[#C4B160]',
@@ -255,7 +255,7 @@ export const credentials: Credential[] = [
   {
     institution: 'Trinity College Dublin',
     institutionUrl: 'https://www.tcd.ie/about/',
-    location: 'Study Abroad • Dublin, Ireland',
+    location: 'Exchange program · Dublin, Ireland',
     description:
       'Computer Science coursework (2013–2014) through the Science Without Borders exchange program.',
   },
@@ -263,9 +263,9 @@ export const credentials: Credential[] = [
 
 export const certificationsAndDegrees = [
   {
-    title: 'Technology in IT Management (2012)',
+    title: 'Tecnólogo in IT Management (2012)',
     institution: 'FATEC Bragança Paulista (Tecnólogo, undergraduate technology degree)',
-    institutionUrl: 'https://site.cps.sp.gov.br/fatec/',
+    institutionUrl: 'https://www.cps.sp.gov.br/fatec/',
   },
   {
     title: 'AWS Cloud Audit Academy',

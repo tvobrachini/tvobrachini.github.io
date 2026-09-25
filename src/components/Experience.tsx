@@ -4,9 +4,9 @@ import { experiences, foundationalRoles, formatDuration } from '../data/portfoli
 
 export const Experience: React.FC = () => {
   const formatPeriod = (startDate: Date, endDate?: Date) => {
-    const startStr = startDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    const startStr = startDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
     const endStr = endDate
-      ? endDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
+      ? endDate.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' })
       : 'Present';
     const duration = formatDuration(startDate, endDate);
     return `${startStr} - ${endStr} (${duration})`;
@@ -17,7 +17,7 @@ export const Experience: React.FC = () => {
       <div className="border-b border-alpine-stone pb-4 flex flex-col md:flex-row md:items-baseline md:justify-between flex-wrap gap-y-2">
         <h2 className="text-3xl font-serif font-bold text-alpine-crepe">Professional Experience</h2>
         <p className="font-mono text-xs text-alpine-cloud mt-2 md:mt-0 uppercase tracking-widest whitespace-nowrap">
-          10+ Years of Excellence
+          Since 2015
         </p>
       </div>
 
@@ -68,14 +68,14 @@ export const Experience: React.FC = () => {
           <div className="absolute left-[-24px] md:[-40px] top-14 w-6 border-b border-alpine-stone/50" />
           <div className="pt-2">
             <h4 className="font-serif font-bold text-lg text-alpine-crepe mb-2">
-              Foundational Engineering (2009 - 2015)
+              Foundational Engineering (2011–2015)
             </h4>
             <p className="font-mono text-xs text-alpine-cloud mb-4 tracking-widest uppercase">
               Software Development & Infrastructure
             </p>
             <div className="text-sm text-alpine-cloud/80 leading-relaxed max-w-3xl space-y-4">
               <p>
-                Before shifting focus to IT Audit and GRC, my foundation was forged in hands-on technical environments across several roles:
+                Before moving into IT audit, I worked in software development:
               </p>
               <ul className="space-y-3">
                 {foundationalRoles.map((role, idx) => (

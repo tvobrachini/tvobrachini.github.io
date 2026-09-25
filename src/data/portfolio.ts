@@ -24,6 +24,7 @@ export interface FoundationalRole {
 export interface StrategicProject {
   title: string;
   repoUrl: string;
+  caseStudyUrl: string;
   badge: string;
   objective: string;
   execution: string;
@@ -173,6 +174,7 @@ export const strategicProjects: StrategicProject[] = [
   {
     title: 'GRC Audit Swarm',
     repoUrl: 'https://github.com/tvobrachini/grc-audit-swarm',
+    caseStudyUrl: 'https://github.com/tvobrachini/grc-audit-swarm/blob/master/CASE_STUDY.md',
     badge: 'Case Study',
     objective: 'Build a three-phase, human-gated audit automation platform with CrewAI.',
     execution:
@@ -184,6 +186,7 @@ export const strategicProjects: StrategicProject[] = [
   {
     title: 'SCF Auto-Crosswalker',
     repoUrl: 'https://github.com/tvobrachini/scf-auto-crosswalker',
+    caseStudyUrl: 'https://github.com/tvobrachini/scf-auto-crosswalker/blob/main/CASE_STUDY.md',
     badge: 'Case Study',
     objective: 'Reduce manual spreadsheet mapping to SCF controls with a framework-as-code utility.',
     execution:

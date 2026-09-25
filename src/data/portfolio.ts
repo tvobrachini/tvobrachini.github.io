@@ -82,14 +82,14 @@ export const personalInfo = {
   subheadlineLead:
     '10+ years of IT audit and technology risk experience across Big Four (PwC) and leading fintechs (Nubank, MercadoLibre, StoneCo).',
   subheadlineBody:
-    'I plan and lead IT and security audits across cloud environments (AWS, GCP) and SDLC governance, evaluate IT general controls, and build data analytics and AI tooling (Databricks, Scala, Python, CrewAI) to automate control testing. Based in São Paulo (UTC−3), open to remote roles worldwide.',
+    'I plan and lead IT and security audits across cloud environments (AWS, GCP) and SDLC governance, evaluate IT general controls, and build data analytics and AI tooling (Databricks, Scala, Python, CrewAI) to automate control testing. Based in Bragança Paulista, SP, Brazil (UTC−3), open to remote roles worldwide.',
   email: 'tvobrachini@gmail.com',
   linkedinUrl: 'https://www.linkedin.com/in/tvobrachini',
   githubUrl: 'https://github.com/tvobrachini',
   profileImage: '/profile.webp',
   cvEnUrl: '/Tiago_Brachini_CV_EN_2026.pdf',
   cvPtUrl: '/Tiago_Brachini_CV_PT_2026.pdf',
-  location: 'São Paulo, Brazil',
+  location: 'Bragança Paulista, SP, Brazil',
 };
 
 export const experiences: ExperienceItem[] = [

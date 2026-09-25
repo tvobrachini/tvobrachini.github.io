@@ -128,7 +128,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: 'StoneCo (NASDAQ: STNE)',
     companyUrl: 'https://www.stoneco.com.br/en/',
-    badge: '1.7M+ Merchant Clients · Payments Fintech',
+    badge: '1.7M+ Active Clients (2021) · Payments Fintech',
     dotColor: '#5A8F70',
     role: 'IT Internal Auditor',
     startDate: new Date('2021-02-01'),
@@ -174,7 +174,7 @@ export const strategicProjects: StrategicProject[] = [
     title: 'GRC Audit Swarm',
     repoUrl: 'https://github.com/tvobrachini/grc-audit-swarm',
     badge: 'Case Study',
-    objective: 'Deploy a stateful, three-phase audit automation platform powered by CrewAI and Groq.',
+    objective: 'Deploy a stateful, three-phase audit automation platform built with CrewAI.',
     execution:
       'Orchestrated specialized agent crews across Planning, Fieldwork, and Reporting—each gated by a human approval step modelled on engagement supervision (IIA Standard 2340), not a compliance claim. Integrated native evidence collection directly via AWS APIs (boto3) for reliable verification of IAM, MFA, and S3 security controls.',
     outcome:
@@ -257,7 +257,7 @@ export const credentials: Credential[] = [
     institutionUrl: 'https://www.tcd.ie/about/',
     location: 'Study Abroad • Dublin, Ireland',
     description:
-      "Completed international coursework in Computer Science, Business, and Statistics (2013-2014) through the Science Without Borders exchange program at Ireland's premier university.",
+      'Computer Science coursework (2013–2014) through the Science Without Borders exchange program.',
   },
 ];
 

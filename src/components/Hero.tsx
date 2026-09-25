@@ -24,9 +24,6 @@ export const Hero: React.FC = () => {
             <span className="font-mono text-xs tracking-widest uppercase text-alpine-moss border-b border-alpine-stone pb-1 inline-block">
               {personalInfo.tagline}
             </span>
-            <span className="font-mono text-[11px] px-2.5 py-0.5 bg-emerald-950/60 border border-emerald-700/60 text-emerald-300 rounded tracking-wider">
-              {personalInfo.availability}
-            </span>
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-black text-alpine-crepe leading-[1.1] tracking-tight">

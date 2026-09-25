@@ -77,12 +77,12 @@ export const navLinks: NavLink[] = [
 export const personalInfo = {
   name: 'Tiago Vinicius de Oliveira Brachini',
   displayName: 'tvobrachini',
-  tagline: 'Senior IT Auditor & Technology Risk Specialist',
+  tagline: 'Global IT Audit Specialist',
   headline: 'Auditing cloud architecture, SDLC governance, and applied AI.',
   subheadlineLead:
-    '10+ years of IT audit and technology risk experience across Big Four (PwC) and leading fintechs (Nubank, Mercado Libre, StoneCo).',
+    '10+ years of IT audit and technology risk experience across Big Four (PwC) and leading fintechs (Nubank, MercadoLibre, StoneCo).',
   subheadlineBody:
-    'I plan and lead IT and security audits across cloud environments (AWS, GCP) and SDLC governance, evaluate SOX 404 IT general controls (ITGC), and engineer data analytics and AI tooling (SQL, Databricks/Scala, CrewAI) to automate control testing over full populations. Based in São Paulo (UTC−3) and available for full remote opportunities worldwide.',
+    'I plan and lead IT and security audits across cloud environments (AWS, GCP) and SDLC governance, evaluate IT general controls, and build data analytics and AI tooling (Databricks, Scala, Python, CrewAI) to automate control testing. Based in São Paulo (UTC−3).',
   email: 'tvobrachini@gmail.com',
   linkedinUrl: 'https://www.linkedin.com/in/tvobrachini',
   githubUrl: 'https://github.com/tvobrachini',
@@ -90,19 +90,18 @@ export const personalInfo = {
   cvEnUrl: '/Tiago_Brachini_CV_EN_2026.pdf',
   cvPtUrl: '/Tiago_Brachini_CV_PT_2026.pdf',
   location: 'São Paulo, Brazil',
-  availability: 'Full Remote (UTC−3 / US Eastern hours overlap)',
 };
 
 export const experiences: ExperienceItem[] = [
   {
     company: 'Nubank (NYSE: NU)',
     companyUrl: 'https://international.nubank.com.br/about/',
-    badge: '139M+ Customers · LATAM Digital Bank',
+    badge: '139M Customers · LATAM Digital Bank',
     dotColor: '#926C9C',
     role: 'Global IT Audit Specialist',
     startDate: new Date('2025-09-01'),
     description:
-      'Plan and lead enterprise IT and cloud security audits (AWS, GCP) across core banking, distributed microservices, and SDLC governance; design and execute risk-and-control matrices (RACM) for SOX 404 compliance. Build AI-assisted audit workflows and automate control testing over full populations with Databricks and Scala. Evaluate compliance against BACEN regulations, TPRM, and SOC 1/2 vendor reports.',
+      'Plan and lead IT and security audits of SDLC governance and cloud environments (AWS, GCP), evaluating IT general controls and risk-and-control matrices. Drive AI-assisted audit documentation and control testing.',
   },
   {
     company: 'Nubank (NYSE: NU)',
@@ -113,18 +112,18 @@ export const experiences: ExperienceItem[] = [
     startDate: new Date('2023-03-01'),
     endDate: new Date('2025-09-01'),
     description:
-      'Evaluated IT general controls (ITGC) and risk-and-control matrices across cloud environments (AWS, GCP) and SDLC governance. Automated audit testing and data analytics using Databricks, Scala, and SQL.',
+      'Evaluated IT general controls and risk matrices across cloud (AWS, GCP) and SDLC. Automated audit testing and data analysis with Databricks and Scala.',
   },
   {
-    company: 'Mercado Libre (NASDAQ: MELI)',
+    company: 'MercadoLibre (NASDAQ: MELI)',
     companyUrl: 'https://investor.mercadolibre.com/',
-    badge: '18 Countries · LATAM #1 E-Commerce & Fintech',
+    badge: '18 Countries · LATAM E-Commerce & Fintech',
     dotColor: '#C4B160',
     role: 'IT Internal Auditor',
     startDate: new Date('2021-11-01'),
     endDate: new Date('2023-03-01'),
     description:
-      'Designed and executed regional SOX 404 ITGC and cloud security audits across Latin America, covering logical access, change management, and computer operations. Built automated audit analytics in Python (Pandas) and SQL (BigQuery) for full-population testing across high-volume systems. Assessed vendor risks via SOC 1/2 reports.',
+      'Designed and ran technical and operational SOX audits, including ITGC and cloud security reviews, across Latin America. Led regional audit projects with multinational teams. Built automated audit analytics in Python (Pandas) and BigQuery for high-volume environments.',
   },
   {
     company: 'StoneCo (NASDAQ: STNE)',
@@ -135,7 +134,7 @@ export const experiences: ExperienceItem[] = [
     startDate: new Date('2021-02-01'),
     endDate: new Date('2021-11-01'),
     description:
-      'Executed SOX 404 IT and operational audits of payment processing, antifraud systems, and core financial ledgers, including PCI DSS-scoped infrastructure. Automated control testing and user access reviews with SQL, Python, and BigQuery.',
+      'Ran SOX IT and operational audits of payment, antifraud and core financial applications, including PCI DSS-relevant environments. Automated control testing with ACL, Python and BigQuery.',
   },
   {
     company: 'PwC Brazil',
@@ -146,7 +145,7 @@ export const experiences: ExperienceItem[] = [
     startDate: new Date('2015-07-01'),
     endDate: new Date('2021-02-01'),
     description:
-      'Planned and executed IT and business process audits (ITGC, SOX 404/ICFR, SOC 1/2) for tier-1 financial institutions and multinational corporations. Evaluated control design and operating effectiveness across ERPs, databases (SQL, Oracle), and operating systems; drafted executive reporting and deficiency memos.',
+      'Planned and ran IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients. Built process flowcharts and risk-and-control matrices; tested control design and operating effectiveness. Coordinated audit teams; documented findings, recommendations and completion reports.',
   },
 ];
 
@@ -177,10 +176,10 @@ export const strategicProjects: StrategicProject[] = [
     badge: 'Case Study',
     objective: 'Deploy a stateful, three-phase audit automation platform powered by CrewAI and Groq.',
     execution:
-      'Orchestrated specialized agent crews across Planning, Fieldwork, and Reporting—each gated by a human approval step modelled on engagement supervision (IIA Standard 2340). Integrated native evidence collection directly via AWS APIs (boto3) for reliable verification of IAM, MFA, and S3 security controls.',
+      'Orchestrated specialized agent crews across Planning, Fieldwork, and Reporting—each gated by a human approval step modelled on engagement supervision (IIA Standard 2340), not a compliance claim. Integrated native evidence collection directly via AWS APIs (boto3) for reliable verification of IAM, MFA, and S3 security controls.',
     outcome:
-      'Built an immutable SHA-256-hashed evidence vault with verbatim source-quote verification, in the spirit of PCAOB AS 1215 documentation integrity principles, preventing hallucinations and ensuring every finding traces directly to collected evidence.',
-    tags: ['CrewAI', 'Python', 'AWS APIs', 'SHA-256 Vault', 'NIST OSCAL'],
+      'Built a SHA-256-hashed evidence vault with verbatim source-quote verification, in the spirit of PCAOB AS 1215 documentation integrity (not a compliance claim), so every finding can be traced back to the evidence it cites.',
+    tags: ['CrewAI', 'Python', 'AWS APIs', 'SHA-256 Vault'],
   },
   {
     title: 'SCF Auto-Crosswalker',
@@ -188,9 +187,9 @@ export const strategicProjects: StrategicProject[] = [
     badge: 'Case Study',
     objective: 'Eliminate manual spreadsheet risk mapping by designing a programmatic framework-as-code crosswalking utility.',
     execution:
-      'Developed an automated crosswalking tool that maps unstructured IT policies and AWS Security Hub findings directly to Secure Controls Framework (SCF) control identifiers, bridging across ISO 27001, NIST, PCI DSS, and SOC 2.',
+      'Developed an automated crosswalking tool that maps unstructured IT policies and AWS Security Hub findings directly to Secure Controls Framework (SCF) control identifiers, which link onward to ISO 27001, NIST, PCI DSS and SOC 2 through the SCF\'s own crosswalk.',
     outcome:
-      'Identifies relevant SCF control IDs for human audit review, streamlining multi-framework mapping without redistributing modified SCF proprietary materials.',
+      'Identifies relevant SCF control IDs for human audit review, streamlining multi-framework mapping.',
     tags: ['Python', 'LLM', 'Security Hub', 'SCF', 'Compliance-as-Code'],
   },
 ];
@@ -200,29 +199,28 @@ export const capabilities: CapabilityCategory[] = [
     number: '01',
     category: 'Governance',
     title: 'IT Audit & GRC',
-    description: 'Evaluating internal controls, SOX 404 ITGCs, regulatory mandates, and enterprise technology risk.',
+    description: 'Evaluating internal controls, SOX IT general controls, and enterprise technology risk.',
     hoverBorderClass: 'hover:border-alpine-moss',
     skills: [
-      { name: 'SOX 404 & ITGC' },
-      { name: 'SOC 1 / SOC 2 Reliance' },
-      { name: 'BACEN (Res. 4893/4658)' },
-      { name: 'ISO 27001 & NIST CSF' },
-      { name: 'PCI-DSS & SCF' },
-      { name: 'TPRM & BCP/DR' },
+      { name: 'ISO 27001' },
+      { name: 'NIST CSF' },
+      { name: 'COBIT & SOX' },
+      { name: 'PCI-DSS' },
+      { name: 'Secure Controls Framework' },
     ],
   },
   {
     number: '02',
     category: 'Architecture',
     title: 'Cloud Security',
-    description: 'Securing cloud platforms, privileged access, and SDLC / DevSecOps engineering pipelines.',
+    description: 'Assessing cloud security and SDLC governance in AWS and GCP environments.',
     hoverBorderClass: 'hover:border-alpine-slate',
     skills: [
-      { name: 'AWS Security (IAM, S3, Orgs)' },
-      { name: 'GCP Security Posture' },
-      { name: 'SDLC / DevSecOps Governance' },
-      { name: 'Privileged Access Management' },
-      { name: 'Vulnerability Management' },
+      { name: 'AWS Ecosystem' },
+      { name: 'GCP Operations' },
+      { name: 'SDLC Governance' },
+      { name: 'IAM Policy Modeling' },
+      { name: 'Linux / UNIX Admin' },
     ],
   },
   {
@@ -232,7 +230,7 @@ export const capabilities: CapabilityCategory[] = [
     description: 'Engineering programmatic testing, big data analytics, and multi-agent AI systems for audit.',
     hoverBorderClass: 'hover:border-[#B86B49]',
     skills: [
-      { name: 'SQL & BigQuery' },
+      { name: 'BigQuery' },
       { name: 'Python (Pandas, boto3)' },
       { name: 'Databricks & Scala' },
       { name: 'CrewAI / Multi-Agent LLMs' },
@@ -248,7 +246,7 @@ export const capabilities: CapabilityCategory[] = [
     skills: [
       { name: 'Portuguese', level: 'Native' },
       { name: 'English', level: 'Fluent' },
-      { name: 'Spanish', level: 'Professional working' },
+      { name: 'Spanish', level: 'Basic' },
     ],
   },
 ];
@@ -266,12 +264,12 @@ export const credentials: Credential[] = [
 export const certificationsAndDegrees = [
   {
     title: 'Technology in IT Management (2012)',
-    institution: 'FATEC Bragança Paulista (Undergraduate Degree)',
+    institution: 'FATEC Bragança Paulista (Tecnólogo, undergraduate technology degree)',
     institutionUrl: 'https://site.cps.sp.gov.br/fatec/',
   },
   {
     title: 'AWS Cloud Audit Academy',
-    issuer: '(Cloud Agnostic Training, AWS)',
+    issuer: '(Cloud Agnostic, AWS training, 2021)',
   },
 ];
 

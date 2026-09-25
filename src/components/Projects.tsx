@@ -6,9 +6,9 @@ export const Projects: React.FC = () => {
   return (
     <section id="strategic-projects" className="space-y-16">
       <div className="border-b border-alpine-stone pb-4 flex flex-col md:flex-row md:items-baseline md:justify-between flex-wrap gap-y-2">
-        <h2 className="text-3xl font-serif font-bold text-alpine-crepe">Strategic Projects</h2>
+        <h2 className="text-3xl font-serif font-bold text-alpine-crepe">Open-Source Projects (Personal)</h2>
         <p className="font-mono text-xs text-alpine-cloud mt-2 md:mt-0 uppercase tracking-widest whitespace-nowrap">
-          Automation & Architecture
+          Built on my own time, not affiliated with any employer
         </p>
       </div>
 

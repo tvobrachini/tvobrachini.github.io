@@ -16,7 +16,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
           href="#"
           onClick={(e) => {
             e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
             if (window.location.hash) {
               window.history.pushState(null, '', window.location.pathname);
             }
@@ -35,7 +35,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
               onClick={(e) => {
                 if (href === '#executive-summary') {
                   e.preventDefault();
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
                   window.history.pushState(null, '', window.location.pathname);
                 }
               }}
@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection }) => {
                   setMenuOpen(false);
                   if (href === '#executive-summary') {
                     e.preventDefault();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    window.scrollTo({ top: 0, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' });
                     window.history.pushState(null, '', window.location.pathname);
                   }
                 }}

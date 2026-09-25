@@ -265,21 +265,13 @@ export const credentials: Credential[] = [
 
 export const certificationsAndDegrees = [
   {
-    title: 'AWS Cloud Audit Academy',
-    issuer: '(Cloud Agnostic Training, 2021)',
-  },
-  {
     title: 'Technology in IT Management (2012)',
     institution: 'FATEC Bragança Paulista (Undergraduate Degree)',
     institutionUrl: 'https://site.cps.sp.gov.br/fatec/',
   },
   {
-    title: 'Alteryx Designer Core',
-    issuer: '(Alteryx, 2020, former)',
-  },
-  {
-    title: 'Scrum Fundamentals Certified',
-    issuer: '(SCRUMstudy, 2019, former)',
+    title: 'AWS Cloud Audit Academy',
+    issuer: '(Cloud Agnostic Training, AWS)',
   },
 ];
 

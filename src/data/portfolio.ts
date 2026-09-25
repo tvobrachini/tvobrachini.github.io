@@ -159,7 +159,7 @@ export const foundationalRoles: FoundationalRole[] = [
     title: 'Software Development Intern',
     company: 'OSG Sulamericana',
     period: 'Jul 2012 – Jul 2013',
-    details: 'Updated IT policies for J-SOX and developed intranet applications.',
+    details: 'Updated IT policies for J-SOX and developed intranet applications using Python/Django and Progress 4GL.',
   },
   {
     title: 'Software Developer',

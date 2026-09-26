@@ -97,7 +97,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: 'Nubank (NYSE: NU)',
     companyUrl: 'https://international.nubank.com.br/about/',
-    badge: '140M+ Customers · Digital Banking Platform',
+    badge: '140M+ Customers · US launch Sep 2026',
     dotColor: '#a889b0',
     role: 'Global IT Audit Specialist',
     startDate: new Date('2025-09-01'),
@@ -135,7 +135,7 @@ export const experiences: ExperienceItem[] = [
     startDate: new Date('2021-02-01'),
     endDate: new Date('2021-11-01'),
     description:
-      'Ran SOX IT and operational audits of payment, antifraud and core financial applications, including PCI DSS-relevant environments. Automated control testing with ACL, Python and BigQuery.',
+      'Ran SOX IT and operational audits of payment, antifraud and core financial applications, including environments in PCI DSS scope. Automated control testing with ACL, Python and BigQuery.',
   },
   {
     company: 'PwC Brazil',
@@ -160,13 +160,11 @@ export const foundationalRoles: FoundationalRole[] = [
     title: 'Software Development Intern',
     company: 'OSG Sulamericana',
     period: 'Jul 2012 – Jul 2013',
-    details: 'Updated IT policies for J-SOX and developed intranet applications using Python/Django and Progress 4GL.',
   },
   {
     title: 'Software Developer',
     company: '3Wise Tecnologia',
     period: 'Jun 2011 – May 2012',
-    details: 'Built an import/export module for Honda Brazil using ASP/VB6, ASP.NET/C# and MySQL/Oracle.',
   },
 ];
 
@@ -223,7 +221,6 @@ export const capabilities: CapabilityCategory[] = [
       { name: 'GCP' },
       { name: 'SDLC Governance' },
       { name: 'IAM reviews' },
-      { name: 'Linux' },
     ],
   },
   {

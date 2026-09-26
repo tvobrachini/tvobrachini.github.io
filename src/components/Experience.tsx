@@ -71,7 +71,7 @@ export const Experience: React.FC = () => {
               Foundational Engineering (2011–2015)
             </h4>
             <p className="font-mono text-xs text-alpine-cloud mb-4 tracking-widest uppercase">
-              Software Development & Infrastructure
+              Software Development
             </p>
             <div className="text-sm text-alpine-cloud/80 leading-relaxed max-w-3xl space-y-4">
               <p>

@@ -162,6 +162,12 @@ export const foundationalRoles: FoundationalRole[] = [
     period: 'Jul 2012 – Jul 2013',
   },
   {
+    title: 'Research Intern',
+    company: 'IFSP',
+    period: 'Jun 2012 – Dec 2012',
+    details: 'Research internship on the semantic web.',
+  },
+  {
     title: 'Software Developer',
     company: '3Wise Tecnologia',
     period: 'Jun 2011 – May 2012',

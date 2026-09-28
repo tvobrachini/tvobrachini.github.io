@@ -55,8 +55,8 @@ export interface Publication {
 }
 
 export function formatDuration(startDate: Date, endDate: Date = new Date()): string {
-  let years = endDate.getFullYear() - startDate.getFullYear();
-  let months = endDate.getMonth() - startDate.getMonth();
+  let years = endDate.getUTCFullYear() - startDate.getUTCFullYear();
+  let months = endDate.getUTCMonth() - startDate.getUTCMonth();
   if (months < 0) {
     years--;
     months += 12;
@@ -184,7 +184,7 @@ export const strategicProjects: StrategicProject[] = [
     execution:
       'Orchestrated specialized agent crews across Planning, Fieldwork, and Reporting, each gated by a human approval step modeled on engagement supervision (IIA Global Internal Audit Standards, Standard 12.3, formerly 2340), not a compliance claim. Integrated native evidence collection directly via AWS APIs (boto3) to collect read-only evidence on IAM, MFA and S3 settings.',
     outcome:
-      'Built a SHA-256-hashed evidence vault with verbatim source-quote verification, so every finding can be traced back to the evidence it cites. Added OSCAL Assessment Results export with NIST 800-53 mapping heuristics.',
+      'Built a SHA-256-hashed evidence vault with verbatim source-quote verification, so every finding can be traced back to the evidence it cites. Added schema-validated OSCAL 1.2.1 Assessment Results export, with NIST 800-53 catalog links for 800-53-style control IDs.',
     tags: ['CrewAI', 'Python', 'AWS APIs', 'SHA-256 Vault', 'OSCAL'],
   },
   {

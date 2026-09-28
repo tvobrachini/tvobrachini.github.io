@@ -55,8 +55,8 @@ export interface Publication {
 }
 
 export function formatDuration(startDate: Date, endDate: Date = new Date()): string {
-  let years = endDate.getFullYear() - startDate.getFullYear();
-  let months = endDate.getMonth() - startDate.getMonth();
+  let years = endDate.getUTCFullYear() - startDate.getUTCFullYear();
+  let months = endDate.getUTCMonth() - startDate.getUTCMonth();
   if (months < 0) {
     years--;
     months += 12;
@@ -184,7 +184,7 @@ export const strategicProjects: StrategicProject[] = [
     execution:
       'Orchestrated specialized agent crews across Planning, Fieldwork, and Reporting, each gated by a human approval step modeled on engagement supervision (IIA Global Internal Audit Standards, Standard 12.3, formerly 2340), not a compliance claim. Integrated native evidence collection directly via AWS APIs (boto3) to collect read-only evidence on IAM, MFA and S3 settings.',
     outcome:
-      'Built a SHA-256-hashed evidence vault with verbatim source-quote verification, so every finding can be traced back to the evidence it cites. Added OSCAL Assessment Results export with NIST 800-53 mapping heuristics.',
+      'Built a SHA-256-hashed evidence vault with verbatim source-quote verification, so every finding can be traced back to the evidence it cites. Added schema-validated OSCAL 1.2.1 Assessment Results export, with NIST 800-53 catalog links for 800-53-style control IDs.',
     tags: ['CrewAI', 'Python', 'AWS APIs', 'SHA-256 Vault', 'OSCAL'],
   },
   {
@@ -194,10 +194,10 @@ export const strategicProjects: StrategicProject[] = [
     badge: 'Case Study',
     objective: 'Reduce manual spreadsheet mapping to SCF controls with a framework-as-code utility.',
     execution:
-      'Developed a tool that suggests mappings from IT policies and AWS Security Hub findings to Secure Controls Framework (SCF) control identifiers, which link onward to ISO 27001, NIST, PCI DSS and SOC 2 through the SCF\'s own crosswalk.',
+      'Developed three tools: a Crosswalker that suggests Secure Controls Framework (SCF) control identifiers for IT policies and AWS Security Hub findings, a Scope Analyzer that suggests SCF controls to test for an audit scope, and a Gap Analyzer that checks a control list against a framework such as SOC 2 per requirement, with no language model. SCF IDs link onward to ISO 27001, NIST, PCI DSS and SOC 2 through the SCF\'s own crosswalk.',
     outcome:
-      'Identifies relevant SCF control IDs for human audit review, streamlining multi-framework mapping.',
-    tags: ['Python', 'LLM', 'Security Hub', 'SCF', 'Compliance-as-Code'],
+      'Every suggested ID is checked against the retrieved SCF candidates, so only real SCF controls reach human audit review. Gap coverage is reported per framework requirement, and results export to CSV and OSCAL.',
+    tags: ['Python', 'LLM', 'Security Hub', 'SCF', 'Gap Analysis', 'OSCAL'],
   },
 ];
 

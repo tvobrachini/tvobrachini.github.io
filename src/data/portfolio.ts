@@ -194,10 +194,10 @@ export const strategicProjects: StrategicProject[] = [
     badge: 'Case Study',
     objective: 'Reduce manual spreadsheet mapping to SCF controls with a framework-as-code utility.',
     execution:
-      'Developed a tool that suggests mappings from IT policies and AWS Security Hub findings to Secure Controls Framework (SCF) control identifiers, which link onward to ISO 27001, NIST, PCI DSS and SOC 2 through the SCF\'s own crosswalk.',
+      'Developed three tools: a Crosswalker that suggests Secure Controls Framework (SCF) control identifiers for IT policies and AWS Security Hub findings, a Scope Analyzer that suggests SCF controls to test for an audit scope, and a Gap Analyzer that checks a control list against a framework such as SOC 2 per requirement, with no language model. SCF IDs link onward to ISO 27001, NIST, PCI DSS and SOC 2 through the SCF\'s own crosswalk.',
     outcome:
-      'Identifies relevant SCF control IDs for human audit review, streamlining multi-framework mapping.',
-    tags: ['Python', 'LLM', 'Security Hub', 'SCF', 'Compliance-as-Code'],
+      'Every suggested ID is checked against the retrieved SCF candidates, so only real SCF controls reach human audit review. Gap coverage is reported per framework requirement, and results export to CSV and OSCAL.',
+    tags: ['Python', 'LLM', 'Security Hub', 'SCF', 'Gap Analysis', 'OSCAL'],
   },
 ];
 

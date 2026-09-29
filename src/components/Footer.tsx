@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
     <footer className="border-t border-alpine-stone py-12 text-center md:text-left bg-alpine-basalt mt-20 print:border-t-2 print:border-black print:bg-transparent print:py-6">
       <div className="max-w-4xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
         <div>
-          <p className="font-mono text-xs text-alpine-cloud uppercase tracking-widest">
+          <p className="text-sm text-alpine-cloud">
             © {new Date().getFullYear()} {personalInfo.displayName}
           </p>
         </div>

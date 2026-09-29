@@ -1,16 +1,15 @@
 import React from 'react';
 import { ExternalLink, FolderGit2 } from 'lucide-react';
 import { strategicProjects } from '../data/portfolio';
+import { SectionHeader } from './SectionHeader';
 
 export const Projects: React.FC = () => {
   return (
     <section id="strategic-projects" className="space-y-16">
-      <div className="border-b border-alpine-stone pb-4 flex flex-col md:flex-row md:items-baseline md:justify-between flex-wrap gap-y-2">
-        <h2 className="text-3xl font-serif font-bold text-alpine-crepe">Open-Source Projects (Personal)</h2>
-        <p className="font-mono text-xs text-alpine-cloud mt-2 md:mt-0 uppercase tracking-widest whitespace-nowrap">
-          Built on my own time, not affiliated with any employer
-        </p>
-      </div>
+      <SectionHeader
+        title="Open-Source Projects (Personal)"
+        note="Built on my own time, not affiliated with any employer"
+      />
 
       <div className="grid gap-8">
         {strategicProjects.map((project) => (
@@ -29,7 +28,7 @@ export const Projects: React.FC = () => {
                 >
                   <FolderGit2 className="w-5 h-5 text-alpine-moss" />
                   <span>{project.title}</span>
-                  <ExternalLink className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
+                  <ExternalLink className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
                 </a>
               </h3>
               <a
@@ -45,19 +44,19 @@ export const Projects: React.FC = () => {
 
             <div className="space-y-6 text-alpine-cloud text-sm md:text-base">
               <p className="leading-relaxed">
-                <strong className="font-mono font-bold uppercase text-alpine-moss block mb-1">
+                <strong className="font-serif font-bold text-alpine-crepe block mb-1">
                   Objective
                 </strong>
                 {project.objective}
               </p>
               <p className="leading-relaxed">
-                <strong className="font-mono font-bold uppercase text-alpine-slate block mb-1">
+                <strong className="font-serif font-bold text-alpine-crepe block mb-1">
                   Execution
                 </strong>
                 {project.execution}
               </p>
               <p className="leading-relaxed">
-                <strong className="font-mono font-bold uppercase text-alpine-leather block mb-1">
+                <strong className="font-serif font-bold text-alpine-crepe block mb-1">
                   Outcome
                 </strong>
                 {project.outcome}
@@ -68,7 +67,7 @@ export const Projects: React.FC = () => {
               {project.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="border border-alpine-stone/60 text-alpine-cloud px-3 py-1 uppercase hover:border-alpine-crepe/50 transition-colors"
+                  className="border border-alpine-stone/60 text-alpine-cloud px-3 py-1"
                 >
                   {tag}
                 </span>

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Linkedin, Github, Mail, Copy, Check, Printer, FileText } from 'lucide-react';
+import { Mail, Copy, Check, FileText } from 'lucide-react';
 import { personalInfo } from '../data/portfolio';
 
 export const Hero: React.FC = () => {
@@ -15,17 +15,13 @@ export const Hero: React.FC = () => {
     }
   };
 
-  const handlePrint = () => {
-    window.print();
-  };
-
   return (
     <section id="executive-summary" className="relative">
       <div className="flex flex-col-reverse lg:flex-row lg:justify-between lg:items-start gap-12 lg:gap-20">
         {/* Text Content */}
         <div className="space-y-8 flex-1">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="font-mono text-xs tracking-widest uppercase text-alpine-moss border-b border-alpine-stone pb-1 inline-block">
+            <span className="text-sm tracking-wide text-alpine-moss">
               {personalInfo.tagline}
             </span>
           </div>
@@ -47,11 +43,11 @@ export const Hero: React.FC = () => {
           </div>
 
           <p className="hidden print:block font-mono text-xs text-black">
-            Tiago Brachini · tvobrachini@gmail.com · linkedin.com/in/tvobrachini · tvobrachini.github.io
+            Tiago Brachini | tvobrachini@gmail.com | linkedin.com/in/tvobrachini | github.com/tvobrachini | tvobrachini.github.io
           </p>
 
           {/* Action Links & Buttons */}
-          <div className="flex flex-wrap gap-3 pt-6 font-mono text-xs uppercase tracking-widest items-center print:hidden">
+          <div className="flex flex-wrap gap-3 pt-6 text-sm items-center print:hidden">
             {/* Primary CV Downloads */}
             <a
               href={personalInfo.cvEnUrl}
@@ -61,7 +57,7 @@ export const Hero: React.FC = () => {
               title="Download English CV (PDF)"
             >
               <FileText className="w-4 h-4" />
-              <span>CV (EN · PDF)</span>
+              <span>CV in English (PDF)</span>
             </a>
 
             <a
@@ -74,27 +70,7 @@ export const Hero: React.FC = () => {
               hrefLang="pt-BR"
             >
               <FileText className="w-4 h-4 text-alpine-moss" />
-              <span>Currículo (PT · PDF)</span>
-            </a>
-
-            <a
-              href={personalInfo.linkedinUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-transparent text-alpine-cloud px-5 py-3 border border-alpine-stone hover:border-alpine-crepe hover:text-alpine-crepe transition-colors"
-            >
-              <Linkedin className="w-4 h-4" />
-              <span>LinkedIn</span>
-            </a>
-
-            <a
-              href={personalInfo.githubUrl}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 bg-transparent text-alpine-cloud px-5 py-3 border border-alpine-stone hover:border-alpine-crepe hover:text-alpine-crepe transition-colors"
-            >
-              <Github className="w-4 h-4" />
-              <span>GitHub</span>
+              <span>Currículo em português (PDF)</span>
             </a>
 
             {/* Email with copy button */}
@@ -121,22 +97,12 @@ export const Hero: React.FC = () => {
               </button>
               <span role="status" aria-live="polite">
               {copied && (
-                <span className="absolute -top-8 right-0 bg-alpine-stone border border-alpine-moss text-[10px] text-alpine-crepe px-2 py-0.5 rounded font-mono shadow-md animate-in fade-in">
-                  Copied!
+                <span className="absolute -top-8 right-0 bg-alpine-stone border border-alpine-moss text-xs text-alpine-crepe px-2 py-0.5 rounded shadow-md whitespace-nowrap">
+                  Email copied
                 </span>
               )}
               </span>
             </div>
-
-            {/* Print / Save CV */}
-            <button
-              onClick={handlePrint}
-              className="inline-flex items-center gap-2 bg-transparent text-alpine-cloud px-4 py-3 border border-dashed border-alpine-stone hover:border-alpine-moss hover:text-alpine-crepe transition-colors"
-              title="Print page or save PDF"
-            >
-              <Printer className="w-4 h-4 text-alpine-moss" />
-              <span>Print Page</span>
-            </button>
           </div>
         </div>
 

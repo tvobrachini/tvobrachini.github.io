@@ -1,29 +1,21 @@
 import React from 'react';
-import { capabilities } from '../data/portfolio';
+import { skills } from '../data/portfolio';
 import { SectionHeader } from './SectionHeader';
-import { Card } from './Card';
 
+// The CV's skills list, word for word, so the site and the PDF never disagree.
 export const Capabilities: React.FC = () => {
   return (
     <section id="capabilities" className="space-y-16">
-      <SectionHeader title="Capabilities" />
+      <SectionHeader title="Skills" />
 
-      <div className="grid md:grid-cols-2 gap-6">
-        {capabilities.map((cat) => (
-          <Card key={cat.title}>
-            <h3 className="text-xl font-serif font-bold mb-3 text-alpine-crepe">{cat.title}</h3>
-            <p className="text-sm text-alpine-cloud/80 mb-6">{cat.description}</p>
-            <ul className="text-sm text-alpine-cloud space-y-2 border-t border-alpine-stone/50 pt-5">
-              {cat.skills.map((skill) => (
-                <li key={skill.name} className="flex justify-between items-baseline gap-2">
-                  <span>{skill.name}</span>
-                  {skill.level && <span className="text-alpine-moss">{skill.level}</span>}
-                </li>
-              ))}
-            </ul>
-          </Card>
+      <dl className="divide-y divide-alpine-stone/60 border-y border-alpine-stone/60">
+        {skills.map((group) => (
+          <div key={group.title} className="grid md:grid-cols-[12rem_1fr] gap-x-8 gap-y-1 py-5 print:break-inside-avoid">
+            <dt className="font-serif font-bold text-alpine-crepe">{group.title}</dt>
+            <dd className="text-alpine-cloud leading-relaxed">{group.skills}</dd>
+          </div>
         ))}
-      </div>
+      </dl>
     </section>
   );
 };

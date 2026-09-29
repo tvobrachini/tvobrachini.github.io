@@ -95,10 +95,10 @@ export const personalInfo = {
   email: 'tvobrachini@gmail.com',
   linkedinUrl: 'https://www.linkedin.com/in/tvobrachini',
   githubUrl: 'https://github.com/tvobrachini',
+  siteUrl: 'https://tvobrachini.github.io',
   profileImage: '/profile.webp',
   cvEnUrl: '/Tiago_Brachini_CV_EN_2026.pdf',
   cvPtUrl: '/Tiago_Brachini_CV_PT_2026.pdf',
-  location: 'Bragança Paulista, SP, Brazil',
 };
 
 export const experiences: ExperienceItem[] = [

@@ -7,7 +7,7 @@ export interface Role {
   title: string;
   startDate: Date;
   endDate?: Date; // undefined means "Present"
-  description: string;
+  description?: string;
 }
 
 // One entry per employer; roles are listed newest first.
@@ -17,6 +17,8 @@ export interface ExperienceItem {
   badge: string;
   dotColor: string;
   roles: Role[];
+  // Shown after the roles when one description covers all of them (as on the CV).
+  description?: string;
 }
 
 export interface FoundationalRole {
@@ -30,17 +32,13 @@ export interface StrategicProject {
   title: string;
   repoUrl: string;
   caseStudyUrl: string;
-  badge: string;
-  objective: string;
-  execution: string;
-  outcome: string;
-  tags: string[];
+  stack: string;
+  summary: string;
 }
 
-export interface CapabilityCategory {
+export interface SkillGroup {
   title: string;
-  description: string;
-  skills: { name: string; level?: string }[];
+  skills: string;
 }
 
 export interface EducationItem {
@@ -79,7 +77,7 @@ export const navLinks: NavLink[] = [
   { href: '#executive-summary', label: 'Summary' },
   { href: '#professional-experience', label: 'Experience' },
   { href: '#strategic-projects', label: 'Projects' },
-  { href: '#capabilities', label: 'Capabilities' },
+  { href: '#capabilities', label: 'Skills' },
   { href: '#credentials', label: 'Education' },
 ];
 
@@ -159,14 +157,13 @@ export const experiences: ExperienceItem[] = [
     badge: 'Big Four accounting | Risk Assurance',
     dotColor: '#B86B49',
     roles: [
-      {
-        title: 'Risk Assurance, Trainee to Senior Associate',
-        startDate: new Date('2015-07-01'),
-        endDate: new Date('2021-02-01'),
-        description:
-          'Planned and ran IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients. Built process flowcharts and risk-and-control matrices; tested control design and operating effectiveness. Coordinated audit teams; documented findings, recommendations and completion reports.',
-      },
+      { title: 'Senior Associate', startDate: new Date('2018-07-01'), endDate: new Date('2021-02-01') },
+      { title: 'Experienced Associate', startDate: new Date('2017-07-01'), endDate: new Date('2018-07-01') },
+      { title: 'Associate', startDate: new Date('2016-07-01'), endDate: new Date('2017-07-01') },
+      { title: 'Trainee', startDate: new Date('2015-07-01'), endDate: new Date('2016-07-01') },
     ],
+    description:
+      'Planned and ran IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients. Built process flowcharts and risk-and-control matrices; tested control design and operating effectiveness. Coordinated audit teams; documented findings and recommendations and drafted completion reports.',
   },
 ];
 
@@ -199,69 +196,38 @@ export const strategicProjects: StrategicProject[] = [
     title: 'GRC Audit Swarm',
     repoUrl: 'https://github.com/tvobrachini/grc-audit-swarm',
     caseStudyUrl: 'https://github.com/tvobrachini/grc-audit-swarm/blob/master/CASE_STUDY.md',
-    badge: 'Case Study',
-    objective: 'Build a three-phase, human-gated audit automation platform with CrewAI.',
-    execution:
-      'Orchestrated specialized agent crews across Planning, Fieldwork, and Reporting, each gated by a human approval step modeled on engagement supervision (IIA Global Internal Audit Standards, Standard 12.3, formerly 2340), not a compliance claim. Integrated native evidence collection directly via AWS APIs (boto3) to collect read-only evidence on IAM, MFA and S3 settings.',
-    outcome:
-      'Built a SHA-256-hashed evidence vault with verbatim source-quote verification, so every finding can be traced back to the evidence it cites. Added schema-validated OSCAL 1.2.1 Assessment Results export, with NIST 800-53 catalog links for 800-53-style control IDs.',
-    tags: ['CrewAI', 'Python', 'AWS APIs', 'SHA-256 Vault', 'OSCAL'],
+    stack: 'Python, CrewAI',
+    summary:
+      'Multi-agent audit platform across Planning, Fieldwork and Reporting, with QA agents that reject and retry, human approval between phases, read-only AWS evidence collection (boto3), a SHA-256-hashed evidence vault, AWS account-ID redaction, and OSCAL export.',
   },
   {
     title: 'SCF Auto-Crosswalker',
     repoUrl: 'https://github.com/tvobrachini/scf-auto-crosswalker',
     caseStudyUrl: 'https://github.com/tvobrachini/scf-auto-crosswalker/blob/main/CASE_STUDY.md',
-    badge: 'Case Study',
-    objective: 'Reduce manual spreadsheet mapping to SCF controls with a framework-as-code utility.',
-    execution:
-      'Developed three tools: a Crosswalker that suggests Secure Controls Framework (SCF) control identifiers for IT policies and AWS Security Hub findings, a Scope Analyzer that suggests SCF controls to test for an audit scope, and a Gap Analyzer that checks a control list against a framework such as SOC 2 per requirement, with no language model. SCF IDs link onward to ISO 27001, NIST, PCI DSS and SOC 2 through the SCF\'s own crosswalk.',
-    outcome:
-      'Every suggested ID is checked against the retrieved SCF candidates, so only real SCF controls reach human audit review. Gap coverage is reported per framework requirement, and results export to CSV and OSCAL.',
-    tags: ['Python', 'LLM', 'Security Hub', 'SCF', 'Gap Analysis', 'OSCAL'],
+    stack: 'Python, LLM',
+    summary:
+      'Suggests Secure Controls Framework control IDs for IT policies, AWS Security Hub findings and audit scopes, for human review, and checks a control list against frameworks such as SOC 2 per requirement (gap analysis, no language model). CSV and OSCAL export; CI with ruff and bandit.',
   },
 ];
 
-export const capabilities: CapabilityCategory[] = [
+export const skills: SkillGroup[] = [
   {
-    title: 'IT Audit & GRC',
-    description: 'Evaluating internal controls, SOX IT general controls, and enterprise technology risk.',
-    skills: [
-      { name: 'ISO 27001' },
-      { name: 'NIST CSF' },
-      { name: 'COBIT & SOX' },
-      { name: 'PCI DSS' },
-      { name: 'Secure Controls Framework' },
-    ],
+    title: 'Governance & risk',
+    skills:
+      'ITGC (access, change management, IT operations), ITAC, SOX/J-SOX, COBIT, COSO, NIST CSF, ISO 27001, PCI DSS, SCF, LGPD/GDPR, CMN Res. 4893, BCP/DR',
   },
   {
-    title: 'Cloud Security',
-    description: 'Assessing cloud security and SDLC governance in AWS and GCP environments.',
-    skills: [
-      { name: 'AWS' },
-      { name: 'GCP' },
-      { name: 'SDLC Governance' },
-      { name: 'IAM reviews' },
-    ],
+    title: 'Security & cloud',
+    skills: 'AWS, GCP, IAM, SDLC/DevSecOps, vulnerability management',
   },
   {
-    title: 'Data & Audit Automation',
-    description: 'Engineering programmatic testing, big data analytics, and multi-agent AI systems for audit.',
-    skills: [
-      { name: 'BigQuery' },
-      { name: 'Python (Pandas, boto3)' },
-      { name: 'Databricks & Scala' },
-      { name: 'CrewAI / Multi-Agent LLMs' },
-      { name: 'Docker & CI/CD' },
-    ],
+    title: 'Data & automation',
+    skills:
+      'SQL, Python, Scala, Databricks, BigQuery, ACL, Alteryx, Power BI, CrewAI, LangGraph, Docker, GitHub Actions',
   },
   {
     title: 'Languages',
-    description: 'Cross-border communication and audit execution across international teams.',
-    skills: [
-      { name: 'Portuguese', level: 'Native' },
-      { name: 'English', level: 'Fluent' },
-      { name: 'Spanish', level: 'Basic' },
-    ],
+    skills: 'Portuguese (native), English (fluent), Spanish (basic)',
   },
 ];
 

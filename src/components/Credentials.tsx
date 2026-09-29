@@ -1,71 +1,57 @@
 import React from 'react';
 import { ExternalLink, GraduationCap, Award, BookOpen } from 'lucide-react';
-import { credentials, certificationsAndDegrees, publication } from '../data/portfolio';
+import { education, training, publication } from '../data/portfolio';
+import { SectionHeader } from './SectionHeader';
 
 export const Credentials: React.FC = () => {
   return (
     <section id="credentials" className="space-y-16">
-      <div className="border-b border-alpine-stone pb-4 flex flex-col md:flex-row md:items-baseline md:justify-between flex-wrap gap-y-2">
-        <h2 className="text-3xl font-serif font-bold text-alpine-crepe">Credentials & Education</h2>
-        <p className="font-mono text-xs text-alpine-cloud mt-2 md:mt-0 uppercase tracking-widest whitespace-nowrap">
-          Academic Foundations
-        </p>
-      </div>
+      <SectionHeader title="Education & Credentials" />
 
       <div className="grid md:grid-cols-2 gap-8">
-        {credentials.map((cred) => (
-          <div key={cred.institution} className="border border-alpine-stone bg-alpine-basalt p-8 relative">
-            <div className="flex items-center gap-2 mb-2 text-alpine-moss">
-              <GraduationCap className="w-5 h-5" />
-              <h3 className="text-xl font-serif font-bold text-alpine-crepe">
-                <a
-                  href={cred.institutionUrl}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-alpine-moss transition-colors inline-flex items-center gap-1.5"
-                >
-                  <span>{cred.institution}</span>
-                  <ExternalLink className="w-3.5 h-3.5 opacity-60" />
-                </a>
-              </h3>
-            </div>
-            <div className="font-mono text-xs text-alpine-slate mb-4 uppercase tracking-widest">
-              {cred.location}
-            </div>
-            <p className="text-sm text-alpine-cloud/80 leading-relaxed">{cred.description}</p>
+        <div className="border border-alpine-stone bg-alpine-basalt p-8">
+          <div className="flex items-center gap-2 mb-6 text-alpine-moss">
+            <GraduationCap className="w-5 h-5" />
+            <h3 className="text-xl font-serif font-bold text-alpine-crepe">Education</h3>
           </div>
-        ))}
+          <ul className="space-y-6">
+            {education.map((item, idx) => (
+              <li
+                key={item.institution}
+                className={idx > 0 ? 'border-t border-alpine-stone/50 pt-6' : undefined}
+              >
+                <p className={`font-serif font-bold text-alpine-crepe ${idx === 0 ? 'text-lg' : ''}`}>
+                  {item.title}
+                </p>
+                <p className="text-sm text-alpine-cloud mt-1">
+                  <a
+                    href={item.institutionUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="hover:text-alpine-moss transition-colors inline-flex items-center gap-1.5"
+                  >
+                    <span>{item.institution}</span>
+                    <ExternalLink className="w-3 h-3 opacity-60" aria-hidden="true" />
+                  </a>
+                  <span className="font-mono text-xs text-alpine-slate ml-2">{item.period}</span>
+                </p>
+                <p className="text-sm text-alpine-cloud/80 leading-relaxed mt-2">{item.description}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
 
-        <div className="border border-alpine-stone bg-alpine-basalt p-8 relative space-y-8">
+        <div className="border border-alpine-stone bg-alpine-basalt p-8 space-y-8">
           <div>
             <div className="flex items-center gap-2 mb-4 text-alpine-slate">
               <Award className="w-5 h-5" />
-              <h3 className="text-xl font-serif font-bold text-alpine-crepe">
-                Degree & Training
-              </h3>
+              <h3 className="text-xl font-serif font-bold text-alpine-crepe">Training</h3>
             </div>
             <ul className="text-sm text-alpine-cloud/80 space-y-3">
-              {certificationsAndDegrees.map((item, idx) => (
-                <li key={idx} className="flex items-start">
-                  <span className="text-alpine-moss font-mono mr-2">›</span>
-                  {item.institutionUrl ? (
-                    <span>
-                      <strong className="text-alpine-cloud mr-1">{item.title}</strong> at{' '}
-                      <a
-                        href={item.institutionUrl}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="hover:text-alpine-moss transition-colors border-b border-alpine-stone hover:border-alpine-moss pb-0.5"
-                      >
-                        {item.institution}
-                      </a>
-                    </span>
-                  ) : (
-                    <span>
-                      <strong className="text-alpine-cloud mr-1">{item.title}</strong>{' '}
-                      <span className="text-alpine-cloud/70">{item.issuer}</span>
-                    </span>
-                  )}
+              {training.map((item) => (
+                <li key={item.title}>
+                  <strong className="text-alpine-cloud font-medium">{item.title}</strong>
+                  <span className="block text-alpine-cloud/70">{item.issuer}</span>
                 </li>
               ))}
             </ul>
@@ -85,9 +71,9 @@ export const Credentials: React.FC = () => {
               <p className="text-sm text-alpine-cloud/80 font-medium group-hover:text-alpine-moss transition-colors leading-relaxed">
                 "{publication.title}"
               </p>
-              <span className="font-mono text-xs text-alpine-slate uppercase tracking-widest mt-2 flex items-center gap-1.5">
+              <span className="text-xs text-alpine-slate mt-2 flex items-center gap-1.5">
                 <span>{publication.source}</span>
-                <ExternalLink className="w-3 h-3 opacity-60 group-hover:opacity-100" />
+                <ExternalLink className="w-3 h-3 opacity-60 group-hover:opacity-100" aria-hidden="true" />
               </span>
             </a>
           </div>

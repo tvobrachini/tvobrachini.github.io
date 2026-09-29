@@ -3,15 +3,20 @@ export interface NavLink {
   label: string;
 }
 
+export interface Role {
+  title: string;
+  startDate: Date;
+  endDate?: Date; // undefined means "Present"
+  description: string;
+}
+
+// One entry per employer; roles are listed newest first.
 export interface ExperienceItem {
   company: string;
   companyUrl: string;
   badge: string;
   dotColor: string;
-  role: string;
-  startDate: Date;
-  endDate?: Date; // undefined means "Present"
-  description: string;
+  roles: Role[];
 }
 
 export interface FoundationalRole {
@@ -33,19 +38,22 @@ export interface StrategicProject {
 }
 
 export interface CapabilityCategory {
-  number: string;
-  category: string;
   title: string;
   description: string;
-  hoverBorderClass: string;
   skills: { name: string; level?: string }[];
 }
 
-export interface Credential {
+export interface EducationItem {
+  title: string;
   institution: string;
   institutionUrl: string;
-  location: string;
+  period: string;
   description: string;
+}
+
+export interface TrainingItem {
+  title: string;
+  issuer: string;
 }
 
 export interface Publication {
@@ -68,11 +76,11 @@ export function formatDuration(startDate: Date, endDate: Date = new Date()): str
 }
 
 export const navLinks: NavLink[] = [
-  { href: '#executive-summary', label: '01. Executive Summary' },
-  { href: '#professional-experience', label: '02. Professional Experience' },
-  { href: '#strategic-projects', label: '03. Open-Source Projects' },
-  { href: '#capabilities', label: '04. Capabilities' },
-  { href: '#credentials', label: '05. Credentials' },
+  { href: '#executive-summary', label: 'Summary' },
+  { href: '#professional-experience', label: 'Experience' },
+  { href: '#strategic-projects', label: 'Projects' },
+  { href: '#capabilities', label: 'Capabilities' },
+  { href: '#credentials', label: 'Education' },
 ];
 
 export const personalInfo = {
@@ -97,56 +105,68 @@ export const experiences: ExperienceItem[] = [
   {
     company: 'Nubank (NYSE: NU)',
     companyUrl: 'https://international.nubank.com.br/about/',
-    badge: '140M+ Customers · US launch Sep 2026',
+    badge: '140M+ customers | US launch Sep 2026',
     dotColor: '#a889b0',
-    role: 'Global IT Audit Specialist',
-    startDate: new Date('2025-09-01'),
-    description:
-      'Plan and lead IT and security audits of SDLC governance and cloud environments (AWS, GCP), evaluating IT general controls and risk-and-control matrices. Drive AI-assisted audit documentation and control testing.',
-  },
-  {
-    company: 'Nubank (NYSE: NU)',
-    companyUrl: 'https://international.nubank.com.br/about/',
-    badge: 'Digital Banking Platform',
-    dotColor: '#a889b0',
-    role: 'IT Internal Auditor',
-    startDate: new Date('2023-03-01'),
-    endDate: new Date('2025-09-01'),
-    description:
-      'Evaluated IT general controls and risk matrices across cloud (AWS, GCP) and SDLC. Automated audit testing and data analysis with Databricks and Scala.',
+    roles: [
+      {
+        title: 'Global IT Audit Specialist',
+        startDate: new Date('2025-09-01'),
+        description:
+          'Plan and lead IT and security audits of SDLC governance and cloud environments (AWS, GCP), evaluating IT general controls and risk-and-control matrices. Drive AI-assisted audit documentation and control testing.',
+      },
+      {
+        title: 'IT Internal Auditor',
+        startDate: new Date('2023-03-01'),
+        endDate: new Date('2025-09-01'),
+        description:
+          'Evaluated IT general controls and risk matrices across cloud (AWS, GCP) and SDLC. Automated audit testing and data analysis with Databricks and Scala.',
+      },
+    ],
   },
   {
     company: 'MercadoLibre (NASDAQ: MELI)',
     companyUrl: 'https://investor.mercadolibre.com/',
-    badge: '18 Countries · LATAM E-Commerce & Fintech',
+    badge: '18 countries | LATAM e-commerce and fintech',
     dotColor: '#C4B160',
-    role: 'IT Internal Auditor',
-    startDate: new Date('2021-11-01'),
-    endDate: new Date('2023-03-01'),
-    description:
-      'Designed and ran technical and operational SOX audits, including ITGC and cloud security reviews, across Latin America. Led regional audit projects with multinational teams. Built automated audit analytics in Python (Pandas) and BigQuery for high-volume environments.',
+    roles: [
+      {
+        title: 'IT Internal Auditor',
+        startDate: new Date('2021-11-01'),
+        endDate: new Date('2023-03-01'),
+        description:
+          'Designed and ran technical and operational SOX audits, including ITGC and cloud security reviews, across Latin America. Led regional audit projects with multinational teams. Built automated audit analytics in Python (Pandas) and BigQuery for high-volume environments.',
+      },
+    ],
   },
   {
     company: 'StoneCo (NASDAQ: STNE)',
     companyUrl: 'https://www.stoneco.com.br/en/',
-    badge: '1.7M+ Active Clients (2021) · Payments Fintech',
+    badge: '1.7M+ active clients (2021) | Payments fintech',
     dotColor: '#5A8F70',
-    role: 'IT Internal Auditor',
-    startDate: new Date('2021-02-01'),
-    endDate: new Date('2021-11-01'),
-    description:
-      'Ran SOX IT and operational audits of payment, antifraud and core financial applications, including environments in PCI DSS scope. Automated control testing with ACL, Python and BigQuery.',
+    roles: [
+      {
+        title: 'IT Internal Auditor',
+        startDate: new Date('2021-02-01'),
+        endDate: new Date('2021-11-01'),
+        description:
+          'Ran SOX IT and operational audits of payment, antifraud and core financial applications, including environments in PCI DSS scope. Automated control testing with ACL, Python and BigQuery.',
+      },
+    ],
   },
   {
     company: 'PwC Brazil',
     companyUrl: 'https://www.pwc.com/gx/en/about.html',
-    badge: 'Big Four Accounting · Risk Assurance',
+    badge: 'Big Four accounting | Risk Assurance',
     dotColor: '#B86B49',
-    role: 'Risk Assurance, Trainee to Senior Associate',
-    startDate: new Date('2015-07-01'),
-    endDate: new Date('2021-02-01'),
-    description:
-      'Planned and ran IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients. Built process flowcharts and risk-and-control matrices; tested control design and operating effectiveness. Coordinated audit teams; documented findings, recommendations and completion reports.',
+    roles: [
+      {
+        title: 'Risk Assurance, Trainee to Senior Associate',
+        startDate: new Date('2015-07-01'),
+        endDate: new Date('2021-02-01'),
+        description:
+          'Planned and ran IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients. Built process flowcharts and risk-and-control matrices; tested control design and operating effectiveness. Coordinated audit teams; documented findings, recommendations and completion reports.',
+      },
+    ],
   },
 ];
 
@@ -203,11 +223,8 @@ export const strategicProjects: StrategicProject[] = [
 
 export const capabilities: CapabilityCategory[] = [
   {
-    number: '01',
-    category: 'Governance',
     title: 'IT Audit & GRC',
     description: 'Evaluating internal controls, SOX IT general controls, and enterprise technology risk.',
-    hoverBorderClass: 'hover:border-alpine-moss',
     skills: [
       { name: 'ISO 27001' },
       { name: 'NIST CSF' },
@@ -217,11 +234,8 @@ export const capabilities: CapabilityCategory[] = [
     ],
   },
   {
-    number: '02',
-    category: 'Cloud',
     title: 'Cloud Security',
     description: 'Assessing cloud security and SDLC governance in AWS and GCP environments.',
-    hoverBorderClass: 'hover:border-alpine-slate',
     skills: [
       { name: 'AWS' },
       { name: 'GCP' },
@@ -230,11 +244,8 @@ export const capabilities: CapabilityCategory[] = [
     ],
   },
   {
-    number: '03',
-    category: 'Automation',
     title: 'Data & Audit Automation',
     description: 'Engineering programmatic testing, big data analytics, and multi-agent AI systems for audit.',
-    hoverBorderClass: 'hover:border-[#B86B49]',
     skills: [
       { name: 'BigQuery' },
       { name: 'Python (Pandas, boto3)' },
@@ -244,11 +255,8 @@ export const capabilities: CapabilityCategory[] = [
     ],
   },
   {
-    number: '04',
-    category: 'Languages',
     title: 'Languages',
     description: 'Cross-border communication and audit execution across international teams.',
-    hoverBorderClass: 'hover:border-[#C4B160]',
     skills: [
       { name: 'Portuguese', level: 'Native' },
       { name: 'English', level: 'Fluent' },
@@ -257,25 +265,27 @@ export const capabilities: CapabilityCategory[] = [
   },
 ];
 
-export const credentials: Credential[] = [
+export const education: EducationItem[] = [
   {
+    title: 'Tecnólogo in IT Management',
+    institution: 'FATEC Bragança Paulista',
+    institutionUrl: 'https://www.cps.sp.gov.br/fatec/',
+    period: '2012',
+    description: 'Undergraduate technology degree (Tecnólogo).',
+  },
+  {
+    title: 'Computer Science exchange',
     institution: 'Trinity College Dublin',
     institutionUrl: 'https://www.tcd.ie/about/',
-    location: 'Exchange program · Dublin, Ireland',
-    description:
-      'Computer Science coursework (2013–2014) through the Science Without Borders exchange program.',
+    period: '2013–2014',
+    description: 'Computer Science coursework in Dublin, Ireland, through the Science Without Borders exchange program.',
   },
 ];
 
-export const certificationsAndDegrees = [
+export const training: TrainingItem[] = [
   {
-    title: 'Tecnólogo in IT Management (2012)',
-    institution: 'FATEC Bragança Paulista (Tecnólogo, undergraduate technology degree)',
-    institutionUrl: 'https://www.cps.sp.gov.br/fatec/',
-  },
-  {
-    title: 'AWS Cloud Audit Academy',
-    issuer: '(Cloud Agnostic, AWS training, 2021)',
+    title: 'AWS Cloud Audit Academy (Cloud Agnostic)',
+    issuer: 'AWS training, 2021',
   },
 ];
 

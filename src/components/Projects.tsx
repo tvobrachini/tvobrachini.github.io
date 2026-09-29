@@ -23,6 +23,29 @@ export const Projects: React.FC = () => {
               <span className="text-sm text-alpine-cloud">{project.stack}</span>
             </div>
             <p className="mt-4 text-alpine-cloud leading-relaxed max-w-3xl">{project.summary}</p>
+            {project.sample && (
+              <figure className="mt-6 border border-alpine-stone bg-alpine-basalt print:hidden">
+                <dl className="p-4 md:p-5 font-mono text-xs md:text-sm leading-relaxed space-y-1">
+                  {project.sample.rows.map(([label, value]) => (
+                    <div key={label} className="grid grid-cols-[4.5rem_1fr] md:grid-cols-[6rem_1fr] gap-x-3">
+                      <dt className="text-alpine-cloud/70">{label}</dt>
+                      <dd className="text-alpine-crepe [overflow-wrap:anywhere]">{value}</dd>
+                    </div>
+                  ))}
+                </dl>
+                <figcaption className="border-t border-alpine-stone px-4 md:px-5 py-3 text-xs text-alpine-cloud">
+                  {project.sample.caption}{' '}
+                  <a
+                    href={project.sample.sourceUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline decoration-alpine-stone underline-offset-4 hover:text-alpine-crepe hover:decoration-alpine-moss transition-colors"
+                  >
+                    See the files
+                  </a>
+                </figcaption>
+              </figure>
+            )}
             <a
               href={project.caseStudyUrl}
               target="_blank"

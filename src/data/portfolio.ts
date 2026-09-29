@@ -34,6 +34,14 @@ export interface StrategicProject {
   caseStudyUrl: string;
   stack: string;
   summary: string;
+  sample?: SampleOutput;
+}
+
+// Values copied from a file committed in the project repo, never written by hand.
+export interface SampleOutput {
+  caption: string;
+  sourceUrl: string;
+  rows: [label: string, value: string][];
 }
 
 export interface SkillGroup {
@@ -199,6 +207,19 @@ export const strategicProjects: StrategicProject[] = [
     stack: 'Python, CrewAI',
     summary:
       'Multi-agent audit platform across Planning, Fieldwork and Reporting, with QA agents that reject and retry, human approval between phases, read-only AWS evidence collection (boto3), a SHA-256-hashed evidence vault, AWS account-ID redaction, and OSCAL export.',
+    // From docs/sample-run/oscal.json and report.md on master (demo run of 2026-09-27).
+    sample: {
+      caption: 'One finding from the committed sample run. Demo mode: synthetic evidence, no AWS account, no language model.',
+      sourceUrl: 'https://github.com/tvobrachini/grc-audit-swarm/tree/master/docs/sample-run',
+      rows: [
+        ['control', 'CTRL-02 | Exception | 3 items tested, 1 exception'],
+        ['quote', 'Bucket demo-analytics-exports: Verdict=PUBLIC, Reasons=ACL grants AllUsers READ'],
+        ['vault', '6d4f9f6d-ac46-4fea-a2cd-9f628a3b544e | quote verified in vault'],
+        ['review', 'Signed off at the Fieldwork gate by Ivan In-Charge (demo)'],
+        ['trail', 'Chain intact (sha256), checked at export'],
+        ['export', 'OSCAL 1.2.1 Assessment Results'],
+      ],
+    },
   },
   {
     title: 'SCF Auto-Crosswalker',

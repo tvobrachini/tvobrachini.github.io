@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { navLinks } from './data/portfolio';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
-import { Divider } from './components/Divider';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Capabilities } from './components/Capabilities';
@@ -69,37 +68,15 @@ export function App() {
       {/* Background ambient accents (hidden in print) */}
       <div className="fixed inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-alpine-basalt/20 via-transparent to-transparent print:hidden" />
 
-      {/* Atmospheric Background Image */}
-      <div
-        className="absolute top-0 left-0 w-full h-[700px] md:h-[900px] pointer-events-none opacity-40 bg-cover bg-[center_bottom] print:hidden"
-        style={{
-          backgroundImage: "url('/alpine_bg.webp')",
-          maskImage: 'linear-gradient(to bottom, black 10%, transparent 95%)',
-          WebkitMaskImage: 'linear-gradient(to bottom, black 10%, transparent 95%)',
-        }}
-      />
-
       {/* Navigation */}
       <Navbar activeSection={activeSection} />
 
-      {/* Hero Content */}
-      <main>
-      <div className="max-w-4xl mx-auto px-6 pt-36 md:pt-44 pb-0 space-y-36 print:pt-4 print:space-y-12">
+      <main className="max-w-4xl mx-auto px-6 pt-36 md:pt-44 pb-24 space-y-36 print:pt-4 print:space-y-12">
         <Hero />
-      </div>
-
-      {/* Cinematic Terrain Divider */}
-      <div className="my-24 md:my-32">
-        <Divider />
-      </div>
-
-      {/* Body Content */}
-      <div className="max-w-4xl mx-auto px-6 pt-6 pb-24 space-y-36 print:pt-0 print:space-y-12">
         <Experience />
         <Projects />
         <Capabilities />
         <Credentials />
-      </div>
       </main>
 
       {/* Scroll to Top floating action */}

@@ -46,10 +46,20 @@ export const Experience: React.FC = () => {
                 </span>
               </div>
 
-              <ol className={multiRole ? 'mt-6 space-y-8 border-l border-alpine-stone/60 pl-5' : undefined}>
+              <ol
+                className={
+                  multiRole
+                    ? `mt-6 border-l border-alpine-stone/60 pl-5 ${exp.description ? 'space-y-2' : 'space-y-8'}`
+                    : undefined
+                }
+              >
                 {exp.roles.map((role) => (
                   <li key={role.title}>
-                    <div className="flex flex-col lg:flex-row lg:justify-between lg:items-baseline gap-x-4 gap-y-1 mb-3">
+                    <div
+                      className={`flex flex-col lg:flex-row lg:justify-between lg:items-baseline gap-x-4 gap-y-1 ${
+                        role.description ? 'mb-3' : ''
+                      }`}
+                    >
                       <div className="font-sans font-bold tracking-wide text-alpine-slate">{role.title}</div>
                       {multiRole && (
                         <span className="font-mono text-xs tracking-widest uppercase sm:whitespace-nowrap text-alpine-cloud">
@@ -57,10 +67,15 @@ export const Experience: React.FC = () => {
                         </span>
                       )}
                     </div>
-                    <p className="text-alpine-cloud leading-relaxed max-w-3xl">{role.description}</p>
+                    {role.description && (
+                      <p className="text-alpine-cloud leading-relaxed max-w-3xl">{role.description}</p>
+                    )}
                   </li>
                 ))}
               </ol>
+              {exp.description && (
+                <p className="mt-6 text-alpine-cloud leading-relaxed max-w-3xl">{exp.description}</p>
+              )}
             </div>
           );
         })}

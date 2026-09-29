@@ -50,7 +50,10 @@ export function App() {
     const sectionIds = navLinks.map(({ href }) => href.slice(1));
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      setShowScrollTop(scrollY > 300);
+      // Hide the floating button once the footer is on screen, where it would cover the footer links.
+      const footer = document.querySelector('footer');
+      const footerVisible = footer !== null && footer.getBoundingClientRect().top < window.innerHeight;
+      setShowScrollTop(scrollY > 300 && !footerVisible);
       let current = sectionIds[0];
       for (const id of sectionIds) {
         const el = document.getElementById(id);

@@ -18,7 +18,7 @@ The site is built with modern web technologies:
 *   **Responsive Design:** Fully accessible across all devices from desktop to mobile.
 *   **Dynamic UI:** Uses Tailwind CSS for smooth micro-animations, hover states, and a sleek Alpine Obsidian aesthetic.
 *   **Interactive Timeline:** A custom-built experience timeline displaying my professional journey.
-*   **Print / PDF Resume:** Dedicated print stylesheet and one-click CV export for executive review.
+*   **PDF CVs and print styles:** English and Portuguese CV downloads in the hero, plus a print stylesheet so printing the page (Ctrl+P) gives a clean résumé.
 *   **Automated Deployments:** Pushes to the `main` branch automatically trigger a GitHub Actions workflow to build and deploy the site using `npm run build`.
 
 ## Getting Started Locally

@@ -30,7 +30,7 @@ export const Hero: React.FC = () => {
             Tiago Brachini
           </h1>
           <p className="text-2xl md:text-3xl font-serif italic text-alpine-slate leading-snug max-w-3xl">
-            IT audit of cloud and SDLC governance, with data and AI tooling.
+            {personalInfo.headline}
           </p>
 
           <div className="border-l-2 border-alpine-moss pl-6 sm:pl-8 mt-8">
@@ -43,7 +43,13 @@ export const Hero: React.FC = () => {
           </div>
 
           <p className="hidden print:block font-mono text-xs text-black">
-            Tiago Brachini | tvobrachini@gmail.com | linkedin.com/in/tvobrachini | github.com/tvobrachini | tvobrachini.github.io
+            {[
+              personalInfo.displayName,
+              personalInfo.email,
+              ...[personalInfo.linkedinUrl, personalInfo.githubUrl, personalInfo.siteUrl].map((url) =>
+                url.replace(/^https:\/\/(www\.)?/, ''),
+              ),
+            ].join(' | ')}
           </p>
 
           {/* Action Links & Buttons */}
@@ -90,7 +96,7 @@ export const Hero: React.FC = () => {
                 aria-label="Copy email address"
               >
                 {copied ? (
-                  <Check className="w-3.5 h-3.5 text-emerald-400" />
+                  <Check className="w-3.5 h-3.5 text-alpine-moss" />
                 ) : (
                   <Copy className="w-3.5 h-3.5" />
                 )}
@@ -107,8 +113,8 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Profile Image Avatar */}
-        <div className="w-32 h-32 md:w-40 md:h-40 xl:w-56 xl:h-56 shrink-0 relative mt-4 md:mt-2 group self-start">
-          <div className="absolute inset-0 bg-alpine-moss translate-x-3 translate-y-3 opacity-30 border border-alpine-stone group-hover:translate-x-4 group-hover:translate-y-4 group-hover:opacity-50 transition-all duration-500" />
+        <div className="w-32 h-32 md:w-40 md:h-40 xl:w-56 xl:h-56 shrink-0 relative mt-4 md:mt-2 self-start">
+          <div className="absolute inset-0 bg-alpine-moss translate-x-3 translate-y-3 opacity-30 border border-alpine-stone" />
           <img
             src={personalInfo.profileImage}
             alt={personalInfo.name}
@@ -116,7 +122,7 @@ export const Hero: React.FC = () => {
             height={224}
             loading="eager"
             decoding="async"
-            className="relative w-full h-full object-cover border border-alpine-stone brightness-90 saturate-[0.85] opacity-90 hover:brightness-100 hover:saturate-100 hover:opacity-100 transition-all duration-700 isolate"
+            className="relative w-full h-full object-cover border border-alpine-stone brightness-90 saturate-[0.85] opacity-90 isolate"
           />
         </div>
       </div>

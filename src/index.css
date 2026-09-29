@@ -90,8 +90,6 @@
   }
 
   /* Prevent page breaks inside cards */
-  .relative.group,
-  .border.bg-alpine-basalt,
   section {
     break-inside: avoid;
     page-break-inside: avoid;

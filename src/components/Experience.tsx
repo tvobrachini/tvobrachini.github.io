@@ -1,7 +1,7 @@
 import React from 'react';
-import { ExternalLink } from 'lucide-react';
 import { experiences, foundationalRoles, formatDuration } from '../data/portfolio';
 import { SectionHeader } from './SectionHeader';
+import { ExternalAnchor } from './ExternalAnchor';
 
 const formatMonth = (date: Date) =>
   date.toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' });
@@ -22,7 +22,7 @@ export const Experience: React.FC = () => {
           const multiRole = exp.roles.length > 1;
 
           return (
-            <div key={exp.company} className="relative group">
+            <div key={exp.company} className="relative print:break-inside-avoid">
               {/* Timeline indicator dot */}
               <div
                 className="absolute left-[-30px] md:left-[-46px] top-2.5 w-3 h-3 bg-alpine-obsidian border-2"
@@ -31,40 +31,31 @@ export const Experience: React.FC = () => {
 
               <div className="flex flex-col lg:flex-row lg:justify-between lg:items-baseline mb-2 gap-x-4 gap-y-2">
                 <h3 className="text-2xl font-serif font-bold text-alpine-crepe flex items-center gap-x-3 gap-y-2 flex-wrap">
-                  <a
-                    href={exp.companyUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-alpine-moss transition-colors inline-flex items-center gap-1.5"
-                  >
+                  <ExternalAnchor href={exp.companyUrl} iconClassName="w-3.5 h-3.5">
                     <span>{exp.company}</span>
-                    <ExternalLink className="w-3.5 h-3.5 opacity-0 group-hover:opacity-60 transition-opacity" aria-hidden="true" />
-                  </a>
+                  </ExternalAnchor>
                   <span className="font-sans font-normal text-xs text-alpine-cloud bg-alpine-stone/50 px-2 py-0.5 rounded-sm">
                     {exp.badge}
                   </span>
                 </h3>
-                {multiRole && (
-                  <span
-                    className="font-mono text-xs font-bold tracking-widest uppercase whitespace-nowrap"
-                    style={{ color: exp.dotColor }}
-                  >
-                    {formatPeriod(companyStart, companyEnd)}
-                  </span>
-                )}
+                <span
+                  className="font-mono text-xs font-bold tracking-widest uppercase sm:whitespace-nowrap"
+                  style={{ color: exp.dotColor }}
+                >
+                  {formatPeriod(companyStart, companyEnd)}
+                </span>
               </div>
 
-              <ol className={multiRole ? 'mt-6 space-y-8 border-l border-alpine-stone/60 pl-5' : 'space-y-4'}>
+              <ol className={multiRole ? 'mt-6 space-y-8 border-l border-alpine-stone/60 pl-5' : undefined}>
                 {exp.roles.map((role) => (
                   <li key={role.title}>
                     <div className="flex flex-col lg:flex-row lg:justify-between lg:items-baseline gap-x-4 gap-y-1 mb-3">
                       <div className="font-sans font-bold tracking-wide text-alpine-slate">{role.title}</div>
-                      <span
-                        className={`font-mono text-xs tracking-widest uppercase whitespace-nowrap ${multiRole ? 'text-alpine-cloud' : 'font-bold'}`}
-                        style={multiRole ? undefined : { color: exp.dotColor }}
-                      >
-                        {formatPeriod(role.startDate, role.endDate)}
-                      </span>
+                      {multiRole && (
+                        <span className="font-mono text-xs tracking-widest uppercase sm:whitespace-nowrap text-alpine-cloud">
+                          {formatPeriod(role.startDate, role.endDate)}
+                        </span>
+                      )}
                     </div>
                     <p className="text-alpine-cloud leading-relaxed max-w-3xl">{role.description}</p>
                   </li>

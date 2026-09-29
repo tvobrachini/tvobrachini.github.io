@@ -2,6 +2,8 @@ import React from 'react';
 import { ExternalLink, GraduationCap, Award, BookOpen } from 'lucide-react';
 import { education, training, publication } from '../data/portfolio';
 import { SectionHeader } from './SectionHeader';
+import { Card } from './Card';
+import { ExternalAnchor } from './ExternalAnchor';
 
 export const Credentials: React.FC = () => {
   return (
@@ -9,7 +11,7 @@ export const Credentials: React.FC = () => {
       <SectionHeader title="Education & Credentials" />
 
       <div className="grid md:grid-cols-2 gap-8">
-        <div className="border border-alpine-stone bg-alpine-basalt p-8">
+        <Card>
           <div className="flex items-center gap-2 mb-6 text-alpine-moss">
             <GraduationCap className="w-5 h-5" />
             <h3 className="text-xl font-serif font-bold text-alpine-crepe">Education</h3>
@@ -24,24 +26,18 @@ export const Credentials: React.FC = () => {
                   {item.title}
                 </p>
                 <p className="text-sm text-alpine-cloud mt-1">
-                  <a
-                    href={item.institutionUrl}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="hover:text-alpine-moss transition-colors inline-flex items-center gap-1.5"
-                  >
+                  <ExternalAnchor href={item.institutionUrl}>
                     <span>{item.institution}</span>
-                    <ExternalLink className="w-3 h-3 opacity-60" aria-hidden="true" />
-                  </a>
+                  </ExternalAnchor>
                   <span className="font-mono text-xs text-alpine-slate ml-2">{item.period}</span>
                 </p>
                 <p className="text-sm text-alpine-cloud/80 leading-relaxed mt-2">{item.description}</p>
               </li>
             ))}
           </ul>
-        </div>
+        </Card>
 
-        <div className="border border-alpine-stone bg-alpine-basalt p-8 space-y-8">
+        <Card className="space-y-8">
           <div>
             <div className="flex items-center gap-2 mb-4 text-alpine-slate">
               <Award className="w-5 h-5" />
@@ -73,11 +69,11 @@ export const Credentials: React.FC = () => {
               </p>
               <span className="text-xs text-alpine-slate mt-2 flex items-center gap-1.5">
                 <span>{publication.source}</span>
-                <ExternalLink className="w-3 h-3 opacity-60 group-hover:opacity-100" aria-hidden="true" />
+                <ExternalLink className="w-3 h-3 opacity-50 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
               </span>
             </a>
           </div>
-        </div>
+        </Card>
       </div>
     </section>
   );

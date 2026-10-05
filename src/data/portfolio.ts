@@ -95,9 +95,9 @@ export const personalInfo = {
   tagline: 'Global IT Audit Specialist',
   headline: 'IT audit of cloud and SDLC governance, with data and AI tooling.',
   subheadlineLead:
-    '10+ years of IT audit and technology risk experience across Big Four (PwC) and three publicly listed fintechs (Nubank, MercadoLibre, StoneCo).',
+    'IT auditor with 10+ years across Big Four (PwC) and three publicly listed fintechs (Nubank, MercadoLibre, StoneCo).',
   subheadlineBody:
-    'I plan and lead IT and security audits across cloud environments (AWS, GCP) and SDLC governance, evaluate IT general controls, and build data analytics and AI tooling (Databricks, Scala, Python, CrewAI) to automate control testing. Based in Bragança Paulista, SP, Brazil (UTC-3), open to remote roles worldwide.',
+    'Specialized in IT general and application controls (ITGC/ITAC), SOX/ICFR, SDLC governance and cloud security (AWS, GCP). I build audit data analytics and AI tooling, from SQL, Python and Scala to open-source multi-agent audit automation with human review at each stage. Based in Bragança Paulista, SP, Brazil (UTC-3), open to remote roles worldwide.',
   email: 'tvobrachini@gmail.com',
   linkedinUrl: 'https://www.linkedin.com/in/tvobrachini',
   githubUrl: 'https://github.com/tvobrachini',
@@ -117,17 +117,15 @@ export const experiences: ExperienceItem[] = [
       {
         title: 'Global IT Audit Specialist',
         startDate: new Date('2025-09-01'),
-        description:
-          'Plan and lead IT and security audits of SDLC governance and cloud environments (AWS, GCP), evaluating IT general controls and risk-and-control matrices. Drive AI-assisted audit documentation and control testing.',
       },
       {
         title: 'IT Internal Auditor',
         startDate: new Date('2023-03-01'),
         endDate: new Date('2025-09-01'),
-        description:
-          'Evaluated IT general controls and risk matrices across cloud (AWS, GCP) and SDLC. Automated audit testing and data analysis with Databricks and Scala.',
       },
     ],
+    description:
+      'Plan and lead IT and security audits of SDLC governance and cloud environments (AWS, GCP), from risk assessment and scoping to reporting; evaluate ITGCs (access management, change management, program development, IT operations) and risk and control matrices (RCMs). Automate audit testing and data analytics with Databricks and Scala; drive the use of AI tools in audit documentation and control testing.',
   },
   {
     company: 'MercadoLibre (NASDAQ: MELI)',
@@ -140,7 +138,7 @@ export const experiences: ExperienceItem[] = [
         startDate: new Date('2021-11-01'),
         endDate: new Date('2023-03-01'),
         description:
-          'Designed and ran technical and operational SOX audits, including ITGC and cloud security reviews, across Latin America. Led regional audit projects with multinational teams. Built automated audit analytics in Python (Pandas) and BigQuery for high-volume environments.',
+          'Planned and executed technical and operational SOX audits across Latin America, including ITGC testing and cloud security reviews; ran walkthroughs with process and control owners and coordinated with external auditors. Led regional IT audit projects with multinational teams. Built automated audit data analytics in Python (Pandas) and BigQuery SQL for high-volume environments.',
       },
     ],
   },
@@ -155,7 +153,7 @@ export const experiences: ExperienceItem[] = [
         startDate: new Date('2021-02-01'),
         endDate: new Date('2021-11-01'),
         description:
-          'Ran SOX IT and operational audits of payment, antifraud and core financial applications, including environments in PCI DSS scope. Automated control testing with ACL, Python and BigQuery.',
+          'Ran SOX IT (ITGC and ITAC) and operational audits of payment, antifraud and core financial applications, including environments in PCI DSS scope. Automated control testing and audit data analytics with ACL, Python and BigQuery.',
       },
     ],
   },
@@ -171,7 +169,7 @@ export const experiences: ExperienceItem[] = [
       { title: 'Trainee', startDate: new Date('2015-07-01'), endDate: new Date('2016-07-01') },
     ],
     description:
-      'Planned and ran IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients. Built process flowcharts and risk-and-control matrices; tested control design and operating effectiveness. Coordinated audit teams; documented findings and recommendations and drafted completion reports.',
+      'Planned and executed IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients, applying COSO and COBIT. Built process flowcharts and risk and control matrices (RCMs); tested control design and operating effectiveness (TOD/TOE), including system-generated reports (IPE) and segregation of duties. Coordinated audit teams and reviewed staff workpapers; evaluated deficiencies, documented findings and recommendations, followed up on remediation with management and drafted completion reports.',
   },
 ];
 
@@ -206,7 +204,7 @@ export const strategicProjects: StrategicProject[] = [
     caseStudyUrl: 'https://github.com/tvobrachini/grc-audit-swarm/blob/master/CASE_STUDY.md',
     stack: 'Python, CrewAI',
     summary:
-      'Multi-agent audit platform across Planning, Fieldwork and Reporting, with QA agents that reject and retry, human approval between phases, read-only AWS evidence collection (boto3), a SHA-256-hashed evidence vault, AWS account-ID redaction, and OSCAL export.',
+      'Multi-agent audit platform across Planning, Fieldwork and Reporting, with QA agents that reject and retry, human approval between phases, automated, read-only AWS evidence collection (boto3), a SHA-256-hashed evidence vault, AWS account-ID redaction, and OSCAL export.',
     // From docs/sample-run/oscal.json and report.md on master (demo run of 2026-09-27).
     sample: {
       caption: 'One finding from the committed sample run. Demo mode: synthetic evidence, no AWS account, no language model.',
@@ -235,7 +233,11 @@ export const skills: SkillGroup[] = [
   {
     title: 'Governance & risk',
     skills:
-      'ITGC (access, change management, IT operations), ITAC, SOX/J-SOX, COBIT, COSO, NIST CSF, ISO 27001, PCI DSS, SCF, LGPD/GDPR, CMN Res. 4893, BCP/DR',
+      'SOX/J-SOX, ICFR, ITGC (access management, change management, program development/SDLC, IT operations), ITAC, COSO, COBIT, ITIL, PCAOB standards, IIA standards, third-party risk management (TPRM) audits, SOC and ISAE assurance report review, NIST CSF, ISO 27001, PCI DSS, SCF, LGPD/GDPR, CMN Res. 4893, BCP/DR',
+  },
+  {
+    title: 'Audit tools & ERP',
+    skills: 'Perinity GRC, ServiceNow GRC, Jira; SAP and Oracle (audit work programs applied)',
   },
   {
     title: 'Security & cloud',
@@ -258,7 +260,7 @@ export const education: EducationItem[] = [
     institution: 'FATEC Bragança Paulista',
     institutionUrl: 'https://www.cps.sp.gov.br/fatec/',
     period: '2012',
-    description: 'Undergraduate technology degree (Tecnólogo).',
+    description: 'Brazilian higher-education undergraduate technology degree (Tecnólogo).',
   },
   {
     title: 'Computer Science exchange',

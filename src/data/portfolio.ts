@@ -125,7 +125,7 @@ export const experiences: ExperienceItem[] = [
       },
     ],
     description:
-      'Plan and lead risk-based IT and security audits of SDLC governance and cloud environments (AWS, GCP), from risk assessment and scoping to reporting; evaluate ITGCs (access management, change management, program development, IT operations) and risk and control matrices (RCMs). Rate IT risks by likelihood and impact, review risk assessments and risk-acceptance requests, challenge the proposed treatment, and track exceptions and corrective action plans to closure. Automate audit testing and data analytics with Databricks and Scala; drive the use of AI tools in audit documentation and control testing; report with Google and AWS tools and Power BI. Run audits and issue tracking in an in-house audit management tool built on Jira; audit third-party risk (TPRM) and review SOC 2 Type II and ISAE reports; test against ISO 27001, PCI DSS and NIST CSF, mapping controls and scoping with the SCF. Audit an SEC-registered group (Form 20-F, SOX/ICFR) whose Brazilian entities are regulated by the Banco Central do Brasil.',
+      'Plan and lead risk-based IT and cybersecurity audits of SDLC governance, security governance and cloud environments (AWS, GCP), from risk assessment and scoping to reporting; evaluate ITGCs (identity and access management, change management, program development, IT operations) and risk and control matrices (RCMs). Rate IT risks by likelihood and impact, review risk assessments and risk-acceptance requests, challenge the proposed treatment, and track exceptions and corrective action plans to closure; report audit results to technical and non-technical stakeholders, mainly engineering leads and general managers. Automate audit testing and data analytics with Databricks and Scala; drive the use of AI tools in audit documentation and control testing; report with Google and AWS tools and Power BI. Run audits and issue tracking in an in-house audit management tool built on Jira; audit third-party (vendor) risk (TPRM) and review SOC 2 Type II and ISAE reports; test against control frameworks (ISO 27001, PCI DSS, NIST CSF), mapping controls and scoping with the SCF. Audit an SEC-registered group (Form 20-F, SOX/ICFR) in a highly regulated sector (Brazilian entities regulated by the Banco Central do Brasil), with multinational scope: auditees in Brazil, Mexico, Colombia, Germany and the US.',
   },
   {
     company: 'MercadoLibre (NASDAQ: MELI)',
@@ -138,7 +138,7 @@ export const experiences: ExperienceItem[] = [
         startDate: new Date('2021-11-01'),
         endDate: new Date('2023-03-01'),
         description:
-          'Planned and executed risk-based technical and operational SOX audits across Latin America, including ITGC testing and cloud security reviews; ran walkthroughs with process and control owners and coordinated with external auditors. Led regional IT audit projects with multinational teams. Built automated audit data analytics in Python (Pandas) and BigQuery SQL for high-volume environments. Audited an SEC-registered group (Form 10-K, SOX) whose payments arm, Mercado Pago, is a Banco Central do Brasil regulated payment institution; covered third-party risk (TPRM), SOC 2 and ISAE report review, and SAP and Oracle work programs.',
+          'Planned and executed risk-based technical and operational SOX audits across Latin America, including ITGC testing and cloud security reviews; ran walkthroughs and interviews with process and control owners and coordinated with external auditors. Led regional IT audit projects with multinational teams. Built automated audit data analytics in Python (Pandas) and BigQuery SQL for high-volume environments. Audited an SEC-registered group (Form 10-K, SOX) whose payments arm, Mercado Pago, is a Banco Central do Brasil regulated payment institution; covered third-party risk (TPRM), SOC 2 and ISAE report review, and SAP and Oracle audit programs.',
       },
     ],
   },
@@ -153,7 +153,7 @@ export const experiences: ExperienceItem[] = [
         startDate: new Date('2021-02-01'),
         endDate: new Date('2021-11-01'),
         description:
-          'Ran risk-based SOX IT (ITGC and ITAC) and operational audits of payment, antifraud and core financial applications, including environments in PCI DSS scope. Automated control testing and audit data analytics with ACL, Python and BigQuery; managed audits in Perinity GRC. Audited an SEC-registered group (Form 20-F, SOX) whose payment institution (acquirer and e-money issuer) is regulated by the Banco Central do Brasil; covered third-party risk (TPRM), SOC 2 and ISAE report review, and SAP and Oracle work programs.',
+          'Ran risk-based SOX IT (ITGC and ITAC) and operational audits of payment, antifraud and core financial applications, including environments in PCI DSS scope. Automated control testing and audit data analytics with ACL, Python and BigQuery; managed audits in Perinity GRC. Audited an SEC-registered group (Form 20-F, SOX) whose payment institution (acquirer and e-money issuer) is regulated by the Banco Central do Brasil; covered third-party risk (TPRM), SOC 2 and ISAE report review, and SAP and Oracle audit programs.',
       },
     ],
   },
@@ -169,7 +169,7 @@ export const experiences: ExperienceItem[] = [
       { title: 'Trainee', startDate: new Date('2015-07-01'), endDate: new Date('2016-07-01') },
     ],
     description:
-      'Planned and executed IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients, applying COSO and COBIT. Prepared and reviewed SOC report attestation engagements for clients. Built process flowcharts and risk and control matrices (RCMs); tested control design and operating effectiveness (TOD/TOE), including system-generated reports (IPE) and segregation of duties. Coordinated audit teams and reviewed staff workpapers; evaluated deficiencies, documented findings and recommendations, followed up on remediation with management and drafted completion reports.',
+      'Planned and executed IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients, applying COSO and COBIT. Prepared and reviewed SOC 1 and SOC 2 attestation engagements for clients. Built process flowcharts and risk and control matrices (RCMs); tested control design and operating effectiveness (TOD/TOE), including system-generated reports (IPE) and segregation of duties. Coordinated audit teams, prepared and reviewed working papers (including staff workpapers); evaluated deficiencies, documented findings and recommendations, followed up on remediation with management and drafted completion reports.',
   },
 ];
 
@@ -233,7 +233,11 @@ export const skills: SkillGroup[] = [
   {
     title: 'Governance & risk',
     skills:
-      'SOX/J-SOX, ICFR, ITGC (access management, change management, program development/SDLC, IT operations), ITAC, COSO, COBIT, ITIL, PCAOB standards, IIA standards, third-party risk management (TPRM) audits, SOC report attestation (preparer and reviewer), SOC 2 and ISAE assurance report review, NIST CSF, ISO 27001, PCI DSS, SCF (metaframework for control mapping and audit planning), LGPD/GDPR, CMN Res. 4893, Res. BCB 85 (payment institutions), BCP/DR',
+      'SOX/J-SOX, ICFR, ITGC (access management, change management, program development/SDLC, IT operations), ITAC, COSO, COBIT, ITIL, PCAOB standards, IIA standards, third-party risk management (TPRM) audits, SOC 1 and SOC 2 attestation (preparer and reviewer), SOC 2 and ISAE assurance report review, NIST CSF, ISO 27001, PCI DSS, SCF (metaframework for control mapping and audit planning), BCP/DR',
+  },
+  {
+    title: 'Regulation',
+    skills: 'LGPD/GDPR (privacy), CMN Res. 4893 (cyber policy and cloud), Res. BCB 85 (payment institutions)',
   },
   {
     title: 'Audit tools & ERP',

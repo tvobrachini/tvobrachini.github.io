@@ -169,7 +169,7 @@ export const experiences: ExperienceItem[] = [
       { title: 'Trainee', startDate: new Date('2015-07-01'), endDate: new Date('2016-07-01') },
     ],
     description:
-      'Planned and executed IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients, applying COSO and COBIT. Prepared and reviewed SOC 1 and SOC 2 attestation engagements for clients. Built process flowcharts and risk and control matrices (RCMs); tested control design and operating effectiveness (TOD/TOE), including system-generated reports (IPE) and segregation of duties. Coordinated audit teams, prepared and reviewed working papers (including staff workpapers); evaluated deficiencies, documented findings and recommendations, followed up on remediation with management and drafted completion reports.',
+      'Planned and executed IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients, applying COSO and COBIT. Coordinated and consolidated SOX 404 internal-controls testing (IT and business processes) across multinational component teams for a Brazil-headquartered global consumer-goods group with NYSE-listed securities; acted as interim engagement manager at times. Prepared and reviewed SOC 1 and SOC 2 attestation engagements for clients. Built process flowcharts and risk and control matrices (RCMs); tested control design and operating effectiveness (TOD/TOE), including system-generated reports (IPE) and segregation of duties. Coordinated audit teams, prepared and reviewed working papers; evaluated deficiencies, documented findings and recommendations, followed up on remediation with management and drafted completion reports.',
   },
 ];
 

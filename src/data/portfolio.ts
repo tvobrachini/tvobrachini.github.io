@@ -202,17 +202,17 @@ export const strategicProjects: StrategicProject[] = [
     title: 'GRC Audit Swarm',
     repoUrl: 'https://github.com/tvobrachini/grc-audit-swarm',
     caseStudyUrl: 'https://github.com/tvobrachini/grc-audit-swarm/blob/master/CASE_STUDY.md',
-    stack: 'Python, CrewAI',
+    stack: 'Python, Zero-Framework AI, FastAPI, React, OSCAL 1.2.1',
     summary:
-      'Multi-agent audit platform across Planning, Fieldwork and Reporting, with QA agents that reject and retry, human approval between phases, automated, read-only AWS evidence collection (boto3), a SHA-256-hashed evidence vault, AWS account-ID redaction, and OSCAL export.',
-    // From docs/sample-run/oscal.json and report.md on master (demo run of 2026-09-27).
+      'Zero-framework, deterministic-first audit platform across Planning, Fieldwork and Reporting, with a 3-tier cascade (14 deterministic audit linters D1–D14, System-1 Jev/Kev logprob classifiers, and cross-AI-family PoLL QA review), human approval gates, read-only AWS & ITGC evidence collection (boto3) with HMAC-SHA256 sampling, a SHA-256-hashed evidence vault, OSCAL 1.2.1 Assessment Results export with drift detection, and IIA GIAS 15.2 post-issuance remediation follow-up.',
+    // From docs/sample-run/oscal.json and report.md on master.
     sample: {
       caption: 'One finding from the committed sample run. Demo mode: synthetic evidence, no AWS account, no language model.',
       sourceUrl: 'https://github.com/tvobrachini/grc-audit-swarm/tree/master/docs/sample-run',
       rows: [
         ['control', 'CTRL-02 | Exception | 3 items tested, 1 exception'],
         ['quote', 'Bucket demo-analytics-exports: Verdict=PUBLIC, Reasons=ACL grants AllUsers READ'],
-        ['vault', '6d4f9f6d-ac46-4fea-a2cd-9f628a3b544e | quote verified in vault'],
+        ['vault', 'e51cc5f1-1885-475b-a5f8-9da33ce8522d | quote verified in vault'],
         ['review', 'Signed off at the Fieldwork gate by Ivan In-Charge (demo)'],
         ['trail', 'Chain intact (sha256), checked at export'],
         ['export', 'OSCAL 1.2.1 Assessment Results'],

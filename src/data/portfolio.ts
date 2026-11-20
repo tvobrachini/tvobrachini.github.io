@@ -97,7 +97,7 @@ export const personalInfo = {
   subheadlineLead:
     'IT internal auditor with 10+ years across a Big 4 firm (PwC) and three publicly listed fintechs (Nubank, MercadoLibre, StoneCo).',
   subheadlineBody:
-    'Specialized in IT general controls (ITGC) and IT application controls (ITAC), Sarbanes-Oxley (SOX/ICFR), technology risk, SDLC governance, cloud security (AWS, GCP) and cybersecurity audit. I build audit data analytics and AI tooling, from SQL, Python and Scala to open-source audit automation and control-mapping prototypes with human review of outputs. I map controls and plan audit scope with the Secure Controls Framework (SCF) metaframework, and have audited Pix (instant payments) and Open Finance (open banking) controls in Brazil. Based in Brazil (UTC-3), open to international opportunities.',
+    'Specialized in IT general controls (ITGC) and IT application controls (ITAC), Sarbanes-Oxley (SOX/ICFR), technology risk, SDLC governance, cloud security (AWS, GCP) and cybersecurity audit. I build audit data analytics and AI tooling, from SQL, Python and Scala to open-source audit automation and control-mapping prototypes with human review of outputs. I map controls and plan audit scope with the Secure Controls Framework (SCF) metaframework, and have audited Pix (instant payments) and Open Finance (open banking) controls in Brazil. Based in Brazil (UTC-3), seeking remote roles worldwide.',
   email: 'tvobrachini@gmail.com',
   linkedinUrl: 'https://www.linkedin.com/in/tvobrachini',
   githubUrl: 'https://github.com/tvobrachini',
@@ -183,6 +183,7 @@ export const foundationalRoles: FoundationalRole[] = [
     title: 'Software Development Intern',
     company: 'OSG Sulamericana',
     period: 'Jul 2012 – Jul 2013',
+    details: 'Exposure to J-SOX requirements.',
   },
   {
     title: 'Research Intern',
@@ -233,7 +234,7 @@ export const skills: SkillGroup[] = [
   {
     title: 'Governance & risk',
     skills:
-      'SOX, ICFR, ITGC (access management, change management, program development/SDLC, IT operations), ITAC, COSO, COBIT, ITIL, PCAOB standards, IIA standards, third-party risk management (TPRM) audits, SOC 1 and SOC 2 attestation (preparer and reviewer), SOC 2 and ISAE assurance report review, NIST CSF, ISO 27001, PCI DSS, SCF (metaframework for control mapping and audit planning), BCP/DR',
+      'SOX, J-SOX (exposure at OSG Sulamericana), ICFR, ITGC (access management, change management, program development/SDLC, IT operations), ITAC, COSO, COBIT, ITIL, PCAOB standards, IIA standards, third-party risk management (TPRM) audits, SOC 1 and SOC 2 attestation (preparer and reviewer), SOC 2 and ISAE assurance report review, NIST CSF, ISO 27001, PCI DSS, SCF (metaframework for control mapping and audit planning), BCP/DR',
   },
   {
     title: 'Regulation',

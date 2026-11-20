@@ -3,7 +3,7 @@
 My personal portfolio website built to showcase my experience as an IT auditor and my expertise bridging the gap between technical operations and business risk.
 
 ## Overview
-This site highlights my background in IT controls, cloud security and SDLC governance across PwC and three publicly listed fintechs (Nubank, MercadoLibre, StoneCo). It also serves as a showcase for my open-source projects, including the [GRC Audit Swarm](https://github.com/tvobrachini/grc-audit-swarm) multi-agent audit automation platform and the [SCF Auto-Crosswalker](https://github.com/tvobrachini/scf-auto-crosswalker) GRC assistant.
+This site highlights my background in IT controls, cloud security and SDLC governance across PwC and three publicly listed fintechs (Nubank, MercadoLibre, StoneCo). It also serves as a showcase for my open-source projects, including the [GRC Audit Swarm](https://github.com/tvobrachini/grc-audit-swarm) audit automation research prototype and the [SCF Auto-Crosswalker](https://github.com/tvobrachini/scf-auto-crosswalker) GRC assistant.
 
 ## Tech Stack
 The site is built with modern web technologies:

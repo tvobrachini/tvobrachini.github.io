@@ -95,9 +95,9 @@ export const personalInfo = {
   tagline: 'Global IT Audit Specialist',
   headline: 'IT audit of cloud and SDLC governance, with data and AI tooling.',
   subheadlineLead:
-    'IT auditor with 10+ years across Big Four (PwC) and three publicly listed fintechs (Nubank, MercadoLibre, StoneCo).',
+    'IT internal auditor with 10+ years across a Big 4 firm (PwC) and three publicly listed fintechs (Nubank, MercadoLibre, StoneCo).',
   subheadlineBody:
-    'Specialized in IT general and application controls (ITGC/ITAC), SOX/ICFR, SDLC governance and cloud security (AWS, GCP). I build audit data analytics and AI tooling, from SQL, Python and Scala to open-source multi-agent audit automation with human review at each stage. I map controls and plan audit scope with the Secure Controls Framework (SCF) metaframework, and use AI for data visualization and web publishing. Based in Bragança Paulista, SP, Brazil (UTC-3).',
+    'Specialized in IT general controls (ITGC) and IT application controls (ITAC), Sarbanes-Oxley (SOX/ICFR), technology risk, SDLC governance, cloud security (AWS, GCP) and cybersecurity audit. I build audit data analytics and AI tooling, from SQL, Python and Scala to open-source audit automation and control-mapping prototypes with human review of outputs. I map controls and plan audit scope with the Secure Controls Framework (SCF) metaframework, and have audited Pix (instant payments) and Open Finance (open banking) controls in Brazil. Based in Brazil (UTC-3), seeking remote roles worldwide.',
   email: 'tvobrachini@gmail.com',
   linkedinUrl: 'https://www.linkedin.com/in/tvobrachini',
   githubUrl: 'https://github.com/tvobrachini',
@@ -111,7 +111,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: 'Nubank (NYSE: NU)',
     companyUrl: 'https://international.nubank.com.br/about/',
-    badge: '140M+ customers | US launch Sep 2026',
+    badge: '143M customers (Q3 2026) | Brazil, Mexico, Colombia',
     dotColor: '#a889b0',
     roles: [
       {
@@ -125,7 +125,7 @@ export const experiences: ExperienceItem[] = [
       },
     ],
     description:
-      'Plan and lead risk-based IT and cybersecurity audits of SDLC governance, security governance and cloud environments (AWS, GCP), from risk assessment and scoping to reporting; evaluate ITGCs (identity and access management, change management, program development, IT operations) and risk and control matrices (RCMs). Audited IT and security controls over Pix and Open Finance (payment and data-sharing frameworks regulated by the Banco Central do Brasil). Rate IT risks by likelihood and impact, review risk assessments and risk-acceptance requests, challenge the proposed treatment, and track exceptions and corrective action plans to closure; report audit results to technical and non-technical stakeholders, mainly engineering leads and general managers. Automate audit testing and data analytics with Databricks and Scala; drive the use of AI tools in audit documentation and control testing; report with Google and AWS tools and Power BI. Run audits and issue tracking in an in-house audit management tool built on Jira; audit third-party (vendor) risk (TPRM) and review SOC 2 Type II and ISAE reports; test against control frameworks (ISO 27001, PCI DSS, NIST CSF), mapping controls and scoping with the SCF. Audit an SEC-registered group (Form 20-F, SOX/ICFR) in a highly regulated sector (Brazilian entities regulated by the Banco Central do Brasil), with multinational scope: auditees in Brazil, Mexico, Colombia, Germany and the US. Context: Nu Mexico converted from a SOFIPO to a licensed bank in 2026; Nu Colombia is an SFC-licensed financing company; Nu US holds OCC conditional approval (2026) for a national bank charter.',
+      'Audited IT and security controls over Pix (Brazil\'s instant-payment system) and Open Finance (open-banking data sharing), both regulated by the Banco Central do Brasil (Brazil\'s central bank). Plan and lead risk-based IT and cybersecurity audits of SDLC governance, security governance, cloud environments (AWS, GCP) and vulnerability management, from risk assessment and scoping to reporting; evaluate ITGCs (identity and access management, change management, program development, IT operations) and risk and control matrices (RCMs). Rate IT risks by likelihood and impact, review risk assessments and risk-acceptance requests, challenge the proposed treatment, and track exceptions and corrective action plans to closure; report audit results to technical and non-technical stakeholders, mainly engineering leads and general managers. Automate audit testing and data analytics with Databricks and Scala; drive the use of AI tools in audit documentation and control testing; report with Google and AWS tools and Power BI. Audit third-party (vendor) risk (TPRM) and review SOC 2 Type II and ISAE reports; test controls against ISO 27001, PCI DSS and NIST CSF, mapping controls and scoping with the Secure Controls Framework (SCF). Manage audits, issues and remediation in ServiceNow GRC and an in-house Jira-based audit management tool. Audit an SEC-registered group (Form 20-F, SOX/ICFR) in a highly regulated sector (Brazilian entities regulated by the Banco Central do Brasil), with multinational scope: auditees in Brazil, Mexico, Colombia, Germany and the US.',
   },
   {
     company: 'MercadoLibre (NASDAQ: MELI)',
@@ -143,9 +143,9 @@ export const experiences: ExperienceItem[] = [
     ],
   },
   {
-    company: 'StoneCo (NASDAQ: STNE)',
+    company: 'StoneCo / Stone (NASDAQ: STNE)',
     companyUrl: 'https://www.stoneco.com.br/en/',
-    badge: '1.7M+ active clients (2021) | Payments fintech',
+    badge: 'Payments fintech',
     dotColor: '#5A8F70',
     roles: [
       {
@@ -160,7 +160,7 @@ export const experiences: ExperienceItem[] = [
   {
     company: 'PwC Brazil',
     companyUrl: 'https://www.pwc.com/gx/en/about.html',
-    badge: 'Big Four accounting | Risk Assurance',
+    badge: 'Big 4 accounting | Risk Assurance',
     dotColor: '#B86B49',
     roles: [
       { title: 'Senior Associate', startDate: new Date('2018-07-01'), endDate: new Date('2021-02-01') },
@@ -169,7 +169,7 @@ export const experiences: ExperienceItem[] = [
       { title: 'Trainee', startDate: new Date('2015-07-01'), endDate: new Date('2016-07-01') },
     ],
     description:
-      'Planned and executed IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients, applying COSO and COBIT. Coordinated and consolidated SOX 404 internal-controls testing (IT and business processes) across multinational component teams for a Brazil-headquartered global consumer-goods group with NYSE-listed securities; acted as interim engagement manager at times. Covered the Brazil component of a global client\'s SOX 404 audit, including a system implementation (controls tested before, during and after go-live, with data flow and key reports), reporting to the group engagement team. Prepared and reviewed SOC 1 and SOC 2 attestation engagements for clients. Built process flowcharts and risk and control matrices (RCMs); tested control design and operating effectiveness (TOD/TOE), including system-generated reports (IPE) and segregation of duties. Coordinated audit teams, prepared and reviewed working papers; evaluated deficiencies, documented findings and recommendations, followed up on remediation with management and drafted completion reports.',
+      'Planned and executed IT and business process audits (ITGC, SOX/ICFR) for major financial institutions and other clients, applying COSO and COBIT. Led a multinational SOX 404 engagement for a Brazil-headquartered global consumer-goods group with NYSE-listed securities, coordinating and consolidating internal-controls testing (IT and business processes) across international component teams; acted as interim engagement manager at times. Covered the Brazil component of a global client\'s SOX 404 audit, including a system implementation (controls tested before, during and after go-live, with data flow and key reports), reporting to the group engagement team. Prepared and reviewed SOC 1 and SOC 2 attestation engagements for clients. Built process flowcharts and risk and control matrices (RCMs); tested control design and operating effectiveness (TOD/TOE), including system-generated reports (IPE) and segregation of duties; used Alteryx for audit data analysis. Coordinated audit teams, prepared and reviewed working papers; evaluated deficiencies, documented findings and recommendations, followed up on remediation with management and drafted completion reports.',
   },
 ];
 
@@ -183,6 +183,7 @@ export const foundationalRoles: FoundationalRole[] = [
     title: 'Software Development Intern',
     company: 'OSG Sulamericana',
     period: 'Jul 2012 – Jul 2013',
+    details: 'Exposure to J-SOX requirements.',
   },
   {
     title: 'Research Intern',
@@ -202,9 +203,9 @@ export const strategicProjects: StrategicProject[] = [
     title: 'GRC Audit Swarm',
     repoUrl: 'https://github.com/tvobrachini/grc-audit-swarm',
     caseStudyUrl: 'https://github.com/tvobrachini/grc-audit-swarm/blob/master/CASE_STUDY.md',
-    stack: 'Python, Zero-Framework AI, FastAPI, React, OSCAL 1.2.1',
+    stack: 'Python, FastAPI, React, OSCAL 1.2.1',
     summary:
-      'Zero-framework, deterministic-first audit platform across Planning, Fieldwork and Reporting, with a 3-tier cascade (14 deterministic audit linters D1–D14, System-1 Jev/Kev logprob classifiers, and cross-AI-family PoLL QA review), human approval gates, read-only AWS & ITGC evidence collection (boto3) with HMAC-SHA256 sampling, a SHA-256-hashed evidence vault, OSCAL 1.2.1 Assessment Results export with drift detection, and IIA GIAS 15.2 post-issuance remediation follow-up.',
+      'Research prototype that drafts an IT audit across Planning, Fieldwork and Reporting, with 13 deterministic audit-methodology checks, a cross-model QA review, and human approval gates between phases. Collects read-only AWS evidence, stores it in a SHA-256 evidence vault, and exports OSCAL 1.2.1 Assessment Results.',
     // From docs/sample-run/oscal.json and report.md on master.
     sample: {
       caption: 'One finding from the committed sample run. Demo mode: synthetic evidence, no AWS account, no language model.',
@@ -233,24 +234,24 @@ export const skills: SkillGroup[] = [
   {
     title: 'Governance & risk',
     skills:
-      'SOX/J-SOX, ICFR, ITGC (access management, change management, program development/SDLC, IT operations), ITAC, COSO, COBIT, ITIL, PCAOB standards, IIA standards, third-party risk management (TPRM) audits, SOC 1 and SOC 2 attestation (preparer and reviewer), SOC 2 and ISAE assurance report review, NIST CSF, ISO 27001, PCI DSS, SCF (metaframework for control mapping and audit planning), BCP/DR',
+      'SOX, J-SOX (exposure at OSG Sulamericana), ICFR, ITGC (access management, change management, program development/SDLC, IT operations), ITAC, COSO, COBIT, ITIL, PCAOB standards, IIA standards, third-party risk management (TPRM) audits, SOC 1 and SOC 2 attestation (preparer and reviewer), SOC 2 and ISAE assurance report review, NIST CSF, ISO 27001, PCI DSS, SCF (metaframework for control mapping and audit planning), BCP/DR',
   },
   {
     title: 'Regulation',
-    skills: 'LGPD/GDPR (privacy), CMN Res. 4893 (cyber policy and cloud), Res. BCB 85 (payment institutions), Pix and Open Finance (control audits)',
+    skills: 'SEC reporting and SOX (Form 20-F, 10-K), PCAOB, privacy (GDPR, LGPD); Brazil: CMN Res. 4893 (cyber policy and cloud), Res. BCB 85 (payment institutions), Pix (instant payments) and Open Finance (open banking) control audits',
   },
   {
     title: 'Audit tools & ERP',
-    skills: 'Perinity GRC (StoneCo), in-house Jira-based audit management (Nubank), ServiceNow GRC, Jira; SAP and Oracle (audit work programs applied)',
+    skills: 'ServiceNow GRC and in-house Jira-based audit management (Nubank), Perinity GRC (StoneCo), Jira; SAP and Oracle (audit work programs applied)',
   },
   {
     title: 'Security & cloud',
-    skills: 'AWS, GCP, IAM, SDLC/DevSecOps, vulnerability management',
+    skills: 'AWS, GCP, identity and access management (IAM), SDLC/DevSecOps, vulnerability management (audit)',
   },
   {
     title: 'Data & automation',
     skills:
-      'SQL, Python, Scala, Databricks, BigQuery, ACL, Alteryx, Power BI, Google and AWS reporting, CrewAI, LangGraph, Docker, GitHub Actions',
+      'SQL, Python, Scala, Databricks, BigQuery, ACL, Alteryx, Power BI, Google and AWS reporting, LLM-based tooling, Docker, GitHub Actions',
   },
   {
     title: 'Languages',
@@ -260,11 +261,11 @@ export const skills: SkillGroup[] = [
 
 export const education: EducationItem[] = [
   {
-    title: 'Tecnólogo in IT Management',
+    title: 'Undergraduate degree (Tecnólogo) in IT Management',
     institution: 'FATEC Bragança Paulista',
     institutionUrl: 'https://www.cps.sp.gov.br/fatec/',
     period: '2012',
-    description: 'Brazilian higher-education undergraduate technology degree (Tecnólogo).',
+    description: 'Brazilian higher-education technology degree (Tecnólogo).',
   },
   {
     title: 'Computer Science exchange',

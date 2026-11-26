@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Local quality gate, run by ~/.config/agents/hooks/quality-gate before an AI agent may finish
+# a turn with uncommitted changes. Mirrors the deploy workflow: lint, then typecheck + build.
+set -uo pipefail
+cd "$(git rev-parse --show-toplevel)" || exit 2
+[ -d node_modules ] || npm ci --silent || { echo "FAILED: npm ci"; exit 1; }
+fail=0
+npm run --silent lint || fail=1
+out=$(npm run --silent build 2>&1) || { echo "FAILED: npm run build"; echo "$out" | tail -30; fail=1; }
+exit $fail
